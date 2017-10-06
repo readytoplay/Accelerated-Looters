@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
+
 public class playerController : MonoBehaviour
 {
 
@@ -12,7 +13,7 @@ public class playerController : MonoBehaviour
 	public Transform groundCheck; //the point that is at the buttom of the character to check if it touched the ground
 	public float groundRadius; 
 	public LayerMask whatIsGround; // specify the layer "Ground" (all the platforms and grounds.)
-
+	Vector3 respawn_pos;	//the position that the player gonna respawn
 	public bool isGrounded; // make sure we don't have to check all the time
 	
 	
@@ -39,10 +40,21 @@ public class playerController : MonoBehaviour
 			myRigidbody.velocity=new Vector3(moveSpeed, myRigidbody.velocity.y,0);
 			
 		} 
+		else if (Input.GetAxisRaw("Horizontal")<0f) //move to right (value >0 is to the right)
+		{
+			myRigidbody.velocity=new Vector3(-moveSpeed, myRigidbody.velocity.y,0);
+
+		} 
 		if (Input.GetButtonDown("Jump")&&isGrounded) //jump (value>0 is up)
 		{
 			myRigidbody.velocity=new Vector3(myRigidbody.velocity.x,jumpSpeed,0);
 			
+		}
+		if (transform.position.y <= -15.0) {
+			transform.position = respawn_pos;
+		}
+		if (transform.position.y >= 8) {
+			transform.position = respawn_pos;
 		}
 	}
 }
