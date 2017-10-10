@@ -12,11 +12,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="EnemyMovement.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EnemyMovement.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding>
                 <marker date="1507582551987" expanded="false" signature="6:78" ph="..." />
                 <marker date="1507582551987" expanded="true" signature="122:1048" ph="{...}" />
@@ -30,9 +30,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="EnemyAttack.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding>
+                <marker date="1507584555960" expanded="false" signature="6:78" ph="..." />
+                <marker date="1507584555960" expanded="true" signature="120:310" ph="{...}" />
+                <marker date="1507584555960" expanded="true" signature="222:246" ph="{...}" />
+                <marker date="1507584555960" expanded="true" signature="301:308" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -42,6 +58,7 @@
         <option value="$PROJECT_DIR$/Assets/Assets/scripts/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/enemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnemyAttack.cs" />
       </list>
     </option>
   </component>
@@ -213,12 +230,12 @@
       <updated>1506982624429</updated>
       <workItem from="1506982675071" duration="131000" />
       <workItem from="1506982970277" duration="179000" />
-      <workItem from="1507577897757" duration="3889000" />
+      <workItem from="1507577897757" duration="4771000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4199000" />
+    <option name="totallyTimeSpent" value="5081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -285,8 +302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+        <state relative-caret-position="180">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
             <marker date="1507582551987" expanded="false" signature="6:78" ph="..." />
             <marker date="1507582551987" expanded="true" signature="122:1048" ph="{...}" />
@@ -302,5 +319,18 @@
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Assets/scripts/playerController.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <marker date="1507584555960" expanded="false" signature="6:78" ph="..." />
+            <marker date="1507584555960" expanded="true" signature="120:310" ph="{...}" />
+            <marker date="1507584555960" expanded="true" signature="222:246" ph="{...}" />
+            <marker date="1507584555960" expanded="true" signature="301:308" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
