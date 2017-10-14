@@ -15,31 +15,69 @@
       <file leaf-file-name="EnemyMovement.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="114">
               <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
               <folding>
-                <marker date="1507582551987" expanded="false" signature="6:78" ph="..." />
-                <marker date="1507582551987" expanded="true" signature="122:1048" ph="{...}" />
-                <marker date="1507582551987" expanded="true" signature="501:648" ph="{...}" />
-                <marker date="1507582551987" expanded="true" signature="700:1046" ph="{...}" />
-                <marker date="1507582551987" expanded="true" signature="909:1043" ph="{...}" />
-                <marker date="1507582551987" expanded="true" signature="950:988" ph="{...}" />
-                <marker date="1507582551987" expanded="true" signature="996:1036" ph="{...}" />
+                <marker date="1508021696696" expanded="false" signature="6:78" ph="..." />
+                <marker date="1508021696696" expanded="true" signature="122:1048" ph="{...}" />
+                <marker date="1508021696696" expanded="true" signature="501:648" ph="{...}" />
+                <marker date="1508021696696" expanded="true" signature="700:1046" ph="{...}" />
+                <marker date="1508021696696" expanded="true" signature="909:1043" ph="{...}" />
+                <marker date="1508021696696" expanded="true" signature="950:988" ph="{...}" />
+                <marker date="1508021696696" expanded="true" signature="996:1036" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnemyAttack.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EnemyAttack.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
-                <marker date="1507584555960" expanded="false" signature="6:78" ph="..." />
-                <marker date="1507584555960" expanded="true" signature="120:310" ph="{...}" />
-                <marker date="1507584555960" expanded="true" signature="222:246" ph="{...}" />
-                <marker date="1507584555960" expanded="true" signature="301:308" ph="{...}" />
+                <marker date="1508021696695" expanded="false" signature="6:78" ph="..." />
+                <marker date="1508021696695" expanded="true" signature="120:310" ph="{...}" />
+                <marker date="1508021696695" expanded="true" signature="222:246" ph="{...}" />
+                <marker date="1508021696695" expanded="true" signature="301:308" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasicEnemyController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/BasicEnemyController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <folding>
+                <marker date="1508023518919" expanded="true" signature="6:78" ph="..." />
+                <marker date="1508023518919" expanded="true" signature="129:530" ph="{...}" />
+                <marker date="1508023518919" expanded="true" signature="255:263" ph="{...}" />
+                <marker date="1508023518919" expanded="true" signature="315:411" ph="{...}" />
+                <marker date="1508023518919" expanded="true" signature="333:408" ph="{...}" />
+                <marker date="1508023518919" expanded="true" signature="504:528" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-380">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1508021696736" expanded="false" signature="6:116" ph="..." />
+                <marker date="1508021696736" expanded="true" signature="164:1684" ph="{...}" />
+                <marker date="1508021696736" expanded="true" signature="684:735" ph="{...}" />
+                <marker date="1508021696736" expanded="true" signature="789:1682" ph="{...}" />
+                <marker date="1508021696736" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+                <marker date="1508021696736" expanded="true" signature="1107:1193" ph="{...}" />
+                <marker date="1508021696736" expanded="true" signature="1283:1367" ph="{...}" />
+                <marker date="1508021696736" expanded="true" signature="1438:1523" ph="{...}" />
+                <marker date="1508021696736" expanded="true" signature="1561:1603" ph="{...}" />
+                <marker date="1508021696736" expanded="true" signature="1637:1679" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -48,8 +86,10 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/BasicEnemyController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -59,6 +99,8 @@
         <option value="$PROJECT_DIR$/Assets/enemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/EnemyAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/enemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/EnemyController.cs" />
       </list>
     </option>
   </component>
@@ -69,8 +111,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1931" />
-    <option name="height" value="1040" />
+    <option name="x" value="477" />
+    <option name="y" value="76" />
+    <option name="width" value="1440" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
@@ -98,6 +142,78 @@
               <option name="myItemId" value="Accelerated Looters (2 projects)" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assembly-CSharp-Editor" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Prototype Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Other" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Settings" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accelerated Looters (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assembly-CSharp-Editor" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Prototype Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Other" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Plugins" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Editor" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JetBrains" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accelerated Looters (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assembly-CSharp-Editor" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -114,6 +230,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accelerated Looters (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assembly-CSharp" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Prototype Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scripts" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Prototype" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Accelerated Looters (2 projects)" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assembly-CSharp" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Assets" />
+              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Prototype Assets" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -189,6 +357,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -231,11 +405,12 @@
       <workItem from="1506982675071" duration="131000" />
       <workItem from="1506982970277" duration="179000" />
       <workItem from="1507577897757" duration="4771000" />
+      <workItem from="1508022492023" duration="1487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5081000" />
+    <option name="totallyTimeSpent" value="6568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,7 +422,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1931" height="1040" extended-state="1" />
+    <frame x="477" y="76" width="1440" height="774" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -258,8 +433,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13591218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31153306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -269,6 +443,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -284,34 +459,64 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Assets/scripts/playerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="152">
           <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding>
-            <marker date="1507582551987" expanded="false" signature="6:78" ph="..." />
-            <marker date="1507582551987" expanded="true" signature="122:1048" ph="{...}" />
-            <marker date="1507582551987" expanded="true" signature="501:648" ph="{...}" />
-            <marker date="1507582551987" expanded="true" signature="700:1046" ph="{...}" />
-            <marker date="1507582551987" expanded="true" signature="909:1043" ph="{...}" />
-            <marker date="1507582551987" expanded="true" signature="950:988" ph="{...}" />
-            <marker date="1507582551987" expanded="true" signature="996:1036" ph="{...}" />
+            <marker date="1508021696696" expanded="false" signature="6:78" ph="..." />
+            <marker date="1508021696696" expanded="true" signature="122:1048" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="501:648" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="700:1046" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="909:1043" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="950:988" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="996:1036" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <marker date="1508021696695" expanded="false" signature="6:78" ph="..." />
+            <marker date="1508021696695" expanded="true" signature="120:310" ph="{...}" />
+            <marker date="1508021696695" expanded="true" signature="222:246" ph="{...}" />
+            <marker date="1508021696695" expanded="true" signature="301:308" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/BasicEnemyController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <marker date="1508023518919" expanded="true" signature="6:78" ph="..." />
+            <marker date="1508023518919" expanded="true" signature="129:530" ph="{...}" />
+            <marker date="1508023518919" expanded="true" signature="255:263" ph="{...}" />
+            <marker date="1508023518919" expanded="true" signature="315:411" ph="{...}" />
+            <marker date="1508023518919" expanded="true" signature="333:408" ph="{...}" />
+            <marker date="1508023518919" expanded="true" signature="504:528" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Assets/scripts/playerController.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <marker date="1508021696696" expanded="false" signature="6:78" ph="..." />
+            <marker date="1508021696696" expanded="true" signature="122:1048" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="501:648" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="700:1046" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="909:1043" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="950:988" ph="{...}" />
+            <marker date="1508021696696" expanded="true" signature="996:1036" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -322,12 +527,31 @@
     <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
-            <marker date="1507584555960" expanded="false" signature="6:78" ph="..." />
-            <marker date="1507584555960" expanded="true" signature="120:310" ph="{...}" />
-            <marker date="1507584555960" expanded="true" signature="222:246" ph="{...}" />
-            <marker date="1507584555960" expanded="true" signature="301:308" ph="{...}" />
+            <marker date="1508021696695" expanded="false" signature="6:78" ph="..." />
+            <marker date="1508021696695" expanded="true" signature="120:310" ph="{...}" />
+            <marker date="1508021696695" expanded="true" signature="222:246" ph="{...}" />
+            <marker date="1508021696695" expanded="true" signature="301:308" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-380">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1508021696736" expanded="false" signature="6:116" ph="..." />
+            <marker date="1508021696736" expanded="true" signature="164:1684" ph="{...}" />
+            <marker date="1508021696736" expanded="true" signature="684:735" ph="{...}" />
+            <marker date="1508021696736" expanded="true" signature="789:1682" ph="{...}" />
+            <marker date="1508021696736" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+            <marker date="1508021696736" expanded="true" signature="1107:1193" ph="{...}" />
+            <marker date="1508021696736" expanded="true" signature="1283:1367" ph="{...}" />
+            <marker date="1508021696736" expanded="true" signature="1438:1523" ph="{...}" />
+            <marker date="1508021696736" expanded="true" signature="1561:1603" ph="{...}" />
+            <marker date="1508021696736" expanded="true" signature="1637:1679" ph="{...}" />
           </folding>
         </state>
       </provider>
