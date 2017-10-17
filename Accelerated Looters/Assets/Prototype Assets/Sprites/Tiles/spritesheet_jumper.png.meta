@@ -1,0 +1,385 @@
+fileFormatVersion: 2
+guid: 53035838fa8bc604eb2f73bef669ee62
+timeCreated: 1508178341
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spritesheet_jumper_0
+    21300002: spritesheet_jumper_1
+    21300004: spritesheet_jumper_2
+    21300006: spritesheet_jumper_3
+    21300008: spritesheet_jumper_4
+    21300010: spritesheet_jumper_5
+    21300012: spritesheet_jumper_6
+    21300014: spritesheet_jumper_7
+    21300016: spritesheet_jumper_8
+    21300018: spritesheet_jumper_9
+    21300020: spritesheet_jumper_10
+    21300022: spritesheet_jumper_11
+    21300024: spritesheet_jumper_12
+    21300026: spritesheet_jumper_13
+    21300028: spritesheet_jumper_14
+    21300030: spritesheet_jumper_15
+    21300032: spritesheet_jumper_16
+    21300034: spritesheet_jumper_17
+    21300036: spritesheet_jumper_18
+    21300038: spritesheet_jumper_19
+    21300040: spritesheet_jumper_20
+    21300042: spritesheet_jumper_21
+    21300044: spritesheet_jumper_22
+    21300046: spritesheet_jumper_23
+    21300048: spritesheet_jumper_24
+    21300050: spritesheet_jumper_25
+    21300052: spritesheet_jumper_26
+    21300054: spritesheet_jumper_27
+    21300056: spritesheet_jumper_28
+    21300058: spritesheet_jumper_29
+    21300060: spritesheet_jumper_30
+    21300062: spritesheet_jumper_31
+    21300064: spritesheet_jumper_32
+    21300066: spritesheet_jumper_33
+    21300068: spritesheet_jumper_34
+    21300070: spritesheet_jumper_35
+    21300072: spritesheet_jumper_36
+    21300074: spritesheet_jumper_37
+    21300076: spritesheet_jumper_38
+    21300078: spritesheet_jumper_39
+    21300080: spritesheet_jumper_40
+    21300082: spritesheet_jumper_41
+    21300084: spritesheet_jumper_42
+    21300086: spritesheet_jumper_43
+    21300088: spritesheet_jumper_44
+    21300090: spritesheet_jumper_45
+    21300092: spritesheet_jumper_46
+    21300094: spritesheet_jumper_47
+    21300096: spritesheet_jumper_48
+    21300098: spritesheet_jumper_49
+    21300100: spritesheet_jumper_50
+    21300102: spritesheet_jumper_51
+    21300104: spritesheet_jumper_52
+    21300106: spritesheet_jumper_53
+    21300108: spritesheet_jumper_54
+    21300110: spritesheet_jumper_55
+    21300112: spritesheet_jumper_56
+    21300114: spritesheet_jumper_57
+    21300116: spritesheet_jumper_58
+    21300118: spritesheet_jumper_59
+    21300120: spritesheet_jumper_60
+    21300122: spritesheet_jumper_61
+    21300124: spritesheet_jumper_62
+    21300126: spritesheet_jumper_63
+    21300128: spritesheet_jumper_64
+    21300130: spritesheet_jumper_65
+    21300132: spritesheet_jumper_66
+    21300134: spritesheet_jumper_67
+    21300136: spritesheet_jumper_68
+    21300138: spritesheet_jumper_69
+    21300140: spritesheet_jumper_70
+    21300142: spritesheet_jumper_71
+    21300144: spritesheet_jumper_72
+    21300146: spritesheet_jumper_73
+    21300148: spritesheet_jumper_74
+    21300150: spritesheet_jumper_75
+    21300152: spritesheet_jumper_76
+    21300154: spritesheet_jumper_77
+    21300156: spritesheet_jumper_78
+    21300158: spritesheet_jumper_79
+    21300160: spritesheet_jumper_80
+    21300162: spritesheet_jumper_81
+    21300164: spritesheet_jumper_82
+    21300166: spritesheet_jumper_83
+    21300168: spritesheet_jumper_84
+    21300170: spritesheet_jumper_85
+    21300172: spritesheet_jumper_86
+    21300174: spritesheet_jumper_87
+    21300176: spritesheet_jumper_88
+    21300178: spritesheet_jumper_89
+    21300180: spritesheet_jumper_90
+    21300182: spritesheet_jumper_91
+    21300184: spritesheet_jumper_92
+    21300186: spritesheet_jumper_93
+    21300188: spritesheet_jumper_94
+    21300190: spritesheet_jumper_95
+    21300192: spritesheet_jumper_96
+    21300194: spritesheet_jumper_97
+    21300196: spritesheet_jumper_98
+    21300198: spritesheet_jumper_99
+    21300200: spritesheet_jumper_100
+    21300202: spritesheet_jumper_101
+    21300204: spritesheet_jumper_102
+    21300206: spritesheet_jumper_103
+    21300208: spritesheet_jumper_104
+    21300210: spritesheet_jumper_105
+    21300212: spritesheet_jumper_106
+    21300214: spritesheet_jumper_107
+    21300216: spritesheet_jumper_108
+    21300218: spritesheet_jumper_109
+    21300220: spritesheet_jumper_110
+    21300222: spritesheet_jumper_111
+    21300224: spritesheet_jumper_112
+    21300226: spritesheet_jumper_113
+    21300228: spritesheet_jumper_114
+    21300230: spritesheet_jumper_115
+    21300232: spritesheet_jumper_116
+    21300234: spritesheet_jumper_117
+    21300236: spritesheet_jumper_118
+    21300238: spritesheet_jumper_119
+    21300240: spritesheet_jumper_120
+    21300242: spritesheet_jumper_121
+    21300244: spritesheet_jumper_122
+    21300246: spritesheet_jumper_123
+    21300248: spritesheet_jumper_124
+    21300250: spritesheet_jumper_125
+    21300252: spritesheet_jumper_126
+    21300254: spritesheet_jumper_127
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spritesheet_jumper_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1054
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 958
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 862
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 766
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 670
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 574
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 478
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 382
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 286
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 190
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: spritesheet_jumper_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 380
+        height: 96
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

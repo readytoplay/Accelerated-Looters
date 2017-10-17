@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/Monika/Desktop/Accelerated-Looters-mona/Accelerated Looters/Assets/ENEMIGO_1.unity
+- path: Assets/Prototype Assets/Scenes/Prototype/Prototype Scene.unity
   isLoaded: 1
   isActive: 1

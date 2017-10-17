@@ -2,49 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class WiggleEnemyMovement : MonoBehaviour
 {
 
-	public float EnemySpeed;
-	public float EnemyJumpSpeed;
+	public float moveSpeed;
 
-	public Vector3 StartPoint;
-	public Vector3 EndPoint;
-	public Vector3 Destination; //Destination will be set to endpoint initially 
+	public Transform leftPoint;
+	public Transform rightPoint;
 
-	[SerializeField] public Transform Enemy;
+	public Transform destination;
 
-	[SerializeField] public Transform EnemyEnd; // the transform for the end point of the enemy
-
-
+	private Rigidbody2D myRigidBody;
+	
+	
 
 
 	// Use this for initialization
 	void Start()
 	{
-		StartPoint = Enemy.localPosition;
-		EndPoint = EnemyEnd.localPosition; // Get the vector of start and end point
-		Destination = EndPoint;
-
+		destination = rightPoint;
+		myRigidBody=GetComponent<Rigidbody2D>();
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		Enemy.localPosition = Vector3.MoveTowards(Enemy.localPosition, Destination, EnemySpeed * Time.fixedDeltaTime);
-		if (Vector3.Distance(Enemy.localPosition, Destination) < EnemySpeed * Time.fixedDeltaTime)
+		if (destination == rightPoint && transform.position.x > rightPoint.position.x)
 		{
-			if (Enemy.position == StartPoint)
-			{
-				Destination = EndPoint;
-			}
-			else
-			{
-				Destination = StartPoint;
-			}
-
-
-
+			destination = leftPoint;
+		}else if (destination == leftPoint && transform.position.x < leftPoint.position.x)
+		{
+			destination = rightPoint;
 		}
+		
+		if (destination == rightPoint)
+		{
+			myRigidBody.velocity = new Vector3(moveSpeed, myRigidBody.velocity.y, 0f);
+		}
+		else
+		{
+			myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0f);
+		}
+		
+		
+
 	}
 }
