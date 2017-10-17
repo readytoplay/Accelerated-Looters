@@ -14,6 +14,8 @@ public class CameraController : MonoBehaviour
 	//the actual position that the camera will follow 
 	//(a bit ahead of the player depends on if it's going to the left or right)
 	public Vector3 TargetPosition;
+
+	public float DelayTime;
 	
 	// Use this for initialization
 	void Start () {
@@ -37,7 +39,7 @@ public class CameraController : MonoBehaviour
 			TargetPosition = new Vector3(TargetPosition.x - AheadOfPlayer, transform.position.y, transform.position.z);
 		}
 
-		    transform.position = TargetPosition;
+		    transform.position = Vector3.Lerp(transform.position, TargetPosition, DelayTime*Time.deltaTime);
 
 	}
 }
