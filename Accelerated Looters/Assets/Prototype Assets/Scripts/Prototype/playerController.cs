@@ -50,11 +50,19 @@ public class playerController : MonoBehaviour
 			myRigidbody.velocity=new Vector3(myRigidbody.velocity.x,jumpSpeed,0);
 			
 		}
-		if (transform.position.y <= -15.0) {
-			transform.position = respawn_pos;
-		}
-		if (transform.position.y >= 8) {
+//		if (transform.position.y <= -15.0) {
+//			
+//		}
+//		if (transform.position.y >= 8) {
+//			transform.position = respawn_pos;
+//		}
+	}
+	
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.CompareTag("KillPlane"))
+		{
 			transform.position = respawn_pos;
 		}
 	}
 }
+
