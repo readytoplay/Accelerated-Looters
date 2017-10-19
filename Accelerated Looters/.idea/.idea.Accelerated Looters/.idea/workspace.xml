@@ -15,31 +15,73 @@
       <file leaf-file-name="playerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
-              <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="532">
+              <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
               <folding>
-                <marker date="1508364100835" expanded="false" signature="6:116" ph="..." />
-                <marker date="1508364100835" expanded="true" signature="164:1882" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="684:735" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="789:1661" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
-                <marker date="1508364100835" expanded="true" signature="1107:1193" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="1283:1367" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="1438:1523" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
-                <marker date="1508364100835" expanded="true" signature="1704:1880" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="1742:1787" ph="{...}" />
-                <marker date="1508364100835" expanded="true" signature="1820:1871" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="6:130" ph="..." />
+                <marker date="1508392280933" expanded="true" signature="178:2347" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="754:856" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="910:1834" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="1007:1132" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+                <marker date="1508392280933" expanded="true" signature="1228:1314" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="1404:1488" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="1559:1644" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="1645:1779" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
+                <marker date="1508392280933" expanded="true" signature="1812:1831" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="1877:2091" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="1915:1993" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="2031:2082" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="2105:2253" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="2127:2221" ph="{...}" />
+                <marker date="1508392280933" expanded="true" signature="2273:2345" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LevelManager.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/LevelManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+              <folding>
+                <marker date="1508392964430" expanded="true" signature="6:130" ph="..." />
+                <marker date="1508392964430" expanded="true" signature="173:1211" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="446:483" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="538:545" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="588:650" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="685:1207" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="714:813" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="841:940" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="968:1068" ph="{...}" />
+                <marker date="1508392964430" expanded="true" signature="1097:1198" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HurtPlayer.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/HurtPlayer.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <marker date="1508392280987" expanded="false" signature="6:78" ph="..." />
+                <marker date="1508392280987" expanded="true" signature="119:517" ph="{...}" />
+                <marker date="1508392280987" expanded="true" signature="262:316" ph="{...}" />
+                <marker date="1508392280987" expanded="true" signature="371:378" ph="{...}" />
+                <marker date="1508392280987" expanded="true" signature="417:509" ph="{...}" />
+                <marker date="1508392280987" expanded="true" signature="454:506" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+            <state relative-caret-position="577">
+              <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
               <folding>
                 <marker date="1508372369678" expanded="false" signature="6:108" ph="..." />
                 <marker date="1508372369678" expanded="true" signature="155:1204" ph="{...}" />
@@ -56,10 +98,12 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/BasicEnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/HurtPlayer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -73,8 +117,10 @@
         <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/WiggledEnemyMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/HurtPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/LevelManager.cs" />
       </list>
     </option>
   </component>
@@ -188,6 +234,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="SearchEverywhereHistoryKey" value="Em&#9;null&#9;null" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -275,6 +322,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="418da449-1529-404f-a262-456b5db0c38c" name="Default" comment="" />
@@ -288,12 +338,12 @@
       <workItem from="1508022492023" duration="1487000" />
       <workItem from="1508199894343" duration="91000" />
       <workItem from="1508200010604" duration="7704000" />
-      <workItem from="1508361501065" duration="4857000" />
+      <workItem from="1508361501065" duration="9419000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19220000" />
+    <option name="totallyTimeSpent" value="23782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,17 +355,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17864583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -380,18 +431,22 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1508364100835" expanded="false" signature="6:116" ph="..." />
-            <marker date="1508364100835" expanded="true" signature="164:1882" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="684:735" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="789:1661" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
-            <marker date="1508364100835" expanded="true" signature="1107:1193" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1283:1367" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1438:1523" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
-            <marker date="1508364100835" expanded="true" signature="1704:1880" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1742:1787" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1820:1871" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="6:130" ph="..." />
+            <marker date="1508392280933" expanded="true" signature="178:2347" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="754:856" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="910:1834" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1007:1132" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+            <marker date="1508392280933" expanded="true" signature="1228:1314" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1404:1488" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1559:1644" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1645:1779" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
+            <marker date="1508392280933" expanded="true" signature="1812:1831" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1877:2091" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1915:1993" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2031:2082" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2105:2253" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2127:2221" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2273:2345" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -415,31 +470,10 @@
     <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/WiggledEnemyMovement.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding>
-            <marker date="1508364100835" expanded="false" signature="6:116" ph="..." />
-            <marker date="1508364100835" expanded="true" signature="164:1882" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="684:735" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="789:1661" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
-            <marker date="1508364100835" expanded="true" signature="1107:1193" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1283:1367" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1438:1523" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
-            <marker date="1508364100835" expanded="true" signature="1704:1880" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1742:1787" ph="{...}" />
-            <marker date="1508364100835" expanded="true" signature="1820:1871" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
+        <state relative-caret-position="577">
+          <caret line="43" column="9" lean-forward="false" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
           <folding>
             <marker date="1508372369678" expanded="false" signature="6:108" ph="..." />
             <marker date="1508372369678" expanded="true" signature="155:1204" ph="{...}" />
@@ -448,6 +482,65 @@
             <marker date="1508372369678" expanded="true" signature="574:1202" ph="{...}" />
             <marker date="1508372369678" expanded="true" signature="838:961" ph="{...}" />
             <marker date="1508372369678" expanded="true" signature="968:1091" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/HurtPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <marker date="1508392280987" expanded="false" signature="6:78" ph="..." />
+            <marker date="1508392280987" expanded="true" signature="119:517" ph="{...}" />
+            <marker date="1508392280987" expanded="true" signature="262:316" ph="{...}" />
+            <marker date="1508392280987" expanded="true" signature="371:378" ph="{...}" />
+            <marker date="1508392280987" expanded="true" signature="417:509" ph="{...}" />
+            <marker date="1508392280987" expanded="true" signature="454:506" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="28" column="4" lean-forward="false" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+          <folding>
+            <marker date="1508392280933" expanded="true" signature="6:130" ph="..." />
+            <marker date="1508392280933" expanded="true" signature="178:2347" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="754:856" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="910:1834" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1007:1132" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+            <marker date="1508392280933" expanded="true" signature="1228:1314" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1404:1488" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1559:1644" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1645:1779" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
+            <marker date="1508392280933" expanded="true" signature="1812:1831" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1877:2091" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="1915:1993" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2031:2082" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2105:2253" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2127:2221" ph="{...}" />
+            <marker date="1508392280933" expanded="true" signature="2273:2345" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/LevelManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="70" column="18" lean-forward="false" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding>
+            <marker date="1508392964430" expanded="true" signature="6:130" ph="..." />
+            <marker date="1508392964430" expanded="true" signature="173:1211" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="446:483" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="538:545" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="588:650" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="685:1207" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="714:813" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="841:940" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="968:1068" ph="{...}" />
+            <marker date="1508392964430" expanded="true" signature="1097:1198" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -15,13 +16,15 @@ public class playerController : MonoBehaviour
 	public LayerMask whatIsGround; // specify the layer "Ground" (all the platforms and grounds.)
 	Vector3 respawn_pos;	//the position that the player gonna respawn
 	public bool isGrounded; // make sure we don't have to check all the time
-	
+	public float time1;
+	public LevelManager MyLevelManager;
 	
 	
 	// Use this for initialization
 	void Start ()
 	{
 		myRigidbody = GetComponent<Rigidbody2D>();
+		MyLevelManager=FindObjectOfType<LevelManager>();
 	}
 	
 	// Update is called once per frame
@@ -56,19 +59,40 @@ public class playerController : MonoBehaviour
 //		if (transform.position.y >= 8) {
 //			transform.position = respawn_pos;
 //		}
+		if (Input.GetKeyUp(KeyCode.Z))
+		{
+			dash();
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.CompareTag("KillPlane"))
 		{
 			transform.position = respawn_pos;
+			MyLevelManager.HurtPlayer(1);
 		}
-		if (other.tag == "CheckPoint")
+		if (other.CompareTag("CheckPoint"))
 		{
 			respawn_pos = other.transform.position;
 		}
 		
 		
+	}
+
+	void dash()
+	{
+		if (!isGrounded)
+		{
+			transform.position += new Vector3(moveSpeed * Time.deltaTime * 3, 0.1f, 0.0f);
+			
+		}
+		Invoke("finishDash",3);
+		
+	}
+
+	void finishDash()
+	{
+		myRigidbody.velocity = new Vector3(0,myRigidbody.velocity.y,0);
 	}
 }
 
