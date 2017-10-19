@@ -16,9 +16,14 @@ public class CameraController : MonoBehaviour
 	public Vector3 TargetPosition;
 
 	public float DelayTime;
+
+	
+	
+	
 	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		
 	}
 	
@@ -30,16 +35,19 @@ public class CameraController : MonoBehaviour
 		
 		//check the direction that the player is going
 
-		if (Player.transform.localScale.x > 0f)
+		if (Player.transform.localPosition.x > 0f)
 		{
 			TargetPosition = new Vector3(TargetPosition.x + AheadOfPlayer, transform.position.y, transform.position.z);
+			
 		}
 		else
 		{
 			TargetPosition = new Vector3(TargetPosition.x - AheadOfPlayer, transform.position.y, transform.position.z);
+			
 		}
 
 		    transform.position = Vector3.Lerp(transform.position, TargetPosition, DelayTime*Time.deltaTime);
+		
 
 	}
 }

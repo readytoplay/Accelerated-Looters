@@ -63,6 +63,12 @@ public class playerController : MonoBehaviour
 		{
 			transform.position = respawn_pos;
 		}
+		if (other.tag == "CheckPoint")
+		{
+			respawn_pos = other.transform.position;
+		}
+		
+		
 	}
 }
 

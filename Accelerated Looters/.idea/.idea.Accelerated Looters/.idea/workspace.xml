@@ -11,78 +11,43 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="WiggledEnemyMovement.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/WiggledEnemyMovement.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding>
-                <marker date="1508200155095" expanded="true" signature="6:78" ph="..." />
-                <marker date="1508200155095" expanded="true" signature="131:933" ph="{...}" />
-                <marker date="1508200155095" expanded="true" signature="338:415" ph="{...}" />
-                <marker date="1508200155095" expanded="true" signature="467:931" ph="{...}" />
-                <marker date="1508200155095" expanded="true" signature="551:587" ph="{...}" />
-                <marker date="1508200155095" expanded="true" signature="668:705" ph="{...}" />
-                <marker date="1508200155095" expanded="true" signature="741:827" ph="{...}" />
-                <marker date="1508200155095" expanded="true" signature="834:921" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="playerController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+            <state relative-caret-position="1121">
+              <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
-                <marker date="1508202733109" expanded="false" signature="6:116" ph="..." />
-                <marker date="1508202733109" expanded="true" signature="164:1792" ph="{...}" />
-                <marker date="1508202733109" expanded="true" signature="684:735" ph="{...}" />
-                <marker date="1508202733109" expanded="true" signature="789:1661" ph="{...}" />
-                <marker date="1508202733109" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
-                <marker date="1508202733109" expanded="true" signature="1107:1193" ph="{...}" />
-                <marker date="1508202733109" expanded="true" signature="1283:1367" ph="{...}" />
-                <marker date="1508202733109" expanded="true" signature="1438:1523" ph="{...}" />
-                <marker date="1508202733109" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
-                <marker date="1508202733109" expanded="true" signature="1704:1790" ph="{...}" />
-                <marker date="1508202733109" expanded="true" signature="1742:1787" ph="{...}" />
+                <marker date="1508364100835" expanded="false" signature="6:116" ph="..." />
+                <marker date="1508364100835" expanded="true" signature="164:1882" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="684:735" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="789:1661" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+                <marker date="1508364100835" expanded="true" signature="1107:1193" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="1283:1367" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="1438:1523" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
+                <marker date="1508364100835" expanded="true" signature="1704:1880" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="1742:1787" ph="{...}" />
+                <marker date="1508364100835" expanded="true" signature="1820:1871" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckPointController.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-              <folding>
-                <marker date="1508212975092" expanded="false" signature="6:78" ph="..." />
-                <marker date="1508212975092" expanded="true" signature="129:605" ph="{...}" />
-                <marker date="1508212975092" expanded="true" signature="316:376" ph="{...}" />
-                <marker date="1508212975092" expanded="true" signature="431:438" ph="{...}" />
-                <marker date="1508212975092" expanded="true" signature="480:603" ph="{...}" />
-                <marker date="1508212975092" expanded="true" signature="517:597" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraController.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CameraController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="41" column="92" lean-forward="false" selection-start-line="41" selection-start-column="92" selection-end-line="41" selection-end-column="92" />
+            <state relative-caret-position="372">
+              <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
               <folding>
-                <marker date="1508205987479" expanded="true" signature="6:108" ph="..." />
-                <marker date="1508205987479" expanded="true" signature="155:1182" ph="{...}" />
-                <marker date="1508205987479" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
-                <marker date="1508205987479" expanded="true" signature="505:512" ph="{...}" />
-                <marker date="1508205987479" expanded="true" signature="566:1180" ph="{...}" />
-                <marker date="1508205987479" expanded="true" signature="827:946" ph="{...}" />
-                <marker date="1508205987479" expanded="true" signature="953:1072" ph="{...}" />
+                <marker date="1508372369678" expanded="false" signature="6:108" ph="..." />
+                <marker date="1508372369678" expanded="true" signature="155:1204" ph="{...}" />
+                <marker date="1508372369678" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
+                <marker date="1508372369678" expanded="true" signature="511:520" ph="{...}" />
+                <marker date="1508372369678" expanded="true" signature="574:1202" ph="{...}" />
+                <marker date="1508372369678" expanded="true" signature="838:961" ph="{...}" />
+                <marker date="1508372369678" expanded="true" signature="968:1091" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -91,13 +56,10 @@
     </leaf>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/BasicEnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/WiggledEnemyMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/BasicEnemyController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -110,9 +72,9 @@
         <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/enemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/WiggledEnemyMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" />
         <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" />
       </list>
     </option>
   </component>
@@ -153,68 +115,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Accelerated Looters (3 projects)" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assembly-CSharp-Editor-firstpass" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accelerated Looters (3 projects)" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assembly-CSharp-Editor" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Prototype Assets" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Other" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accelerated Looters (3 projects)" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assembly-CSharp-Editor" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Accelerated Looters (3 projects)" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assembly-CSharp" />
-              <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assets" />
               <option name="myItemType" value="com.jetbrains.rider.projectView.solutionExplorer.SolutionExplorerNodeRider" />
             </PATH_ELEMENT>
           </PATH>
@@ -388,11 +288,12 @@
       <workItem from="1508022492023" duration="1487000" />
       <workItem from="1508199894343" duration="91000" />
       <workItem from="1508200010604" duration="7704000" />
+      <workItem from="1508361501065" duration="4857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14363000" />
+    <option name="totallyTimeSpent" value="19220000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,7 +305,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -463,28 +365,9 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Sprites/Characters/WiggleEnemyMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Sprites/Characters/WiggleEnemyMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/BasicEnemyController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -497,43 +380,25 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1508202733109" expanded="false" signature="6:116" ph="..." />
-            <marker date="1508202733109" expanded="true" signature="164:1792" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="684:735" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="789:1661" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
-            <marker date="1508202733109" expanded="true" signature="1107:1193" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1283:1367" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1438:1523" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
-            <marker date="1508202733109" expanded="true" signature="1704:1790" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1742:1787" ph="{...}" />
+            <marker date="1508364100835" expanded="false" signature="6:116" ph="..." />
+            <marker date="1508364100835" expanded="true" signature="164:1882" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="684:735" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="789:1661" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+            <marker date="1508364100835" expanded="true" signature="1107:1193" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1283:1367" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1438:1523" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
+            <marker date="1508364100835" expanded="true" signature="1704:1880" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1742:1787" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1820:1871" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Sprites/Characters/WiggleEnemyMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Sprites/Characters/WiggleEnemyMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Assets/scripts/playerController.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
@@ -546,84 +411,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyAttack.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/WiggledEnemyMovement.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/EnemyMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/WiggledEnemyMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="1121">
+          <caret line="62" column="9" lean-forward="false" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
-            <marker date="1508200155095" expanded="true" signature="6:78" ph="..." />
-            <marker date="1508200155095" expanded="true" signature="131:933" ph="{...}" />
-            <marker date="1508200155095" expanded="true" signature="338:415" ph="{...}" />
-            <marker date="1508200155095" expanded="true" signature="467:931" ph="{...}" />
-            <marker date="1508200155095" expanded="true" signature="551:587" ph="{...}" />
-            <marker date="1508200155095" expanded="true" signature="668:705" ph="{...}" />
-            <marker date="1508200155095" expanded="true" signature="741:827" ph="{...}" />
-            <marker date="1508200155095" expanded="true" signature="834:921" ph="{...}" />
+            <marker date="1508364100835" expanded="false" signature="6:116" ph="..." />
+            <marker date="1508364100835" expanded="true" signature="164:1882" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="684:735" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="789:1661" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
+            <marker date="1508364100835" expanded="true" signature="1107:1193" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1283:1367" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1438:1523" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
+            <marker date="1508364100835" expanded="true" signature="1704:1880" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1742:1787" ph="{...}" />
+            <marker date="1508364100835" expanded="true" signature="1820:1871" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CameraController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="41" column="92" lean-forward="false" selection-start-line="41" selection-start-column="92" selection-end-line="41" selection-end-column="92" />
+        <state relative-caret-position="372">
+          <caret line="43" column="9" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
           <folding>
-            <marker date="1508205987479" expanded="true" signature="6:108" ph="..." />
-            <marker date="1508205987479" expanded="true" signature="155:1182" ph="{...}" />
-            <marker date="1508205987479" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
-            <marker date="1508205987479" expanded="true" signature="505:512" ph="{...}" />
-            <marker date="1508205987479" expanded="true" signature="566:1180" ph="{...}" />
-            <marker date="1508205987479" expanded="true" signature="827:946" ph="{...}" />
-            <marker date="1508205987479" expanded="true" signature="953:1072" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/Prototype/playerController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
-          <folding>
-            <marker date="1508202733109" expanded="false" signature="6:116" ph="..." />
-            <marker date="1508202733109" expanded="true" signature="164:1792" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="684:735" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="789:1661" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="886:1011" ph="/* it does a overlap circle around the point that we have to the given size and checks if it is the right layer ... */" />
-            <marker date="1508202733109" expanded="true" signature="1107:1193" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1283:1367" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1438:1523" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1524:1658" ph="/* if (transform.position.y &lt;= -15.0) { ... */" />
-            <marker date="1508202733109" expanded="true" signature="1704:1790" ph="{...}" />
-            <marker date="1508202733109" expanded="true" signature="1742:1787" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Prototype Assets/Scripts/CheckPointController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <marker date="1508212975092" expanded="false" signature="6:78" ph="..." />
-            <marker date="1508212975092" expanded="true" signature="129:605" ph="{...}" />
-            <marker date="1508212975092" expanded="true" signature="316:376" ph="{...}" />
-            <marker date="1508212975092" expanded="true" signature="431:438" ph="{...}" />
-            <marker date="1508212975092" expanded="true" signature="480:603" ph="{...}" />
-            <marker date="1508212975092" expanded="true" signature="517:597" ph="{...}" />
+            <marker date="1508372369678" expanded="false" signature="6:108" ph="..." />
+            <marker date="1508372369678" expanded="true" signature="155:1204" ph="{...}" />
+            <marker date="1508372369678" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
+            <marker date="1508372369678" expanded="true" signature="511:520" ph="{...}" />
+            <marker date="1508372369678" expanded="true" signature="574:1202" ph="{...}" />
+            <marker date="1508372369678" expanded="true" signature="838:961" ph="{...}" />
+            <marker date="1508372369678" expanded="true" signature="968:1091" ph="{...}" />
           </folding>
         </state>
       </provider>
