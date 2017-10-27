@@ -18,19 +18,25 @@ public class playerController : MonoBehaviour
 	public bool isGrounded; // make sure we don't have to check all the time
 	public float time1;
 	public LevelManager MyLevelManager;
-	
+	public int coins;
+	public bool beingCollected;
+
+	public GameObject killBox;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		
+		beingCollected = false;
 		myRigidbody = GetComponent<Rigidbody2D>();
 		MyLevelManager=FindObjectOfType<LevelManager>();
+		coins = 0;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-
+		beingCollected = false;
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		//it does a overlap circle around the point that we have to the given size and checks if it is the right layer
 		//within us.
@@ -53,16 +59,22 @@ public class playerController : MonoBehaviour
 			myRigidbody.velocity=new Vector3(myRigidbody.velocity.x,jumpSpeed,0);
 			
 		}
-//		if (transform.position.y <= -15.0) {
-//			
-//		}
-//		if (transform.position.y >= 8) {
-//			transform.position = respawn_pos;
-//		}
-		if (Input.GetKeyUp(KeyCode.Z))
+
+		if (myRigidbody.velocity.y < 0)
 		{
-			dash();
+			killBox.SetActive(true);
 		}
+		else
+		{
+				killBox.SetActive(false);
+		}
+		
+		
+		
+		
+		
+		
+	
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
@@ -75,24 +87,26 @@ public class playerController : MonoBehaviour
 		{
 			respawn_pos = other.transform.position;
 		}
-		
-		
-	}
-
-	void dash()
-	{
-		if (!isGrounded)
+		if (other.CompareTag("Enemy"))
 		{
-			transform.position += new Vector3(moveSpeed * Time.deltaTime * 3, 0.1f, 0.0f);
+			MyLevelManager.HurtPlayer(1);
+		}
+		if (other.CompareTag("Coin"))
+		{
+			//In case the coins are being collected again before it disappears
+			if (!beingCollected) 
+			{
+				coins++;
+				beingCollected = true;
+			}
+			Destroy(other.gameObject);
 			
 		}
-		Invoke("finishDash",3);
+		
 		
 	}
 
-	void finishDash()
-	{
-		myRigidbody.velocity = new Vector3(0,myRigidbody.velocity.y,0);
-	}
+
+
 }
 
