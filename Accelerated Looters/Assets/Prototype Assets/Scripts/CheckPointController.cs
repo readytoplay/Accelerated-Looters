@@ -28,7 +28,7 @@ public class CheckPointController : MonoBehaviour
 	{
 		if (other.CompareTag("Player"))
 		{
-			TheSpriteRenderer.sprite = CheckedPoint;
+			TheSpriteRenderer.sprite = CheckedPoint;	//changing color
 			CheckPointActive = true;
 		}
 		
