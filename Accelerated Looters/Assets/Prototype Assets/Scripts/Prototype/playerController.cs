@@ -20,7 +20,7 @@ public class playerController : MonoBehaviour
 	public LevelManager MyLevelManager;
 	public int coins;
 	public bool beingCollected;
-
+	public KillEnemy charaterKilling; //variable for KillEnemy class
 	public GameObject killBox;
 	
 	// Use this for initialization
@@ -30,6 +30,7 @@ public class playerController : MonoBehaviour
 		beingCollected = false;
 		myRigidbody = GetComponent<Rigidbody2D>();
 		MyLevelManager=FindObjectOfType<LevelManager>();
+		charaterKilling = FindObjectOfType<KillEnemy> ();
 		coins = 0;
 	}
 	
@@ -89,7 +90,9 @@ public class playerController : MonoBehaviour
 		}
 		if (other.CompareTag("Enemy"))
 		{
-			MyLevelManager.HurtPlayer(1);
+			if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
+				MyLevelManager.HurtPlayer (1);
+			}
 		}
 		if (other.CompareTag("Coin"))
 		{

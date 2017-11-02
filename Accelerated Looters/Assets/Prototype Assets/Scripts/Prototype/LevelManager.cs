@@ -40,8 +40,11 @@ public class LevelManager : MonoBehaviour
 
 	public void HurtPlayer(int damageAmount)
 	{
+		
 		CurrentHealth -= damageAmount;
 		UpdateHeartStatus();
+
+
 	}
 
 
@@ -52,6 +55,7 @@ public class LevelManager : MonoBehaviour
 			heart1.sprite = FullHeart;
 			heart2.sprite = FullHeart;
 			heart3.sprite = FullHeart;
+
 
 		}else if (CurrentHealth == 2)
 		{

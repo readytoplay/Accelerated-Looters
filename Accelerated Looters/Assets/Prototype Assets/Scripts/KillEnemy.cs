@@ -6,32 +6,31 @@ public class KillEnemy : MonoBehaviour
 {
 
 	public int enemyKilled;
-
-	public bool beingKilled;
+	public bool killingEnemy;		//determine are we killing enemy
 
 	// Use this for initialization
 	void Start ()
 	{
-		enemyKilled = 0;
-		beingKilled = false;
+		enemyKilled = 0;			//count how many enemy we killing
+
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		beingKilled = false;
+		killingEnemy = false;			//set killing enemy to false all the time
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Enemy"))
 		{
-			if (!beingKilled)
-			{
-				enemyKilled++;
-				beingKilled = true;
+			killingEnemy = true;		//set true if character killing someone
+			enemyKilled++;				//+1 when we killed the enemy
+			Destroy(other.gameObject);	//destory the enemy
+
 			}
-			Destroy(other.gameObject);
+			
 		}
 	}
-}
+
