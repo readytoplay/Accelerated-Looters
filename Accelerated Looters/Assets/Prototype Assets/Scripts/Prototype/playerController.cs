@@ -22,16 +22,20 @@ public class playerController : MonoBehaviour
 	public bool beingCollected;
 	public KillEnemy charaterKilling; //variable for KillEnemy class
 	public GameObject killBox;
-	
+	public CheckPointController checkPointChecker;	//check if we go though that checkpoint before
+	public int life_count;						//player health
+	public GameObject GameOver;					//display game over
 	// Use this for initialization
 	void Start ()
 	{
-		
+		life_count = 3;	//player life
 		beingCollected = false;
 		myRigidbody = GetComponent<Rigidbody2D>();
 		MyLevelManager=FindObjectOfType<LevelManager>();
 		charaterKilling = FindObjectOfType<KillEnemy> ();
+		checkPointChecker = FindObjectOfType<CheckPointController> ();
 		coins = 0;
+		GameOver.SetActive(false);				//hide game over
 	}
 	
 	// Update is called once per frame
@@ -41,9 +45,6 @@ public class playerController : MonoBehaviour
 		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 		//it does a overlap circle around the point that we have to the given size and checks if it is the right layer
 		//within us.
-		
-		
-		
 		
 		if (Input.GetAxisRaw("Horizontal")>0f) //move to right (value >0 is to the right)
 		{
@@ -67,27 +68,26 @@ public class playerController : MonoBehaviour
 		}
 		else
 		{
-				killBox.SetActive(false);
+			killBox.SetActive(false);
 		}
-		
-		
-		
-		
-		
+		if(life_count<=0){
+			GameOver.SetActive(true);		//set gameover true
+			Time.timeScale = 0;
+		}
+		if (transform.position.y <= -10.0) {			//if felt, lose health
+			MyLevelManager.HurtPlayer (1);
+			transform.position = respawn_pos;
+		}
 		
 	
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.CompareTag("KillPlane"))
-		{
-			transform.position = respawn_pos;
-			MyLevelManager.HurtPlayer(1);
-		}
-		if (other.CompareTag("CheckPoint"))
-		{
-			respawn_pos = other.transform.position;
-		}
+		if (other.CompareTag ("CheckPoint")) {
+				
+				respawn_pos = other.transform.position;			//record the transition point
+			}
+
 		if (other.CompareTag("Enemy"))
 		{
 			if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
@@ -108,8 +108,9 @@ public class playerController : MonoBehaviour
 		
 		
 	}
+	}
 
 
 
-}
+
 

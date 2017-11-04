@@ -8,74 +8,36 @@ public class LevelManager : MonoBehaviour
 {
 
 	public playerController Player;
-	
-	
-	
-	public Image heart1;
-	public Image heart2;
-	public Image heart3;
 
-	public Sprite FullHeart;
+	public int CurrentHealth;	//player health
 
-	public Sprite EmptyHeart;
 
-	public int TotalHealth;
-
-	public int CurrentHealth;
-	
-	
 	
 	
 
 	// Use this for initialization
 	void Start ()
 	{
-		CurrentHealth = TotalHealth;
+		Player = FindObjectOfType<playerController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		CurrentHealth = Player.life_count;		//record current health
+
 	}
 
 	public void HurtPlayer(int damageAmount)
 	{
-		
-		CurrentHealth -= damageAmount;
-		UpdateHeartStatus();
-
-
+		CurrentHealth -= damageAmount;			//decrease player health
+		Player.life_count = CurrentHealth;		//update player health
 	}
 
 
-	public void UpdateHeartStatus()
-	{
-		if (CurrentHealth == 3)
-		{
-			heart1.sprite = FullHeart;
-			heart2.sprite = FullHeart;
-			heart3.sprite = FullHeart;
 
 
-		}else if (CurrentHealth == 2)
-		{
-			heart1.sprite = FullHeart;
-			heart2.sprite = FullHeart;
-			heart3.sprite = EmptyHeart;
-		}
-		else if(CurrentHealth==1)
-		{
-			heart1.sprite = FullHeart;
-			heart2.sprite = EmptyHeart;
-			heart3.sprite = EmptyHeart;
-		} else if (CurrentHealth <= 0)
-		{
-			heart1.sprite = EmptyHeart;
-			heart2.sprite = EmptyHeart;
-			heart3.sprite = EmptyHeart;
-		}
 		
 		
 	}
 	
-}
+
