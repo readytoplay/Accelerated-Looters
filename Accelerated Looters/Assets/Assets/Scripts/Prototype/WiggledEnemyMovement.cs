@@ -40,10 +40,14 @@ public class WiggledEnemyMovement : MonoBehaviour
 		if (destination == rightPoint)
 		{
 			myRigidBody.velocity = new Vector3(moveSpeed, myRigidBody.velocity.y, 0f);
+			GetComponent<SpriteRenderer> ().flipX = false;
+
 		}
 		else
 		{
 			myRigidBody.velocity = new Vector3(-moveSpeed, myRigidBody.velocity.y, 0f);
+			GetComponent<SpriteRenderer> ().flipX = true;
+
 		}
 		
 		
