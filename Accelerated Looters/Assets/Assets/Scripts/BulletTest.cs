@@ -38,7 +38,7 @@ public class BulletTest : MonoBehaviour
 		
 			
 		
-		transform.Translate(10f*Time.deltaTime,0f,0f);
+		transform.Translate(-10f*Time.deltaTime,0f,0f);
 		maxDistance += 2f*Time.deltaTime;
 		if (maxDistance >= 2)
 		{
