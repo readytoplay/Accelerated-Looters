@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Coin
   - Bullet
+  - CheckPoint
+  - Enemy
+  - goal
   layers:
   - Default
   - TransparentFX
