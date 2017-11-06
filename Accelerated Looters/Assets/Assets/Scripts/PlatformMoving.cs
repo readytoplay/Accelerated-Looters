@@ -20,7 +20,7 @@ public class PlatformMoving : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//from our current position to our target time with some speed
-		transform.position = Vector2.MoveTowards (transform.position, point [nextPoint].position, speed * Time.deltaTime);
+		transform.position = Vector3.MoveTowards (transform.position, point [nextPoint].position, speed * Time.deltaTime);
 		if (transform.position == point [nextPoint].position) {//check if we arrive the point
 			nextPoint ++; //+1 which toworard to other point
 			if (nextPoint == point.Length) {

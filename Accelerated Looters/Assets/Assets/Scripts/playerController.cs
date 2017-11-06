@@ -143,6 +143,22 @@ public class playerController : MonoBehaviour
 		}
 		
 		
+	}//wehn player collide
+
+	void OnCollisionEnter2D(Collision2D player){
+		//if player collide with platform
+		if (player.gameObject.CompareTag ("movingPlatform")) {
+			transform.SetParent (player.transform);  //set the player parent to the movingPlatform and move together
+
+		}
+	}
+	//when player exit collide
+	void OnCollisionExit2D(Collision2D player){
+
+		if (player.gameObject.CompareTag ("movingPlatform")) {
+			transform.SetParent (null);				//set the player parent off the movingPlatform
+		}
+
 	}
 
 	public void setHighJump(){ //increases height of jump
