@@ -25,6 +25,12 @@ public class playerController : MonoBehaviour
 	public CheckPointController checkPointChecker;	//check if we go though that checkpoint before
 	public int life_count;						//player health
 	public GameObject GameOver;					//display game over
+	public float HighJumpTimer = 10.0f; //Timer for HighJump power
+	public float SpeedBoostTimer = 10.0f; //Timer for SpeedBoost power
+	public float DoubleCoinTimer = 10.0f; //Timer for DoubleCoin power
+	public bool CoinBoost; //does player get extra coins
+	public bool Invincible; //is the player invincible
+	public float InvincibleTimer = 10.0f; //Timer for Invincible power
 	// Use this for initialization
 	void Start ()
 	{
@@ -35,6 +41,7 @@ public class playerController : MonoBehaviour
 		charaterKilling = FindObjectOfType<KillEnemy> ();
 		checkPointChecker = FindObjectOfType<CheckPointController> ();
 		coins = 0;
+		CoinBoost = false;
 		GameOver.SetActive(false);				//hide game over
 	}
 	
@@ -59,7 +66,7 @@ public class playerController : MonoBehaviour
 		if (Input.GetButtonDown("Jump")&&isGrounded) //jump (value>0 is up)
 		{
 			myRigidbody.velocity=new Vector3(myRigidbody.velocity.x,jumpSpeed,0);
-			
+
 		}
 
 		if (myRigidbody.velocity.y < 0)
@@ -78,7 +85,30 @@ public class playerController : MonoBehaviour
 			MyLevelManager.HurtPlayer (1);
 			transform.position = respawn_pos;
 		}
-		
+
+		HighJumpTimer -= Time.deltaTime; //decreases HighJump timer
+		if (HighJumpTimer <= 0) { 
+			HighJumpTimer = 10.0f; //reset HighJump timer
+			jumpSpeed = 11f; //reset HighJump to normal
+		}
+
+		SpeedBoostTimer -= Time.deltaTime; //decreases SpeedBoost timer
+		if (SpeedBoostTimer <= 0) { 
+			SpeedBoostTimer = 10.0f; //reset SpeedBoost timer
+			moveSpeed = 10; //reset SpeedBoost to normal
+		}
+
+		DoubleCoinTimer -= Time.deltaTime; //decreases DoubleCoin timer
+		if (DoubleCoinTimer <= 0) { 
+			DoubleCoinTimer = 10.0f; //reset DoubleCoin timer
+			CoinBoost = false; //reset CoinBoost to normal
+		}
+
+		InvincibleTimer -= Time.deltaTime; //decreases Invincible timer
+		if (InvincibleTimer <= 0) { 
+			InvincibleTimer = 10.0f; //reset Invincible timer
+			Invincible = false; //reset Invincible to normal
+		}
 	
 	}
 	
@@ -90,8 +120,10 @@ public class playerController : MonoBehaviour
 
 		if (other.CompareTag("Enemy"))
 		{
-			if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
-				MyLevelManager.HurtPlayer (1);
+			if (!Invincible) { //check if player is invincible before doing damage
+				if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
+					MyLevelManager.HurtPlayer (1);
+				}
 			}
 		}
 		if (other.CompareTag("Coin"))
@@ -99,8 +131,12 @@ public class playerController : MonoBehaviour
 			//In case the coins are being collected again before it disappears
 			if (!beingCollected) 
 			{
-				coins++;
-				beingCollected = true;
+				if (CoinBoost) {
+					coins = coins + 2;
+					beingCollected = true;
+				} else {
+					coins++;
+				}
 			}
 			Destroy(other.gameObject);
 			
@@ -108,6 +144,27 @@ public class playerController : MonoBehaviour
 		
 		
 	}
+
+	public void setHighJump(){ //increases height of jump
+		jumpSpeed = 17;
+		HighJumpTimer = 10.0f;
+	}
+
+	public void setSpeedBoost(){ //increases height of jump
+		moveSpeed = 20f;
+		SpeedBoostTimer = 10.0f;
+	}
+
+	public void setDoubleCoin(){ //doubles amount of coins collected
+		CoinBoost = true;
+		DoubleCoinTimer = 10.0f;
+	}
+
+	public void setInvincible(){ //doubles amount of coins collected
+		Invincible = true;
+		InvincibleTimer = 10.0f;
+	}
+
 	}
 
 
