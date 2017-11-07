@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 9
+  controlID: 123
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,8 +91,8 @@ MonoBehaviour:
     y: 0
     width: 276
     height: 459
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 10
+  controlID: 77
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 11
+  controlID: 41
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -376,19 +376,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Prototype Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Prototype Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Monika\Documents\Accelerated-Looters\Accelerated Looters
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c270000
-    m_LastClickedID: 10140
-    m_ExpandedIDs: 000000009c270000aa270000e42700001a310000543200005a320000cc3400006235000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 234}
+    m_SelectedIDs: 62320000
+    m_LastClickedID: 12898
+    m_ExpandedIDs: 00000000a0270000ae270000e8270000203100005c320000d63400006c35000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -416,7 +416,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c270000aa270000e42700001a310000543200005a320000cc34000062350000
+    m_ExpandedIDs: 00000000a0270000ae270000e8270000203100005c320000d63400006c350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -582,7 +582,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 102}
     m_SelectedIDs: d6340000
     m_LastClickedID: 13526
-    m_ExpandedIDs: 000000009c270000aa270000e42700001a31000024320000543200005a320000cc340000603500006235000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000a0270000ae270000e8270000203100005c320000d63400006c350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -610,7 +610,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009c270000aa270000e42700001a310000543200005a320000cc34000062350000
+    m_ExpandedIDs: 00000000a0270000ae270000e8270000203100005c320000d63400006c350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -691,7 +691,7 @@ MonoBehaviour:
     y: 92
     width: 278
     height: 710
-  m_ScrollPosition: {x: 0, y: 540}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 160
@@ -725,24 +725,24 @@ MonoBehaviour:
     width: 274
     height: 438
   m_TreeViewState:
-    scrollPos: {x: 0, y: 171}
-    m_SelectedIDs: 82ccfcff
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: cefaffff9efbffff0000000052360000603600007836000088360000
+    m_ExpandedIDs: 28faffff9efbffff000000006236000070360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: WiggleHolder_Cat
+      m_OriginalName: WiggleHolder_Cat
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -1496
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -778,14 +778,14 @@ MonoBehaviour:
     width: 976
     height: 438
   m_SceneLighting: 1
-  lastFramingTime: 2033.2855020246914
+  lastFramingTime: 1167.185909011717
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.245199, y: -4.362413, z: 0}
+    m_Target: {x: 0.5105308, y: 0.6126348, z: -0.109375}
     speed: 2
-    m_Value: {x: -5.245199, y: -4.362413, z: 0}
+    m_Value: {x: 0.5105308, y: 0.6126348, z: -0.109375}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -812,9 +812,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 20.757126
+    m_Target: 22
     speed: 2
-    m_Value: 20.757126
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2
