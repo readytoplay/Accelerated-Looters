@@ -8,6 +8,10 @@ TagManager:
   - CheckPoint
   - Enemy
   - Coin
+  - movingPlatform
+  - goal
+  - Bullet
+  - Powerup
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
