@@ -1,0 +1,48 @@
+types of platforms: floor, 
+
+Step 1:
+generate_floor(starting_position)
+	chunk = generate_chunk(starting_position)
+	current_pos = 0
+	while(current_pos < chunk.length)
+		floor_piece = generate_floor_piece(random number between 3-5)
+		current_pos = floor_piece.width
+		set_visible(floor_piece, random(true or false)
+	endwhile
+	generate_playability(chunk)
+	await player.pos = chunk.mid
+	generate_floor(chunk.right)
+end algorithm
+
+Step 2: generate playability
+
+generate_air_piece( (startx, endx), maximum_y_start, maximum_x_start)
+	piece_x_left  = random num between startx and maximum_x_start
+	piece_x_right = random num between (endx - maximum_x_start) and (endx + random number between 3 and 5)
+	piece_y       = random num between floor_y and maximum_y_start
+	return generate_piece(piece_x_left, piece_x_right, piece_y)
+end algorithm
+
+generate_playability(chunk)
+	hole_list< (pos, pos) > = scan_for_holes(chunk)
+	foreach pos1,pos2 in hole_list
+		generate_air_piece( (pos1,pos2), player.jump_range_y, player.jump_range_x)
+	endfor
+end algorithm
+		
+step 3:
+
+jumpable(player_pos, player_maximum_y_jump, player_maximum_x_jump)
+	return ( random(player_pos.x and player_maximum_x_jump), random(player_maximum_y_jump and player_pos.y) )
+end algorithm
+
+generate_random_jumpable()
+	if satisfied, end algorithm (could be num blocks)
+	foreach piece in list_of_pieces
+		if( random true or false) continue
+		j = jumplable(player.pos, player.y_jump_max, player.x_jump_max)
+		generate_piece(startx: j.first, starty: j.second, length: random(1 and 5))
+	end for
+	generate_random_jumpable()
+end algorithm
+	

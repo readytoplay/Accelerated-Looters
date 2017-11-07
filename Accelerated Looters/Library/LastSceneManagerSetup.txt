@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Prototype Assets/Scenes/Prototype/Prototype Scene.unity
+- path: Assets/Assets/Scenes/Jungle Level 1.unity
   isLoaded: 1
   isActive: 1
