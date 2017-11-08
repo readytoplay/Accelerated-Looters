@@ -33,6 +33,8 @@ public class playerController : MonoBehaviour
 	public bool Invincible; //is the player invincible
 	public float InvincibleTimer = 10.0f; //Timer for Invincible power
 	public GameObject spike;
+	public float originalJumpSpeed;
+	public float originalSpeed;
 
 
 	// Use this for initialization
@@ -47,7 +49,11 @@ public class playerController : MonoBehaviour
 		coins = 0;
 		CoinBoost = false;
 		GameOver.SetActive(false);				//hide game over
-        
+		originalJumpSpeed = jumpSpeed;
+		originalSpeed = moveSpeed;
+
+
+
 	}
 
     // Update is called once per frame
@@ -97,14 +103,14 @@ public class playerController : MonoBehaviour
         if (HighJumpTimer <= 0)
         {
             HighJumpTimer = 10.0f; //reset HighJump timer
-            jumpSpeed = 11f; //reset HighJump to normal
+            jumpSpeed = originalJumpSpeed; //reset HighJump to normal
         }
 
         SpeedBoostTimer -= Time.deltaTime; //decreases SpeedBoost timer
         if (SpeedBoostTimer <= 0)
         {
             SpeedBoostTimer = 10.0f; //reset SpeedBoost timer
-            moveSpeed = 10; //reset SpeedBoost to normal
+            moveSpeed = originalSpeed; //reset SpeedBoost to normal
         }
 
         DoubleCoinTimer -= Time.deltaTime; //decreases DoubleCoin timer
