@@ -31,6 +31,8 @@ public class playerController : MonoBehaviour
 	public bool CoinBoost; //does player get extra coins
 	public bool Invincible; //is the player invincible
 	public float InvincibleTimer = 10.0f; //Timer for Invincible power
+	public GameObject spike;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -141,6 +143,7 @@ public class playerController : MonoBehaviour
 			Destroy(other.gameObject);
 			
 		}
+
 		
 		
 	}//wehn player collide

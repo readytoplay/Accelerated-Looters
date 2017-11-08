@@ -12,6 +12,7 @@ TagManager:
   - goal
   - Bullet
   - Powerup
+  - spike
   layers:
   - Default
   - TransparentFX
