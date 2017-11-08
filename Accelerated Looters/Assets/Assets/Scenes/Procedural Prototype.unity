@@ -190,13 +190,18 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538362140}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.83, y: -3.65, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1127618352}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1127618352 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4917585720765266, guid: ee432d38306e0ef408d00736a0663813,
+    type: 2}
+  m_PrefabInternal: {fileID: 2002496398}
 --- !u!1 &1382357971
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a044e675970ce704c98ec3add5e7914b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gO: {fileID: 1956779609480192, guid: dd50171602ea4de40bff68d87a3a5369, type: 2}
+  prefab_lowerPlatform: {fileID: 1956779609480192, guid: dd50171602ea4de40bff68d87a3a5369,
+    type: 2}
+  prefab_spikes: {fileID: 0}
 --- !u!4 &1382357973
 Transform:
   m_ObjectHideFlags: 0
@@ -236,7 +243,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2002496398
 Prefab:
@@ -247,11 +254,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4917585720765266, guid: ee432d38306e0ef408d00736a0663813, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.094047
+      value: -0.83
       objectReference: {fileID: 0}
     - target: {fileID: 4917585720765266, guid: ee432d38306e0ef408d00736a0663813, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.422533
+      value: 3.65
       objectReference: {fileID: 0}
     - target: {fileID: 4917585720765266, guid: ee432d38306e0ef408d00736a0663813, type: 2}
       propertyPath: m_LocalPosition.z
@@ -275,7 +282,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4917585720765266, guid: ee432d38306e0ef408d00736a0663813, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4917585720765266, guid: ee432d38306e0ef408d00736a0663813, type: 2}
       propertyPath: m_LocalScale.x
