@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using UnityEngine.UI;
 using UnityEngine;
 
 
@@ -33,6 +34,7 @@ public class playerController : MonoBehaviour
 	public float InvincibleTimer = 10.0f; //Timer for Invincible power
 	public GameObject spike;
 
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -45,76 +47,90 @@ public class playerController : MonoBehaviour
 		coins = 0;
 		CoinBoost = false;
 		GameOver.SetActive(false);				//hide game over
+        
 	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		beingCollected = false;
-		isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-		//it does a overlap circle around the point that we have to the given size and checks if it is the right layer
-		//within us.
-		
-		if (Input.GetAxisRaw("Horizontal")>0f) //move to right (value >0 is to the right)
-		{
-			myRigidbody.velocity=new Vector3(moveSpeed, myRigidbody.velocity.y,0);
-			
-		} 
-		else if (Input.GetAxisRaw("Horizontal")<0f) //move to right (value >0 is to the right)
-		{
-			myRigidbody.velocity=new Vector3(-moveSpeed, myRigidbody.velocity.y,0);
 
-		} 
-		if (Input.GetButtonDown("Jump")&&isGrounded) //jump (value>0 is up)
-		{
-			myRigidbody.velocity=new Vector3(myRigidbody.velocity.x,jumpSpeed,0);
+    // Update is called once per frame
+    void Update()
+    {
+        beingCollected = false;
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+        //it does a overlap circle around the point that we have to the given size and checks if it is the right layer
+        //within us.
 
-		}
+        if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
+        {
+            myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
 
-		if (myRigidbody.velocity.y < 0)
-		{
-			killBox.SetActive(true);
-		}
-		else
-		{
-			killBox.SetActive(false);
-		}
-		if(life_count<=0){
-			GameOver.SetActive(true);		//set gameover true
-			Time.timeScale = 0;
-		}
-		if (transform.position.y <= -10.0) {			//if felt, lose health
-			MyLevelManager.HurtPlayer (1);
-			transform.position = respawn_pos;
-		}
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
+        {
+            myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
 
-		HighJumpTimer -= Time.deltaTime; //decreases HighJump timer
-		if (HighJumpTimer <= 0) { 
-			HighJumpTimer = 10.0f; //reset HighJump timer
-			jumpSpeed = 11f; //reset HighJump to normal
-		}
+        }
+        if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
+        {
+            myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0);
 
-		SpeedBoostTimer -= Time.deltaTime; //decreases SpeedBoost timer
-		if (SpeedBoostTimer <= 0) { 
-			SpeedBoostTimer = 10.0f; //reset SpeedBoost timer
-			moveSpeed = 10; //reset SpeedBoost to normal
-		}
+        }
 
-		DoubleCoinTimer -= Time.deltaTime; //decreases DoubleCoin timer
-		if (DoubleCoinTimer <= 0) { 
-			DoubleCoinTimer = 10.0f; //reset DoubleCoin timer
-			CoinBoost = false; //reset CoinBoost to normal
-		}
+        if (myRigidbody.velocity.y < 0)
+        {
+            killBox.SetActive(true);
+        }
+        else
+        {
+            killBox.SetActive(false);
+        }
+        if (life_count <= 0)
+        {
+            GameOver.SetActive(true);       //set gameover true
+            Time.timeScale = 0;
+        }
+        if (transform.position.y <= -10.0)
+        {           //if felt, lose health
+            MyLevelManager.HurtPlayer(1);
+            transform.position = respawn_pos;
+        }
 
-		InvincibleTimer -= Time.deltaTime; //decreases Invincible timer
-		if (InvincibleTimer <= 0) { 
-			InvincibleTimer = 10.0f; //reset Invincible timer
-			Invincible = false; //reset Invincible to normal
-		}
-	
-	}
-	
-	void OnTriggerEnter2D(Collider2D other){
+        HighJumpTimer -= Time.deltaTime; //decreases HighJump timer
+        if (HighJumpTimer <= 0)
+        {
+            HighJumpTimer = 10.0f; //reset HighJump timer
+            jumpSpeed = 11f; //reset HighJump to normal
+        }
+
+        SpeedBoostTimer -= Time.deltaTime; //decreases SpeedBoost timer
+        if (SpeedBoostTimer <= 0)
+        {
+            SpeedBoostTimer = 10.0f; //reset SpeedBoost timer
+            moveSpeed = 10; //reset SpeedBoost to normal
+        }
+
+        DoubleCoinTimer -= Time.deltaTime; //decreases DoubleCoin timer
+        if (DoubleCoinTimer <= 0)
+        {
+            DoubleCoinTimer = 10.0f; //reset DoubleCoin timer
+            CoinBoost = false; //reset CoinBoost to normal
+        }
+
+        InvincibleTimer -= Time.deltaTime; //decreases Invincible timer
+        if (InvincibleTimer <= 0)
+        {
+            InvincibleTimer = 10.0f; //reset Invincible timer
+            Invincible = false; //reset Invincible to normal
+        }
+
+      //  if (Input.GetKeyDown(KeyCode.Escape) && paused == false)
+      //  {
+       //     paused = togglePause();
+       //     pauseMenuTemplate.SetActive(true);
+       // } 
+
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other){
 		if (other.CompareTag ("CheckPoint")) {
 				
 				respawn_pos = other.transform.position;			//record the transition point
@@ -146,7 +162,7 @@ public class playerController : MonoBehaviour
 
 		
 		
-	}//wehn player collide
+	}//when player collide
 
 	void OnCollisionEnter2D(Collision2D player){
 		//if player collide with platform
@@ -184,9 +200,4 @@ public class playerController : MonoBehaviour
 		InvincibleTimer = 10.0f;
 	}
 
-	}
-
-
-
-
-
+}
