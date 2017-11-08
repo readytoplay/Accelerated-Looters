@@ -22,7 +22,7 @@ public class Coins : MonoBehaviour {
 	{
 		coin = p.coins;
 		
-		coins.text = ("Coins = " + coin);
+		coins.text = ("" + coin);
 
 	}
 

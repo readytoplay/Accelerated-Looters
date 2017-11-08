@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour  {
 
     // Update is called once per frame
     void Update()   {
-        timer.text = ("Time = " + time + "s");
+        timer.text = (time + "s");
 
     }
 
