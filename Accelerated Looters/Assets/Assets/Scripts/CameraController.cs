@@ -31,22 +31,32 @@ public class CameraController : MonoBehaviour
 	void Update ()
 	{
 		//camera follow the player when it moves left and right.
-		TargetPosition = new Vector3(Player.transform.position.x, transform.position.y,transform.position.z);
-		
+		//TargetPosition = new Vector3(Player.transform.position.x, transform.position.y,transform.position.z);
+		TargetPosition = new Vector3(Player.transform.position.x, Player.transform.position.y,transform.position.z);
 		//check the direction that the player is going
 
-		if (Player.transform.localPosition.x > 0f)
+		if (Player.transform.localPosition.x > 3f && Player.transform.localPosition.y > 3f)
 		{
-			TargetPosition = new Vector3(TargetPosition.x + AheadOfPlayer, transform.position.y, transform.position.z);
+			TargetPosition = new Vector3(TargetPosition.x + AheadOfPlayer, TargetPosition.y + AheadOfPlayer , transform.position.z);
 			
 		}
-		else
+		else if (Player.transform.localPosition.x > 3f && Player.transform.localPosition.y < -3f)
 		{
-			TargetPosition = new Vector3(TargetPosition.x - AheadOfPlayer, transform.position.y, transform.position.z);
+			TargetPosition = new Vector3(TargetPosition.x + AheadOfPlayer, TargetPosition.y - AheadOfPlayer, transform.position.z);
+			
+		} else if (Player.transform.localPosition.x < -3f && Player.transform.localPosition.y < -3f)
+		{
+			TargetPosition = new Vector3(TargetPosition.x - AheadOfPlayer, TargetPosition.y - AheadOfPlayer, transform.position.z);
+			
+		}
+		else if (Player.transform.localPosition.x < -3f && Player.transform.localPosition.y > 3f)
+		{
+			TargetPosition = new Vector3(TargetPosition.x - AheadOfPlayer, TargetPosition.y + AheadOfPlayer, transform.position.z);
 			
 		}
 
-		    transform.position = Vector3.Lerp(transform.position, TargetPosition, DelayTime*Time.deltaTime);
+
+		transform.position = Vector3.Lerp(transform.position, TargetPosition, DelayTime*Time.deltaTime);
 		
 
 	}
