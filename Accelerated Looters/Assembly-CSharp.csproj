@@ -82,7 +82,7 @@
     <None Include="Assets\Assets\Other\Settings\LibraryFormatVersion.txt" />
     <None Include="Assets\Assets\Other\Settings\LastSceneManagerSetup.txt" />
     <Reference Include="Facebook.Unity.Settings">
-      <HintPath>C:/Users/Monika/Documents/Accelerated-Looters1/Accelerated Looters/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+      <HintPath>C:/Users/Monika/Documents/Accelerated-Looters-dev/Accelerated Looters/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
