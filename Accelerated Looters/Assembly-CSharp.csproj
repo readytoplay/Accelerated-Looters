@@ -78,6 +78,7 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
+    <Compile Include="Assets\WiggleEnemy2.cs" />
     <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Assets\Other\Settings\LibraryFormatVersion.txt" />
     <None Include="Assets\Assets\Other\Settings\LastSceneManagerSetup.txt" />
