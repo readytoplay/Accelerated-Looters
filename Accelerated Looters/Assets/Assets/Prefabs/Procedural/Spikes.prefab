@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4129243536727800}
   - component: {fileID: 212645546405694136}
   - component: {fileID: 61272020826042774}
+  - component: {fileID: 114090976703864262}
   m_Layer: 8
   m_Name: Spikes
   m_TagString: Untagged
@@ -66,6 +67,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 0.59}
   m_EdgeRadius: 0
+--- !u!114 &114090976703864262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363288706106820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01453358195c3455ab57e81d56d34ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 114049242446244920, guid: ee432d38306e0ef408d00736a0663813, type: 2}
 --- !u!212 &212645546405694136
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -75,7 +88,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -91,7 +103,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -108,5 +119,3 @@ SpriteRenderer:
   m_Size: {x: 0.96, y: 0.59}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
