@@ -18,6 +18,7 @@ public class PauseMenu : MonoBehaviour {
 
         // set the pause menu view to false on start
         pauseMenuTemplate.SetActive(false);
+        
 
         // add button click listeners
         resumeButton.onClick.AddListener(resumeButtonOnClick); 
