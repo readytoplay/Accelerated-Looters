@@ -6,64 +6,93 @@ using UnityEngine.UI;
 using UnityEngine;
 
 
-public class playerController : MonoBehaviour
-{
+public class playerController : MonoBehaviour {
 
-	public float moveSpeed;
-	public Rigidbody2D myRigidbody;
-	public float jumpSpeed;
-	public Transform groundCheck; //the point that is at the buttom of the character to check if it touched the ground
-	public float groundRadius; 
-	public LayerMask whatIsGround; // specify the layer "Ground" (all the platforms and grounds.)
-	Vector3 respawn_pos;	//the position that the player gonna respawn
-	public bool isGrounded; // make sure we don't have to check all the time
-	public float time1;
-	public LevelManager MyLevelManager;
-	public int coins;
-	public bool beingCollected;
-	public KillEnemy charaterKilling; //variable for KillEnemy class
-	public GameObject killBox;
-	public CheckPointController checkPointChecker;	//check if we go though that checkpoint before
-	public int life_count;						//player health
-	public GameObject GameOver;					//display game over
-	public float HighJumpTimer = 10.0f; //Timer for HighJump power
-	public float SpeedBoostTimer = 10.0f; //Timer for SpeedBoost power
-	public float DoubleCoinTimer = 10.0f; //Timer for DoubleCoin power
-	public bool CoinBoost; //does player get extra coins
-	public bool Invincible; //is the player invincible
-	public float InvincibleTimer = 10.0f; //Timer for Invincible power
-	public GameObject spike;
-	public float originalJumpSpeed;
-	public float originalSpeed;
+    // Integers ***
+    public int coins;
+    public int life_count; //player health
+
+    // Floats ***
+    public float moveSpeed;
+    public float originalSpeed;
+
+    public float jumpSpeed;
+    public float originalJumpSpeed;
+
+    public float groundRadius;
+    public float time1;
+
+    public float HighJumpTimer = 10.0f; //Timer for HighJump power
+    public float SpeedBoostTimer = 10.0f; //Timer for SpeedBoost power
+    public float DoubleCoinTimer = 10.0f; //Timer for DoubleCoin power    
+    public float InvincibleTimer = 10.0f; //Timer for Invincible power
+
+    // Booleans ***
+    public bool isGrounded; // make sure we don't have to check all the time
+    public bool CoinBoost; //does player get extra coins
+    public bool Invincible; //is the player invincible
+    public bool beingCollected;
+
+    // Objects ***
+    // Game Objects 
+    public GameObject spike;
+    public GameObject GameOver; //display game over
+    public GameObject killBox;
+
+    // Other Objects
+    public Rigidbody2D myRigidbody;
+    public Transform groundCheck; //the point that is at the buttom of the character to check if it touched the ground
+    public LayerMask whatIsGround; // specify the layer "Ground" (all the platforms and grounds.)
+    public KillEnemy charaterKilling; //variable for KillEnemy class
+    public LevelManager MyLevelManager;
+    public CheckPointController checkPointChecker;  //check if we go though that checkpoint before
+
+    Vector3 respawn_pos;    //the position that the player gonna respawn
+
+    
+    // Use this for initialization
+    void Start() {
+
+        // Variable Setting
+        life_count = 3; // player life
+        originalJumpSpeed = jumpSpeed;
+        originalSpeed = moveSpeed;
+        beingCollected = false;
+        coins = 0;
+        CoinBoost = false;
+        GameOver.SetActive(false); // hide game over
 
 
-	// Use this for initialization
-	void Start ()
-	{
-		life_count = 3;	//player life
-		beingCollected = false;
-		myRigidbody = GetComponent<Rigidbody2D>();
-		MyLevelManager=FindObjectOfType<LevelManager>();
-		charaterKilling = FindObjectOfType<KillEnemy> ();
-		checkPointChecker = FindObjectOfType<CheckPointController> ();
-		coins = 0;
-		CoinBoost = false;
-		GameOver.SetActive(false);				//hide game over
-		originalJumpSpeed = jumpSpeed;
-		originalSpeed = moveSpeed;
+        // Get Components/Get Types
+        myRigidbody = GetComponent<Rigidbody2D>();
+        MyLevelManager = FindObjectOfType<LevelManager>();
+        charaterKilling = FindObjectOfType<KillEnemy>();
+        checkPointChecker = FindObjectOfType<CheckPointController>();
 
-
-
-	}
+    }
 
     // Update is called once per frame
+    // Everyone, please use functions and function calls instead of putting everything in the Update() function, thanks.
     void Update()
     {
         beingCollected = false;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-        //it does a overlap circle around the point that we have to the given size and checks if it is the right layer
-        //within us.
 
+        handleMovement(); // handles player's movement
+
+        handleFallingOffMap(); // if player falls off map
+
+        healthManage(); // check life count
+
+        powerUpTimers(); // handles the power up timers
+
+    }
+
+    /*
+     * Method for movement
+     */
+    void handleMovement()
+    {
         if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
         {
             myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
@@ -88,17 +117,14 @@ public class playerController : MonoBehaviour
         {
             killBox.SetActive(false);
         }
-        if (life_count <= 0)
-        {
-            GameOver.SetActive(true);       //set gameover true
-            Time.timeScale = 0;
-        }
-        if (transform.position.y <= -10.0)
-        {           //if felt, lose health
-            MyLevelManager.HurtPlayer(1);
-            transform.position = respawn_pos;
-        }
 
+    }
+
+    /*
+     * Method for handling the power up timers
+     */
+    void powerUpTimers()
+    {
         HighJumpTimer -= Time.deltaTime; //decreases HighJump timer
         if (HighJumpTimer <= 0)
         {
@@ -126,14 +152,30 @@ public class playerController : MonoBehaviour
             InvincibleTimer = 10.0f; //reset Invincible timer
             Invincible = false; //reset Invincible to normal
         }
+    }
 
-      //  if (Input.GetKeyDown(KeyCode.Escape) && paused == false)
-      //  {
-       //     paused = togglePause();
-       //     pauseMenuTemplate.SetActive(true);
-       // } 
+    /*
+    * Methof for handling if the player falls off the map
+    */
+    void handleFallingOffMap()
+    {
+        if (transform.position.y <= -10.0)
+        {           //if felt, lose health
+            MyLevelManager.HurtPlayer(1);
+            transform.position = respawn_pos;
+        }
+    }
 
-
+    /*
+     * Check player's health status
+     */
+    void healthManage()
+    {
+        if (life_count <= 0)
+        {
+            GameOver.SetActive(true);       //set gameover true
+            Time.timeScale = 0;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other){

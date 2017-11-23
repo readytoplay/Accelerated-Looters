@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Assets/Scenes/Underwater Level 2.unity
-=======
-- path: Assets/Assets/Scenes/Haunted Level 3.unity
->>>>>>> origin/develop
   isLoaded: 1
   isActive: 1
