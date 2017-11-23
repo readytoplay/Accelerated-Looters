@@ -85,37 +85,34 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Facebook.Unity.Settings">
-      <HintPath>Library\FacebookSDK\Facebook.Unity.Settings.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\BasicEnemyController.cs" />
-    <Compile Include="Assets\Scripts\BulletTest.cs" />
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\CheckPointController.cs" />
-    <Compile Include="Assets\Scripts\Coins.cs" />
-    <Compile Include="Assets\Scripts\DoubleCoinPowerUp.cs" />
-    <Compile Include="Assets\Scripts\EnemiesKilled.cs" />
-    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
-    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\enemyTop.cs" />
-    <Compile Include="Assets\Scripts\HighJumpPowerUP.cs" />
-    <Compile Include="Assets\Scripts\InvincibilityPowerUp.cs" />
-    <Compile Include="Assets\Scripts\KillEnemy.cs" />
-    <Compile Include="Assets\Scripts\LevelManager.cs" />
-    <Compile Include="Assets\Scripts\life_number_Script.cs" />
-    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
-    <Compile Include="Assets\Scripts\PlatformMoving.cs" />
-    <Compile Include="Assets\Scripts\playerController.cs" />
-    <Compile Include="Assets\Scripts\ProceduralController.cs" />
-    <Compile Include="Assets\Scripts\Shooting.cs" />
-    <Compile Include="Assets\Scripts\SpeedBoostPowerUp.cs" />
-    <Compile Include="Assets\Scripts\Spike.cs" />
-    <Compile Include="Assets\Scripts\StartButton.cs" />
-    <Compile Include="Assets\Scripts\StartScreen.cs" />
-    <Compile Include="Assets\Scripts\Timer.cs" />
-    <Compile Include="Assets\Scripts\WiggledEnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\BasicEnemyController.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\BulletTest.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemiesKilled.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\enemyTop.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\KillEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\Shooting.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\CheckPointController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\PlatformMoving.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\playerController.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Spike.cs" />
+    <Compile Include="Assets\Scripts\Power Up Scripts\DoubleCoinPowerUp.cs" />
+    <Compile Include="Assets\Scripts\Power Up Scripts\HighJumpPowerUP.cs" />
+    <Compile Include="Assets\Scripts\Power Up Scripts\InvincibilityPowerUp.cs" />
+    <Compile Include="Assets\Scripts\Power Up Scripts\SpeedBoostPowerUp.cs" />
+    <Compile Include="Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\Coins.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\life_number_Script.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\StartButton.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\StartScreen.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\Timer.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Other\Settings\LastSceneManagerSetup.txt" />
