@@ -95,8 +95,7 @@ public class playerController : MonoBehaviour {
     void handleMovement()
     {
 
-        if (isGrounded)
-        {
+
 
             if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
             {
@@ -108,19 +107,7 @@ public class playerController : MonoBehaviour {
                 myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
 
             }
-        } else if(!isGrounded)
-        {
-            if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(inAirMoveSpeed, myRigidbody.velocity.y, 0);
 
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(-inAirMoveSpeed, myRigidbody.velocity.y, 0);
-
-            }
-        }
 
         if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
         {
