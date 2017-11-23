@@ -82,7 +82,7 @@ public class playerController : MonoBehaviour {
 
         handleFallingOffMap(); // if player falls off map
 
-        healthManage(); // check life count
+        healthManager(); // check life count
 
         powerUpTimers(); // handles the power up timers
 
@@ -169,7 +169,7 @@ public class playerController : MonoBehaviour {
     /*
      * Check player's health status
      */
-    void healthManage()
+    void healthManager()
     {
         if (life_count <= 0)
         {
