@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 //this script is for spike
 public class Spike : MonoBehaviour {
 	public playerController player;		
 
 	// Use this for initialization
-	void Start () {
-		player = GameObject.Find ("Player").GetComponent<playerController>(); //gets script to access
-			
+	void Start ()
+	{
+		player = FindObjectOfType<playerController>(); //gets script to access
+
 	}
 	
 	// Update is called once per frame
