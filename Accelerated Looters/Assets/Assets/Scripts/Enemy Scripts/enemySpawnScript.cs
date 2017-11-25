@@ -17,14 +17,23 @@ public class enemySpawnScript : MonoBehaviour {
 
 	void Update (){
 
-		if(timer<Time.time){		//cooldown
-			int spawnPointIndex=Random.Range(0,spawnPoints.Length);
+		if (timer < Time.time) {		//cooldown
+			int spawnPointIndex = Random.Range (0, spawnPoints.Length);
 			spawnSpot = spawnPointIndex;
-			Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-			timer = Time.time + 10;
+			Instantiate (enemy, spawnPoints [spawnPointIndex].position, spawnPoints [spawnPointIndex].rotation);
+			timer = Time.time + 5;
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D other){
+		if (other.gameObject.tag == "Player")
+			{
+			this.gameObject.SetActive (false);
+			}
+
 		}
 
 
 
 	}
-}
+

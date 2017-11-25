@@ -13,6 +13,8 @@ TagManager:
   - Bullet
   - Powerup
   - spike
+  - enemySpawnHouse
+  - SpawnEnemy
   layers:
   - Default
   - TransparentFX
