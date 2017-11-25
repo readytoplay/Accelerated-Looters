@@ -100,14 +100,15 @@ public class playerController : MonoBehaviour {
             if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
             {
                 myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
+	            transform.eulerAngles = new Vector2(0,0); //flip the character
 
             }
             else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
             {
                 myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
+				transform.eulerAngles = new Vector2(0,180); //flip the character
 
             }
-
 
         if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
         {
