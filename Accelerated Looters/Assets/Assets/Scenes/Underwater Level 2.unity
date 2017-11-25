@@ -2386,6 +2386,31 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &573689086 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 128850, guid: b6ed95875921a1f4f9c6f17b9f812b11, type: 2}
+  m_PrefabInternal: {fileID: 744073862}
+--- !u!95 &573689088 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 9563046, guid: b6ed95875921a1f4f9c6f17b9f812b11,
+    type: 2}
+  m_PrefabInternal: {fileID: 744073862}
+--- !u!114 &573689089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 573689086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6734e1a78bcc9754ca7c2ac248e25a2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p: {fileID: 1476673345}
+  a: {fileID: 573689088}
+  MyRigidbody2D: {fileID: 0}
+  velocity: 0
+  isGrounded: 0
 --- !u!1 &586246959
 GameObject:
   m_ObjectHideFlags: 0
@@ -7083,19 +7108,19 @@ AudioReverbFilter:
   m_Enabled: 1
   m_DryLevel: 0
   m_Room: -1000
-  m_RoomHF: -4000
-  m_DecayTime: 1.49
-  m_DecayHFRatio: 0.1
-  m_ReflectionsLevel: -449
-  m_ReverbLevel: 1700
-  m_ReverbDelay: 0.011
+  m_RoomHF: 0
+  m_DecayTime: 8.39
+  m_DecayHFRatio: 1.39
+  m_ReflectionsLevel: -115
+  m_ReverbLevel: 985
+  m_ReverbDelay: 0.03
   m_Diffusion: 100
   m_Density: 100
   m_HFReference: 5000
   m_RoomLF: 0
   m_LFReference: 250
   m_ReflectionsDelay: 0
-  m_ReverbPreset: 23
+  m_ReverbPreset: 24
 --- !u!167 &1933517853
 AudioReverbZone:
   m_ObjectHideFlags: 0
@@ -7105,15 +7130,15 @@ AudioReverbZone:
   m_Enabled: 1
   m_MinDistance: 10
   m_MaxDistance: 15
-  m_ReverbPreset: 23
+  m_ReverbPreset: 24
   m_Room: -1000
-  m_RoomHF: -4000
-  m_DecayTime: 1.49
-  m_DecayHFRatio: 0.1
-  m_Reflections: -449
-  m_ReflectionsDelay: 0.007
-  m_Reverb: 1700
-  m_ReverbDelay: 0.011
+  m_RoomHF: 0
+  m_DecayTime: 8.39
+  m_DecayHFRatio: 1.39
+  m_Reflections: -115
+  m_ReflectionsDelay: 0.002
+  m_Reverb: 985
+  m_ReverbDelay: 0.03
   m_HFReference: 5000
   m_Diffusion: 100
   m_Density: 100
