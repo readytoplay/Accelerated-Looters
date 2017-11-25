@@ -198,6 +198,8 @@ public class playerController : MonoBehaviour {
 				}
 			}
 		}
+
+
 		if (other.CompareTag("Coin"))
 		{
 			//In case the coins are being collected again before it disappears
