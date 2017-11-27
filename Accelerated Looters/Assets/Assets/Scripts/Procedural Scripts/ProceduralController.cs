@@ -167,15 +167,17 @@ public class ProceduralController : MonoBehaviour
         var end_x = _randomNum(spikeChunk.Count - 2, spikeChunk.Count);
         var random_y_jumpable = _random.NextDouble() * (3);
 
-        //length calculation
-        var _len = 5f;
+        //parameter calcuations
+        var _x = spikeChunk[start_x].transform.position.x;
+        var _y = (float)(spikeChunk[0].transform.position.y + random_y_jumpable)
+        var _len = 5f + _x;
 
 
         List<GameObject> temp;
         _generatePiece(
-            x:          spikeChunk[start_x].transform.position.x,
-            y:          (float)(spikeChunk[0].transform.position.y + random_y_jumpable),
-            len:        spikeChunk[start_x].transform.position.x + _len,
+            x:          _x,
+            y:          _y,
+            len:        _len,
             pt:         PLATFORM_TYPE.AIR_T,
             curObjects: out temp 
         );
