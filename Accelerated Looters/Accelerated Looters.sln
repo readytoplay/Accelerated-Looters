@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Accelerated Looters.csproj", "{91C74C02-917E-C4CB-9293-6DFFCA4ADCE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters.Editor", "Accelerated Looters.Editor.csproj", "{264FDE7E-E20B-AEE5-F5FD-A4025BD155D3}"
@@ -30,8 +28,5 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2AD4B61D-9D76-46DB-9C2B-C6168AFD2CF6}
 	EndGlobalSection
 EndGlobal
