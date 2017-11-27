@@ -47,6 +47,8 @@ public class playerController : MonoBehaviour {
     public KillEnemy charaterKilling; //variable for KillEnemy class
     public LevelManager MyLevelManager;
     public CheckPointController checkPointChecker;  //check if we go though that checkpoint before
+    Animator myAnim;
+
 
     Vector3 respawn_pos;    //the position that the player gonna respawn
 
@@ -69,6 +71,7 @@ public class playerController : MonoBehaviour {
         MyLevelManager = FindObjectOfType<LevelManager>();
         charaterKilling = FindObjectOfType<KillEnemy>();
         checkPointChecker = FindObjectOfType<CheckPointController>();
+        myAnim = GetComponent<Animator>();
 
     }
 
@@ -95,22 +98,29 @@ public class playerController : MonoBehaviour {
     void handleMovement()
     {
 
+        if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
+        {
+            myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
+            myAnim.SetBool("isJumping", false);
+            myAnim.SetFloat("Speed", moveSpeed);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
+        {
+            myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
+            myAnim.SetBool("isJumping", false);
+            myAnim.SetFloat("Speed", moveSpeed);
 
-
-            if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
-
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
-
-            }
+        } else if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y);
+            myAnim.SetBool("isJumping", false);
+            myAnim.SetFloat("Speed", 0f);
+        }
 
 
         if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
         {
+            myAnim.SetBool("isJumping", true);
             myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0);
 
         }
