@@ -13,7 +13,12 @@ TagManager:
   - Bullet
   - Powerup
   - spike
+<<<<<<< HEAD
   - NopointEnemy
+=======
+  - enemySpawnHouse
+  - SpawnEnemy
+>>>>>>> 4eef0fb51da9a35808370e5a5e531b550de7f6d5
   layers:
   - Default
   - TransparentFX

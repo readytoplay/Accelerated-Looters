@@ -23,4 +23,9 @@ public class Timer : MonoBehaviour  {
             time++;
         }
     }
+	public void reduceTime(int x){
+		time = time - x; //reduce time;
+	}
+
+
 }
