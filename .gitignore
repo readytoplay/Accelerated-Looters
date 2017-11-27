@@ -1,1 +1,6 @@
-UnityLockFile
+Library/
+obj/
+Temp/
+.vs/
+.idea/
+Thumbs.db
