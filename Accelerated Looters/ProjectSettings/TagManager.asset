@@ -4,21 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - KillPlane
-  - CheckPoint
-  - Enemy
   - Coin
-  - movingPlatform
-  - goal
-  - Bullet
   - Powerup
   - spike
-<<<<<<< HEAD
+  - movingPlatform
   - NopointEnemy
-=======
-  - enemySpawnHouse
+  - Bullet
+  - DARig
   - SpawnEnemy
->>>>>>> 4eef0fb51da9a35808370e5a5e531b550de7f6d5
   layers:
   - Default
   - TransparentFX
@@ -28,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
+  - 
   - 
   - 
   - 
@@ -55,7 +48,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: 
-    uniqueID: 3544526239
     locked: 0

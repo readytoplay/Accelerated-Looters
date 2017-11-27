@@ -169,7 +169,7 @@ public class ProceduralController : MonoBehaviour
 
         //parameter calcuations
         var _x = spikeChunk[start_x].transform.position.x;
-        var _y = (float)(spikeChunk[0].transform.position.y + random_y_jumpable)
+        var _y = (float)(spikeChunk[0].transform.position.y + random_y_jumpable);
         var _len = 5f + _x;
 
 

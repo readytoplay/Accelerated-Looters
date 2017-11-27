@@ -109,29 +109,13 @@ public class playerController : MonoBehaviour {
             myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
             myAnim.SetBool("isJumping", false);
             myAnim.SetFloat("Speed", moveSpeed);
-
-<<<<<<< HEAD
-        } else if (Input.GetAxisRaw("Horizontal") == 0)
+        }
+        else if (Input.GetAxisRaw("Horizontal") == 0)
         {
             myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y);
             myAnim.SetBool("isJumping", false);
             myAnim.SetFloat("Speed", 0f);
         }
-=======
-
-            if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
-	            transform.eulerAngles = new Vector2(0,0); //flip the character
-
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
-				transform.eulerAngles = new Vector2(0,180); //flip the character
-
-            }
->>>>>>> 4eef0fb51da9a35808370e5a5e531b550de7f6d5
 
         if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
         {
