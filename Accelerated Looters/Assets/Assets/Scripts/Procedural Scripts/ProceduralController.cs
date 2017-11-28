@@ -123,7 +123,7 @@ public class ProceduralController : MonoBehaviour
         var spikesList = new List<GameObject>();
         foreach(var piece in _currentFloorChunkObjects)
         {
-            if (piece.tag == "spike")
+            if (piece.tag == "spike" && piece.transform.position.x < _curFloorEnd)
                 spikesList.Add(piece);
         }
         var spikesChunkList = new List<List<GameObject>>();
@@ -259,6 +259,7 @@ public class ProceduralController : MonoBehaviour
             {
                 Debug.Log("cur_len: " + cur_length + " len: " + len);
                 curObjects.Add(Instantiate(prefab_lowerPlatform, new Vector3(cur_length, y), Quaternion.identity));
+                cur_length += BOX_WIDTH;
             }
         }
     }

@@ -105,6 +105,7 @@
     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\SpawnEnemyMovementScript.cs" />
     <Compile Include="Assets\Assets\Scripts\level2\level2Animation.cs" />
     <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraController.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\Assets\Scripts\Player Scripts\CheckPointController.cs" />
     <Compile Include="Assets\Assets\Scripts\Player Scripts\LevelManager.cs" />
     <Compile Include="Assets\Assets\Scripts\Player Scripts\PlatformMoving.cs" />
