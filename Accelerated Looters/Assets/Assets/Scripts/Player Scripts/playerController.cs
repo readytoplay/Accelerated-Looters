@@ -212,6 +212,10 @@ public class playerController : MonoBehaviour {
 			if (!Invincible) { //check if player is invincible before doing damage
 				if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
 					MyLevelManager.HurtPlayer (1);
+					this.setInvincible ();
+					InvincibleTimer = 3.0f;
+
+
 				}
 			}
 		}
@@ -223,7 +227,7 @@ public class playerController : MonoBehaviour {
 			if (!beingCollected) 
 			{
 				if (CoinBoost) {
-					coins = coins + 1;
+					coins = coins + 2;
 					beingCollected = true;
 				} else {
 					coins++;
