@@ -8,7 +8,7 @@ public class InvincibilityPowerUp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		playerScript = GameObject.Find ("Player").GetComponent<playerController>(); //gets script to access
+		playerScript = FindObjectOfType<playerController>(); //gets script to access
 	}
 
 	// Update is called once per frame
