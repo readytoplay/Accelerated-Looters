@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: a4c9234c052ec9f4395430ee91e321eb
-timeCreated: 1511457475
+timeCreated: 1511883346
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -23,6 +23,7 @@ TextureImporter:
     21300032: Windows_16
     21300034: Windows_17
     21300036: Windows_18
+    21300038: Windows_19
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -401,6 +402,20 @@ TextureImporter:
         y: 1142
         width: 233
         height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Windows_19
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 2899
+        width: 1118
+        height: 888
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
