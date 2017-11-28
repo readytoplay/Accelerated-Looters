@@ -223,7 +223,7 @@ public class playerController : MonoBehaviour {
 			if (!beingCollected) 
 			{
 				if (CoinBoost) {
-					coins = coins + 2;
+					coins = coins + 1;
 					beingCollected = true;
 				} else {
 					coins++;
