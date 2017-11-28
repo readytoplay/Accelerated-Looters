@@ -12,6 +12,8 @@ TagManager:
   - Bullet
   - DARig
   - SpawnEnemy
+  - Enemy
+  - CheckPoint
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
