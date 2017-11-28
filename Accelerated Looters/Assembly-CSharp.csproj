@@ -55,6 +55,7 @@
      <Compile Include="Assets\Assets\Prefabs\spawnEnemyBehaviour.cs" />
      <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BasicEnemyController.cs" />
      <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BulletTest.cs" />
+     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\Deadzone.cs" />
      <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemiesKilled.cs" />
      <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemyMovement.cs" />

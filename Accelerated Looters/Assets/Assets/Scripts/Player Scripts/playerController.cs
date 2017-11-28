@@ -213,7 +213,7 @@ public class playerController : MonoBehaviour {
 				if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
 					MyLevelManager.HurtPlayer (1);
 					this.setInvincible ();
-					InvincibleTimer = 3.0f;
+					InvincibleTimer = 2.0f;
 
 
 				}
