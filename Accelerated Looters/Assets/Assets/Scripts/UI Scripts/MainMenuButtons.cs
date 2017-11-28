@@ -36,6 +36,12 @@ public class MainMenuButtons : MonoBehaviour {
         SceneManager.LoadScene("Haunted Level 3");
     }
 
+    public void loadMainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+
+    }
+
     // ***** TODO Stuff *****
 
     // TODO
