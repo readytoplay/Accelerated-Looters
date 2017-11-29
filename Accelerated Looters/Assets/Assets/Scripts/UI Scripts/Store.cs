@@ -7,14 +7,16 @@ public class Store : MonoBehaviour {
 
     public GameObject buyIcon1, buyIcon2, buyIcon3, buyIcon4;
 
-    bool hasPowerUp1, hasPowerUp2, hasPowerUp3, hasPowerUp4;
+    public playerController playerScript;
+
+    public bool hasPowerUp1, hasPowerUp2, hasPowerUp3, hasPowerUp4;
 
     // Use this for initialization
     void Start () {
-		
-        
 
-	}
+        playerScript = FindObjectOfType<playerController>(); //gets script to access
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -70,10 +72,26 @@ public class Store : MonoBehaviour {
         }
     }
 
-    public void goBack()
+    public void goBackJungleEndLevelMenu()
     {
-        SceneManager.LoadScene("End Level Menu");
+        SceneManager.LoadScene("Jungle End Level Menu");
     }
+
+    public void goBackUnderWaterEndLevelMenu()
+    {
+        SceneManager.LoadScene("UW End Level Menu");
+    }
+
+    public void goBackHauntedEndLevelMenu()
+    {
+        SceneManager.LoadScene("Haunted End Level Menu");
+    }
+
+    public void goBackSnowEndLevelMenu()
+    {
+        SceneManager.LoadScene("Snow End Level Menu");
+    }
+
 
     void setIconsActive()
     {
