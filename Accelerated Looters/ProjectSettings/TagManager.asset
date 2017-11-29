@@ -14,6 +14,9 @@ TagManager:
   - SpawnEnemy
   - Enemy
   - CheckPoint
+  - enemySpawnHouse
+  - goal
+  - CoinText
   layers:
   - Default
   - TransparentFX
