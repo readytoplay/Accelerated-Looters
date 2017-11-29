@@ -47,6 +47,8 @@ public class playerController : MonoBehaviour {
     public KillEnemy charaterKilling; //variable for KillEnemy class
     public LevelManager MyLevelManager;
     public CheckPointController checkPointChecker;  //check if we go though that checkpoint before
+    public Animator myAnim;
+
 
     Vector3 respawn_pos;    //the position that the player gonna respawn
 
@@ -69,6 +71,7 @@ public class playerController : MonoBehaviour {
         MyLevelManager = FindObjectOfType<LevelManager>();
         charaterKilling = FindObjectOfType<KillEnemy>();
         checkPointChecker = FindObjectOfType<CheckPointController>();
+        myAnim = FindObjectOfType<Animator>();
 
     }
 
@@ -95,22 +98,35 @@ public class playerController : MonoBehaviour {
     void handleMovement()
     {
 
+	    myAnim.SetBool("isJumping", !isGrounded);
+        if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
+        {
+            myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
+            //myAnim.SetBool("isJumping", false);
+            myAnim.SetFloat("Speed", moveSpeed);
+	        transform.eulerAngles = new Vector2(0,0); //flip the character
 
 
-            if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
+        {
+            myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
+           // myAnim.SetBool("isJumping", false);
+            myAnim.SetFloat("Speed", moveSpeed);
+	        transform.eulerAngles = new Vector2(0,180); //flip the character
 
-            }
-            else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
-            {
-                myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
 
-            }
-
+        }
+        else if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y);
+           // myAnim.SetBool("isJumping", false);
+           myAnim.SetFloat("Speed", 0f);
+        }
 
         if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
         {
+            myAnim.SetBool("isJumping", true);
             myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0);
 
         }
@@ -123,6 +139,7 @@ public class playerController : MonoBehaviour {
         {
             killBox.SetActive(false);
         }
+	    myAnim.SetFloat("Speed", Mathf.Abs( myRigidbody.velocity.x));
 
     }
 
@@ -195,6 +212,10 @@ public class playerController : MonoBehaviour {
 			if (!Invincible) { //check if player is invincible before doing damage
 				if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
 					MyLevelManager.HurtPlayer (1);
+					this.setInvincible ();
+					InvincibleTimer = 2.0f;
+
+
 				}
 			}
 		}
@@ -237,7 +258,7 @@ public class playerController : MonoBehaviour {
 	}
 
 	public void setHighJump(){ //increases height of jump
-		jumpSpeed = 17;
+		jumpSpeed = 25f;
 		HighJumpTimer = 10.0f;
 	}
 
