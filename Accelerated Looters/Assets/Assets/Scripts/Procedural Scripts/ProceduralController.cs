@@ -53,6 +53,7 @@ internal class Chunk
     }
 }
 
+
 /// <summary>
 /// represents the type of platform we wana make
 /// </summary>
@@ -64,6 +65,13 @@ public class ProceduralController : MonoBehaviour
     [SerializeField]
     public GameObject prefab_lowerPlatform;
     public GameObject prefab_spikes;
+    public GameObject prefab_enemy1;
+    public GameObject prefab_enemy2;
+    public GameObject prefab_coins;
+    public GameObject prefab_pu1;
+    public GameObject prefab_pu2;
+    public GameObject prefab_pu3;
+    public GameObject prefab_pu4;
 
     //state variables
     private Chunk _curChunk;
@@ -75,16 +83,27 @@ public class ProceduralController : MonoBehaviour
     private Transform _playerTransform;
     private List<GameObject> _currentFloorChunkObjects;
     private List<float> _currentPlatformLocations;
+    private List<float> _curEnemyLocations;
 
     //useful info
     private const float BOX_WIDTH = 0.8f, FLOOR_Y = -3f;
     private float CHUNK_W = 50f;
+
+    //probabilities
+    private const float ENEMY1_PROB = 0.05f;
+    private const float ENEMY2_PROB = 0.05f;
+    private const float COIN_PROB   = 0.50f;
+    private const float PU1_PROB = 0.01f;
+    private const float PU2_PROB = 0.01f;
+    private const float PU3_PROB = 0.01f;
+    private const float PU4_PROB = 0.01f;
 
     //initialize list before
     private void Awake()
     {
         _currentFloorChunkObjects = new List<GameObject>();
         _currentPlatformLocations = new List<float>();
+        _curEnemyLocations = new List<float>();
         _random = new System.Random();
     }
 
@@ -117,6 +136,82 @@ public class ProceduralController : MonoBehaviour
         List<GameObject> curItems;
         _generateFloor(chunk, out curItems);
         _ensureLevelIsCompletable(curItems);
+        _fillChunkWithPrefabs(curItems);
+    }
+
+    /// <summary>
+    /// fills the gven chunk with enemies/coins/powerups/etc
+    /// </summary>
+    /// <param name="curItems"></param>
+    private void _fillChunkWithPrefabs(List<GameObject> curItems)
+    {
+        //find ground floor items
+        foreach(var gameObject in _currentFloorChunkObjects)
+        {
+            if(gameObject.tag == "Ground")
+            {
+                _randomSpawn(gameObject.transform.position.x, gameObject.transform.position.y+1f);
+            }
+        }
+    }
+
+    /// <summary>
+    /// return true within selected probability
+    /// </summary>
+    /// <param name="prob"></param>
+    private bool _rollWithProbability(float prob)
+    {
+        if (_random.NextDouble() < prob)
+            return true;
+        else return false;
+    }
+
+    /// <summary>
+    /// spawn random given probabilities
+    /// </summary>
+    private void _randomSpawn(float x, float y)
+    {
+
+        foreach(var elem in _curEnemyLocations)
+        {
+            if (Math.Abs(elem - x) < 10f)
+                return;
+        }
+
+        if (Math.Abs(_playerTransform.position.x - x) < 30f)
+            return;
+
+        if (_rollWithProbability(ENEMY1_PROB))
+        {
+            GameObject.Instantiate(prefab_enemy1, new Vector3(x, y), Quaternion.identity);
+            _curEnemyLocations.Add(x);
+        }
+        else if (_rollWithProbability(ENEMY2_PROB))
+        {
+            GameObject.Instantiate(prefab_enemy2, new Vector3(x, y), Quaternion.identity);
+            _curEnemyLocations.Add(x);
+        }
+
+        if (_rollWithProbability(COIN_PROB)){
+            GameObject.Instantiate(prefab_coins, new Vector3(x, y), Quaternion.identity);
+        }
+
+        if (_rollWithProbability(PU1_PROB))
+        {
+            GameObject.Instantiate(prefab_pu1, new Vector3(x, y), Quaternion.identity);
+        }
+        else if (_rollWithProbability(PU2_PROB))
+        {
+            GameObject.Instantiate(prefab_pu2, new Vector3(x, y), Quaternion.identity);
+        }
+        else if (_rollWithProbability(PU3_PROB))
+        {
+            GameObject.Instantiate(prefab_pu3, new Vector3(x, y), Quaternion.identity);
+        }
+        else if (_rollWithProbability(PU4_PROB))
+        {
+            GameObject.Instantiate(prefab_pu4, new Vector3(x, y), Quaternion.identity);
+        }
     }
 
     /// <summary>
@@ -189,7 +284,7 @@ public class ProceduralController : MonoBehaviour
             pt:         PLATFORM_TYPE.AIR_T,
             curObjects: out temp 
         );
-        temp.Clear();
+        _currentFloorChunkObjects.AddRange(temp);
         _currentPlatformLocations.Add(spikeChunk[0].transform.position.x);
     }
 
@@ -234,7 +329,7 @@ public class ProceduralController : MonoBehaviour
                 PLATFORM_TYPE pt2;
 
                 //debug stuff
-                var rnum = _randomNum(0, 2);
+                var rnum = _randomNum(0, 3);
                 if (rnum == 1)
                     pt2 = PLATFORM_TYPE.FLOOR_T;
                 else
