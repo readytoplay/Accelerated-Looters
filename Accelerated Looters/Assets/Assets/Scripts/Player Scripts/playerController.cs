@@ -55,6 +55,9 @@ public class playerController : MonoBehaviour {
 
 
     Vector3 respawn_pos;    //the position that the player gonna respawn
+	
+	//total coins
+	public int totalCoins;
 
     
     // Use this for initialization
@@ -76,6 +79,9 @@ public class playerController : MonoBehaviour {
         charaterKilling = FindObjectOfType<KillEnemy>();
         checkPointChecker = FindObjectOfType<CheckPointController>();
         myAnim = FindObjectOfType<Animator>();
+	    
+	    //Get history coins number
+	    totalCoins = PlayerPrefs.GetInt("totalcoins");
 
     }
 
@@ -214,6 +220,7 @@ public class playerController : MonoBehaviour {
     {
         if (life_count <= 0)
         {
+	        PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
             GameOver.SetActive(true);       //set gameover true
             Time.timeScale = 0;
         }

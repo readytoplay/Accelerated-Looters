@@ -5,8 +5,9 @@ using UnityEngine.UI;
 public class Coins : MonoBehaviour {
 
 	public int coin = 0;
-	
+	public int totalCoins;
 	public Text coins;
+	public Text totalc;
 	public playerController p;
 
 
@@ -21,8 +22,9 @@ public class Coins : MonoBehaviour {
 	void Update()
 	{
 		coin = p.coins;
+		totalCoins = PlayerPrefs.GetInt("totalcoins");
 		
-		coins.text = ("" + coin);
+		coins.text = ("Current coins " + coin+ "\n" + "Total Coins " + totalCoins);
 
 	}
 
