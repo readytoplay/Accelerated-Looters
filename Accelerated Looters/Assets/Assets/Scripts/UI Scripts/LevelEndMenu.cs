@@ -1,10 +1,72 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
-public class MainMenuButtons : MonoBehaviour {
+public class LevelEndMenu : MonoBehaviour {
+
+    public GameObject star1, star2, star3;
+    Text coinCounter, timeCounter;
+
+    int playerCoins, playerLives;
+    Time playerTime;
+
+    public Time timeStandard;
+    public int coinStandard;
+
+    
+
+	// Use this for initialization
+	void Start () {
+
+        star1.SetActive(false);
+        star2.SetActive(false);
+        star3.SetActive(false);
+
+        // TODO
+
+        // get the player time count
+        // get the player coin count
+
+        // get the current high score
+        // if new score is higher, replace current high score
+
+        if (playerCoins > 15)
+        {
+            star1.SetActive(true);
+        }
+        if(playerLives >= 3)
+        {
+            star2.SetActive(true);
+        }
+
+        // TODO player time < standard
+        /*
+        if ( )
+        {
+            star3.SetActive(true);
+        }
+        */
+    }
+
+    // Update is called once per frame
+    void Update () {
+		
+	}
+
+    // Reloads the previous scene
+    public void reloadPrevScene()
+    {
+        // load the previous scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
+
+    public void loadNextLevel()
+    {
+        // load the previous scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
 
     public void loadSettings()
     {

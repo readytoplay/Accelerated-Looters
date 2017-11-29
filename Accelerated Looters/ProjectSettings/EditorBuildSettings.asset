@@ -18,8 +18,20 @@ EditorBuildSettings:
     path: Assets/Assets/Scenes/Jungle Level 1.unity
     guid: 05576d056967e7947a9c8c438b7077c7
   - enabled: 1
+    path: Assets/Assets/Scenes/End Level Menu.unity
+    guid: 9ab883ecc02faad4cb5ad0f9d9fe1525
+  - enabled: 1
     path: Assets/Assets/Scenes/Underwater Level 2.unity
     guid: 20947a01a051063439a0f0b16df2f655
   - enabled: 1
     path: Assets/Assets/Scenes/Haunted Level 3.unity
     guid: 54bbd079c1902df4a9deef47d08737ef
+  - enabled: 1
+    path: Assets/Assets/Scenes/Settings.unity
+    guid: 025b014b8f56d1e4c95c50071d292510
+  - enabled: 1
+    path: Assets/Assets/Scenes/High Scores.unity
+    guid: 6d527f15e76de7144a2d9ec4714bff5d
+  - enabled: 1
+    path: Assets/Assets/Scenes/Store.unity
+    guid: c663866c3ece4284488330e8ca804cdd
