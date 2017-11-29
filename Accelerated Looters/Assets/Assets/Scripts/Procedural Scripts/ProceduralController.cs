@@ -68,11 +68,13 @@ public class ProceduralController : MonoBehaviour
     //state variables
     private Chunk _curChunk;
     private float _curFloorEnd;
+    private float _curPlatformEnd;
     private System.Random _random;
 
     //game variables
     private Transform _playerTransform;
     private List<GameObject> _currentFloorChunkObjects;
+    private List<float> _currentPlatformLocations;
 
     //useful info
     private const float BOX_WIDTH = 0.8f, FLOOR_Y = -3f;
@@ -82,6 +84,7 @@ public class ProceduralController : MonoBehaviour
     private void Awake()
     {
         _currentFloorChunkObjects = new List<GameObject>();
+        _currentPlatformLocations = new List<float>();
         _random = new System.Random();
     }
 
@@ -92,6 +95,7 @@ public class ProceduralController : MonoBehaviour
         InvokeRepeating("_checkMemory", 5, 5);
         _curChunk = new Chunk(CHUNK_W);
         _fillChunk(_curChunk);
+        _curPlatformEnd = 0;
     }
 
     /// <summary>
@@ -162,18 +166,22 @@ public class ProceduralController : MonoBehaviour
     /// <param name="spikeChunk"></param>
     private void _generateJumpable(List<GameObject> spikeChunk)
     {
+
+        if (_currentPlatformLocations.Contains(spikeChunk[0].transform.position.x))
+            return;
+
         //random variables
-        var start_x = _randomNum(0,2);
-        var end_x = _randomNum(spikeChunk.Count - 2, spikeChunk.Count);
-        var random_y_jumpable = _random.NextDouble() * (3);
+        var start_x = _randomNum(0,3);
+        var end_x = _randomNum(spikeChunk.Count - 3, spikeChunk.Count);
+        var random_y_jumpable = _random.NextDouble() * (3) + 1.5f;
 
         //parameter calcuations
         var _x = spikeChunk[start_x].transform.position.x;
         var _y = (float)(spikeChunk[0].transform.position.y + random_y_jumpable);
-        var _len = 5f + _x;
+        var _len = spikeChunk[end_x].transform.position.x - spikeChunk[start_x].transform.position.x;
 
 
-        List<GameObject> temp;
+        List <GameObject> temp;
         _generatePiece(
             x:          _x,
             y:          _y,
@@ -182,6 +190,7 @@ public class ProceduralController : MonoBehaviour
             curObjects: out temp 
         );
         temp.Clear();
+        _currentPlatformLocations.Add(spikeChunk[0].transform.position.x);
     }
 
     /// <summary>
@@ -252,15 +261,14 @@ public class ProceduralController : MonoBehaviour
         }
         else if (pt == PLATFORM_TYPE.AIR_T)
         {
-            Debug.Log("generating platform of type air");
-            Debug.Log("cur_len: " + x + " len: " + len);
+            var plen = x + len;
             var cur_length = x;
-            while (cur_length < len)
+            while (cur_length < plen)
             {
-                Debug.Log("cur_len: " + cur_length + " len: " + len);
                 curObjects.Add(Instantiate(prefab_lowerPlatform, new Vector3(cur_length, y), Quaternion.identity));
                 cur_length += BOX_WIDTH;
             }
+            _curPlatformEnd = cur_length;
         }
     }
 
