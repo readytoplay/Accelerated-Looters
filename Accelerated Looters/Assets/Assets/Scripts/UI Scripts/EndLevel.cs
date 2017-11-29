@@ -6,12 +6,10 @@ using UnityEngine;
 
 public class EndLevel : MonoBehaviour {
 
-    static public int coins;
-    public GameObject manager;
-
+ 
 	// Use this for initialization
 	void Start () {
-        Debug.Log(coins);
+        
         
 
     }
@@ -23,9 +21,32 @@ public class EndLevel : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
+
         if(collision.transform.tag == "Player")
         {
-            SceneManager.LoadScene("End Level Menu");
+
+            if (SceneManager.GetActiveScene().name == "Jungle Level 1")
+            {
+                SceneManager.LoadScene("Jungle End Level Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Underwater Level 2")
+            {
+                SceneManager.LoadScene("UW End Level Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Haunted Level 3")
+            {
+                SceneManager.LoadScene("Haunted End Level Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Snow Level 4")
+            {
+                SceneManager.LoadScene("Snow End Level Menu");
+            }
+
         }
     }
 

@@ -15,10 +15,11 @@ public class LevelEndMenu : MonoBehaviour {
     public Time timeStandard;
     public int coinStandard;
 
-    
+    public static string PreviousScene = "";
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
 
         star1.SetActive(false);
         star2.SetActive(false);
@@ -55,66 +56,88 @@ public class LevelEndMenu : MonoBehaviour {
 		
 	}
 
-    // Reloads the previous scene
-    public void reloadPrevScene()
+    public void loadPreviousScene()
     {
-        // load the previous scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-    }
+        SceneManager.LoadScene("PreviousScene");
 
-    public void loadNextLevel()
-    {
-        // load the previous scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void loadSettings()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Settings");
     }
 
     public void loadFirstScene()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Jungle Level 1");
+
     }
 
     public void loadHighScores()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("High Scores");
     }
 
     public void loadStore()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Store");
     }
 
     public void loadLevel()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Load Level");
     }
 
     public void exitGame()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         Application.Quit();
     }
 
     public void loadJungleLevel()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Jungle Level 1");
+    }
+
+    public void loadJungleLevelStore()
+    {
+        PreviousScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("Jungle Store");
     }
 
     public void loadUnderwaterLevel()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Underwater Level 2");
+    }
+
+    public void loadUnderwaterLevelStore()
+    {
+        PreviousScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("UW Store");
     }
 
     public void loadHauntedLevel()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Haunted Level 3");
+    }
+
+    public void loadHauntedLevelStore()
+    {
+        PreviousScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("Haunted Store");
     }
 
     public void loadMainMenu()
     {
+        PreviousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Main Menu");
 
     }
@@ -123,6 +146,13 @@ public class LevelEndMenu : MonoBehaviour {
 
     // TODO
     public void loadIceLevel()
+    {
+        // TODO when Ice level is committed
+        // SceneManager.LoadScene("Ice Level 4");
+    }
+
+    // TODO
+    public void loadIceLevelStore()
     {
         // TODO when Ice level is committed
         // SceneManager.LoadScene("Ice Level 4");
