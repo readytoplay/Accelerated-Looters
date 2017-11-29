@@ -823,11 +823,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -35.4
+      value: 364.1
       objectReference: {fileID: 0}
     - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: 14.1
       objectReference: {fileID: 0}
     - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8709,10 +8709,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740365888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b6a19e456714b45a48ddbef936053f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7847792eb2e555544ae1903615be591a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
 --- !u!1 &1756137332
 GameObject:
   m_ObjectHideFlags: 0

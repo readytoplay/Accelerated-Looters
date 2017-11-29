@@ -1,22 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
 
-	public playerController Player;
+	public static playerController Player;
 
 	public int CurrentHealth;	//player health
 
+    public static int CurrentCoins;
 
-	
-	
+    public static string PreviousScene = "";
 
-	// Use this for initialization
-	void Start ()
+    void start()
+    {
+
+    }
+
+    public void LoadScene(string sceneName)
+    {
+        PreviousScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
+        
+    }
+
+    // Use this for initialization
+    void Start ()
 	{
 		Player = FindObjectOfType<playerController>();
 	}
