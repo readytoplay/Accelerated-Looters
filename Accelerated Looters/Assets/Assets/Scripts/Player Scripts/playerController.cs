@@ -27,12 +27,16 @@ public class playerController : MonoBehaviour {
     public float SpeedBoostTimer = 10.0f; //Timer for SpeedBoost power
     public float DoubleCoinTimer = 10.0f; //Timer for DoubleCoin power    
     public float InvincibleTimer = 10.0f; //Timer for Invincible power
+    public float jumpBuffer = 0f; // time for double jump to avoid jumping all at once
 
     // Booleans ***
     public bool isGrounded; // make sure we don't have to check all the time
     public bool CoinBoost; //does player get extra coins
     public bool Invincible; //is the player invincible
     public bool beingCollected;
+    public bool doubleJump;
+    public bool hasPowerUp1, hasPowerUp2, hasPowerUp3, hasPowerUp4;
+
 
     // Objects ***
     // Game Objects 
@@ -126,9 +130,23 @@ public class playerController : MonoBehaviour {
 
         if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
         {
+            jumpBuffer = 0;
             myAnim.SetBool("isJumping", true);
             myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0);
+        }
 
+        jumpBuffer = jumpBuffer + Time.deltaTime;
+        if (Input.GetButtonDown("Jump") && doubleJump && jumpBuffer < 1.0f && !isGrounded)//&& hasPowerUp1)
+        {
+            Debug.Log("plz");
+            doubleJump = false;
+            myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0);
+            myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0);
+        }
+
+        if (isGrounded)
+        {
+            doubleJump = true;
         }
 
         if (myRigidbody.velocity.y < 0)

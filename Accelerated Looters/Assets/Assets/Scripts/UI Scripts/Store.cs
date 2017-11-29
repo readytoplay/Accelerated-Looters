@@ -7,14 +7,16 @@ public class Store : MonoBehaviour {
 
     public GameObject buyIcon1, buyIcon2, buyIcon3, buyIcon4;
 
-    bool hasPowerUp1, hasPowerUp2, hasPowerUp3, hasPowerUp4;
+    public playerController playerScript;
+
+    public bool hasPowerUp1, hasPowerUp2, hasPowerUp3, hasPowerUp4;
 
     // Use this for initialization
     void Start () {
-		
-        
 
-	}
+        playerScript = FindObjectOfType<playerController>(); //gets script to access
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
