@@ -169,6 +169,18 @@ Prefab:
       propertyPath: myRigidbody
       value: 
       objectReference: {fileID: 366706742}
+    - target: {fileID: 114631128069674816, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+        type: 2}
+      propertyPath: spike
+      value: 
+      objectReference: {fileID: 1363288706106820, guid: 56dfbd8e4be2f514cbee1b11f2d69b50,
+        type: 2}
+    - target: {fileID: 114631128069674816, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+        type: 2}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 1480990022063362, guid: 80f22da012ce54f46b3f48dd1ef2f5b8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
   m_IsPrefabParent: 0
@@ -320,6 +332,16 @@ MonoBehaviour:
     type: 2}
   prefab_spikes: {fileID: 1363288706106820, guid: 56dfbd8e4be2f514cbee1b11f2d69b50,
     type: 2}
+  prefab_enemy1: {fileID: 1915912197755988, guid: 8483d9e7b989c2f4b83b8fe4a0f29364,
+    type: 2}
+  prefab_enemy2: {fileID: 1251933823443278, guid: 415d178f17d0078489a5c84ef9b3a69a,
+    type: 2}
+  prefab_coins: {fileID: 1318304408765420, guid: 5777b24a56de54944965f95fb70bb04e,
+    type: 2}
+  prefab_pu1: {fileID: 1091238768032384, guid: 6fcebdb72cc942d40a3c624980e1d45d, type: 2}
+  prefab_pu2: {fileID: 1825078288563582, guid: 91b4e29516602234e80160cb1e8ec948, type: 2}
+  prefab_pu3: {fileID: 1808412702977524, guid: b417d729d8bfc6b42b46c4ea994ea5a5, type: 2}
+  prefab_pu4: {fileID: 1534923143060946, guid: 599001103eb8ef04bb471ba0b1610ad3, type: 2}
 --- !u!4 &1382357973
 Transform:
   m_ObjectHideFlags: 0

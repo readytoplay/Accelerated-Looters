@@ -66,6 +66,7 @@
      <Compile Include="Assets\Assets\Scripts\Enemy Scripts\SpawnEnemyMovementScript.cs" />
      <Compile Include="Assets\Assets\Scripts\level2\level2Animation.cs" />
      <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraController.cs" />
+     <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\Assets\Scripts\Player Scripts\CheckPointController.cs" />
      <Compile Include="Assets\Assets\Scripts\Player Scripts\LevelManager.cs" />
      <Compile Include="Assets\Assets\Scripts\Player Scripts\PlatformMoving.cs" />
@@ -77,10 +78,14 @@
      <Compile Include="Assets\Assets\Scripts\Power Up Scripts\SpeedBoostPowerUp.cs" />
      <Compile Include="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
      <Compile Include="Assets\Assets\Scripts\UI Scripts\Coins.cs" />
+     <Compile Include="Assets\Assets\Scripts\UI Scripts\DistanceSlide.cs" />
+     <Compile Include="Assets\Assets\Scripts\UI Scripts\EndLevel.cs" />
+     <Compile Include="Assets\Assets\Scripts\UI Scripts\LevelEndMenu.cs" />
      <Compile Include="Assets\Assets\Scripts\UI Scripts\life_number_Script.cs" />
      <Compile Include="Assets\Assets\Scripts\UI Scripts\MainMenuButtons.cs" />
      <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
+     <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
      <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
      <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
      <Compile Include="Assets\WiggleEnemy2.cs" />
