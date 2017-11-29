@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Acce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters.Editor", "Accelerated Looters.Editor.csproj", "{264FDE7E-E20B-AEE5-F5FD-A4025BD155D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters.Editor.Plugins", "Accelerated Looters.Editor.Plugins.csproj", "{BE2DCADE-7D95-53E1-CFDD-4DA1AEF34181}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,10 +19,6 @@ Global
 		{264FDE7E-E20B-AEE5-F5FD-A4025BD155D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{264FDE7E-E20B-AEE5-F5FD-A4025BD155D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{264FDE7E-E20B-AEE5-F5FD-A4025BD155D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE2DCADE-7D95-53E1-CFDD-4DA1AEF34181}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE2DCADE-7D95-53E1-CFDD-4DA1AEF34181}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE2DCADE-7D95-53E1-CFDD-4DA1AEF34181}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE2DCADE-7D95-53E1-CFDD-4DA1AEF34181}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
