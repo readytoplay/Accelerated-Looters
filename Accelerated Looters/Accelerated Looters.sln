@@ -1,10 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6B24B61E-3EC9-454D-9B15-170A505F3CC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Assembly-CSharp.csproj", "{6B24B61E-3EC9-454D-9B15-170A505F3CC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{E4360F41-01A2-92AE-B8EC-38117E99737F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Assembly-CSharp-Editor.csproj", "{E4360F41-01A2-92AE-B8EC-38117E99737F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{F2207682-207F-05F6-6650-46BE274C9293}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Assembly-CSharp-Editor-firstpass.csproj", "{F2207682-207F-05F6-6650-46BE274C9293}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
