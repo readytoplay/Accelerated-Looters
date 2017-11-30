@@ -82,13 +82,20 @@ public class playerController : MonoBehaviour {
         charaterKilling = FindObjectOfType<KillEnemy>();
         checkPointChecker = FindObjectOfType<CheckPointController>();
         myAnim = FindObjectOfType<Animator>();
+
 	    
 	    //Get history coins number
 	    totalCoins = PlayerPrefs.GetInt("totalcoins");
+
+        if(hasPowerUp4)
+        {
+            life_count = 5;
+        }
 	    
 	    //Get high score
 	    k = FindObjectOfType<KillEnemy>();
 	    highScore = PlayerPrefs.GetInt("highscore");
+
 
     }
 
@@ -98,6 +105,8 @@ public class playerController : MonoBehaviour {
     {
         beingCollected = false;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+
+        powerUp3();
 
         handleMovement(); // handles player's movement
 
@@ -264,7 +273,13 @@ public class playerController : MonoBehaviour {
 			//In case the coins are being collected again before it disappears
 			if (!beingCollected) 
 			{
-				if (CoinBoost) {
+                if(CoinBoost && hasPowerUp2) {
+                    coins = coins + 6;
+                }
+                else if (hasPowerUp2){
+                    coins = coins + 3;
+                }
+				else if (CoinBoost) {
 					coins = coins + 2;
 					beingCollected = true;
 				} else {
@@ -315,4 +330,11 @@ public class playerController : MonoBehaviour {
 		InvincibleTimer = 10.0f;
 	}
 
+    public void powerUp3()
+    {
+        if(hasPowerUp3)
+        {
+            moveSpeed = 15.0f;
+        }
+    }
 }
