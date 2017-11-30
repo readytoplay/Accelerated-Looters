@@ -35,9 +35,10 @@ public class Store : MonoBehaviour {
     {
 
         // TODO
-        if(!hasPowerUp1)
+        if(!hasPowerUp1&&PlayerPrefs.GetInt("totalcoins")>=5)
         {
             hasPowerUp1 = true;
+            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-5);
             // todo - enable player script new power up
         }
     }
@@ -45,9 +46,10 @@ public class Store : MonoBehaviour {
     public void buyPowerUp2()
     {
         // TODO 
-        if (!hasPowerUp2)
+        if (!hasPowerUp2&&PlayerPrefs.GetInt("totalcoins")>=10)
         {
             hasPowerUp2 = true;
+            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-10);
             // todo - enable player script new power up
         }
     }
@@ -55,9 +57,10 @@ public class Store : MonoBehaviour {
     public void buyPowerUp3()
     {
         // TODO 
-        if (!hasPowerUp3)
+        if (!hasPowerUp3&&PlayerPrefs.GetInt("totalcoins")>=15)
         {
             hasPowerUp3 = true;
+            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-15);
             // todo - enable player script new power up
         }
     }
@@ -65,9 +68,10 @@ public class Store : MonoBehaviour {
     public void buyPowerUp4()
     {
         // TODO 
-        if (!hasPowerUp4)
+        if (!hasPowerUp4&& PlayerPrefs.GetInt("totalcoins")>=20)
         {
             hasPowerUp4 = true;
+            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-20);
             // todo - enable player script new power up
         }
     }
