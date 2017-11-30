@@ -261,6 +261,7 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
+    <Compile Include="Assets\Procedural_Spikes.cs" />
     <Compile Include="Assets\WiggleEnemy2.cs" />
   </ItemGroup>
   <ItemGroup>
