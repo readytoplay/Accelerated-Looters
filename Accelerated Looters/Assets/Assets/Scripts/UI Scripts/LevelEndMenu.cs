@@ -33,7 +33,7 @@ public class LevelEndMenu : MonoBehaviour {
         // get the current high score
         // if new score is higher, replace current high score
 
-        if (playerCoins > 15)
+        if (playerCoins > coinStandard)
         {
             star1.SetActive(true);
         }
@@ -42,7 +42,7 @@ public class LevelEndMenu : MonoBehaviour {
             star2.SetActive(true);
         }
 
-        // TODO player time < standard
+        // TODO player time < timeStandard
         /*
         if ( )
         {
@@ -147,15 +147,13 @@ public class LevelEndMenu : MonoBehaviour {
     // TODO
     public void loadIceLevel()
     {
-        // TODO when Ice level is committed
-        // SceneManager.LoadScene("Ice Level 4");
+        SceneManager.LoadScene("Snow Level 4");
     }
 
     // TODO
     public void loadIceLevelStore()
     {
-        // TODO when Ice level is committed
-        // SceneManager.LoadScene("Ice Level 4");
+        SceneManager.LoadScene("Snow Store");
     }
 
     // TODO
