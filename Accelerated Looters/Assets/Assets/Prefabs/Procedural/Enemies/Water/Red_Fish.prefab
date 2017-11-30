@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4075137994281802}
   m_Layer: 0
-  m_Name: WiggleHolder_Cat 1
+  m_Name: Red_Fish
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
