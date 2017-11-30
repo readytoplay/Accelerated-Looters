@@ -58,7 +58,10 @@ public class playerController : MonoBehaviour {
 	
 	//total coins
 	public int totalCoins;
-
+	
+	//high score (enemies killed number)
+	public int highScore;
+	public KillEnemy k;
     
     // Use this for initialization
     void Start() {
@@ -79,10 +82,22 @@ public class playerController : MonoBehaviour {
         charaterKilling = FindObjectOfType<KillEnemy>();
         checkPointChecker = FindObjectOfType<CheckPointController>();
         myAnim = FindObjectOfType<Animator>();
+
 	    
 	    //Get history coins number
 	    totalCoins = PlayerPrefs.GetInt("totalcoins");
+<<<<<<< HEAD
+        if(hasPowerUp4)
+        {
+            life_count = 5;
+        }
+=======
+	    
+	    //Get high score
+	    k = FindObjectOfType<KillEnemy>();
+	    highScore = PlayerPrefs.GetInt("highscore");
 
+>>>>>>> 31ba298c9749d00e313e040e9a75ffbaa89b8dfc
     }
 
     // Update is called once per frame
@@ -99,6 +114,11 @@ public class playerController : MonoBehaviour {
         healthManager(); // check life count
 
         powerUpTimers(); // handles the power up timers
+
+        if(hasPowerUp3)
+        {
+            moveSpeed = 15.0f;
+        }
 
     }
 
@@ -220,7 +240,13 @@ public class playerController : MonoBehaviour {
     {
         if (life_count <= 0)
         {
+	        //update coins
 	        PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
+	        //update high score
+	        if (k.enemyKilled > highScore)
+	        {
+		        PlayerPrefs.SetInt("highscore", k.enemyKilled);
+	        }
             GameOver.SetActive(true);       //set gameover true
             Time.timeScale = 0;
         }
@@ -251,7 +277,13 @@ public class playerController : MonoBehaviour {
 			//In case the coins are being collected again before it disappears
 			if (!beingCollected) 
 			{
-				if (CoinBoost) {
+                if(CoinBoost && hasPowerUp2) {
+                    coins = coins + 6;
+                }
+                else if (hasPowerUp2){
+                    coins = coins + 3;
+                }
+				else if (CoinBoost) {
 					coins = coins + 2;
 					beingCollected = true;
 				} else {

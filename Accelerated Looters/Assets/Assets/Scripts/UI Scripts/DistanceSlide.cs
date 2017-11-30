@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DistanceSlide : MonoBehaviour {
 	public Slider mainSlider;
+	public GameObject player;
 	
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,6 @@ public class DistanceSlide : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		mainSlider.value=mainSlider.value+1.0f;
+		mainSlider.value=player.transform.position.x;
 	}
 }
