@@ -29,6 +29,7 @@ public class playerController : MonoBehaviour {
     public float DoubleCoinTimer = 10.0f; //Timer for DoubleCoin power    
     public float InvincibleTimer = 10.0f; //Timer for Invincible power
     public float jumpBuffer = 0f; // time for double jump to avoid jumping all at once
+    public float spikeCooldown = 3.0f;
 
     // Booleans ***
     public bool isGrounded; // make sure we don't have to check all the time
@@ -107,7 +108,7 @@ public class playerController : MonoBehaviour {
         beingCollected = false;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 
-        powerUp3();
+        powerUp3(); //sets speed base on whether you have powerup3
 
         handleMovement(); // handles player's movement
 
@@ -116,6 +117,8 @@ public class playerController : MonoBehaviour {
         healthManager(); // check life count
 
         powerUpTimers(); // handles the power up timers
+
+        increaseSpikeTime(); //
 
     }
 
@@ -358,4 +361,19 @@ public class playerController : MonoBehaviour {
             moveSpeed = 15.0f;
         }
     }
+
+    public void increaseSpikeTime()
+    {
+        spikeCooldown = spikeCooldown + Time.deltaTime;
+    }
+
+    public void spikeDamage()
+    {
+        if (spikeCooldown > 3.0f)
+        {
+            MyLevelManager.HurtPlayer(1);
+            spikeCooldown = 0.0f;
+        }
+    }
+
 }
