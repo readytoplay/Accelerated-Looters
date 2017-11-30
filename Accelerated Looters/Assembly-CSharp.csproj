@@ -77,6 +77,7 @@
     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\HighJumpPowerUP.cs" />
     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\InvincibilityPowerUp.cs" />
     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\SpeedBoostPowerUp.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\AcceleratingPlayer.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\CameraFollowProcedural.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Coins.cs" />
