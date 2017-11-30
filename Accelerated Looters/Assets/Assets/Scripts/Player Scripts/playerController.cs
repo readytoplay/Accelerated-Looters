@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
@@ -28,6 +29,7 @@ public class playerController : MonoBehaviour {
     public float DoubleCoinTimer = 10.0f; //Timer for DoubleCoin power    
     public float InvincibleTimer = 10.0f; //Timer for Invincible power
     public float jumpBuffer = 0f; // time for double jump to avoid jumping all at once
+    public float spikeCooldown = 3.0f;
 
     // Booleans ***
     public bool isGrounded; // make sure we don't have to check all the time
@@ -110,7 +112,7 @@ public class playerController : MonoBehaviour {
         beingCollected = false;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 
-        powerUp3();
+        powerUp3(); //sets speed base on whether you have powerup3
 
         handleMovement(); // handles player's movement
 
@@ -119,6 +121,8 @@ public class playerController : MonoBehaviour {
         healthManager(); // check life count
 
         powerUpTimers(); // handles the power up timers
+
+        increaseSpikeTime(); //
 
     }
 
@@ -248,8 +252,28 @@ public class playerController : MonoBehaviour {
 	        {
 		        PlayerPrefs.SetInt("highscore", k.enemyKilled);
 	        }
-            GameOver.SetActive(true);       //set gameover true
-            Time.timeScale = 0;
+
+            if (SceneManager.GetActiveScene().name == "Jungle Level 1")
+            {
+                SceneManager.LoadScene("Jungle Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Underwater Level 2")
+            {
+                SceneManager.LoadScene("UW Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Haunted Level 3")
+            {
+                SceneManager.LoadScene("Haunted Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Snow Level 4")
+            {
+                SceneManager.LoadScene("Snow Game Over Menu");
+            }
+            
+           
         }
     }
 
@@ -344,4 +368,19 @@ public class playerController : MonoBehaviour {
             moveSpeed *= 1.5f;
         }
     }
+
+    public void increaseSpikeTime()
+    {
+        spikeCooldown = spikeCooldown + Time.deltaTime;
+    }
+
+    public void spikeDamage()
+    {
+        if (spikeCooldown > 3.0f)
+        {
+            MyLevelManager.HurtPlayer(1);
+            spikeCooldown = 0.0f;
+        }
+    }
+
 }

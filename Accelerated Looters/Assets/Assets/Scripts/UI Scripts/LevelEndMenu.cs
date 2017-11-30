@@ -33,7 +33,7 @@ public class LevelEndMenu : MonoBehaviour {
         // get the current high score
         // if new score is higher, replace current high score
 
-        if (playerCoins > 15)
+        if (playerCoins > coinStandard)
         {
             star1.SetActive(true);
         }
@@ -42,7 +42,7 @@ public class LevelEndMenu : MonoBehaviour {
             star2.SetActive(true);
         }
 
-        // TODO player time < standard
+        // TODO player time < timeStandard
         /*
         if ( )
         {
@@ -61,6 +61,8 @@ public class LevelEndMenu : MonoBehaviour {
         SceneManager.LoadScene("PreviousScene");
 
     }
+
+
 
     public void loadSettings()
     {
@@ -142,47 +144,57 @@ public class LevelEndMenu : MonoBehaviour {
 
     }
 
-    // ***** TODO Stuff *****
-
-    // TODO
     public void loadIceLevel()
     {
-        // TODO when Ice level is committed
-        // SceneManager.LoadScene("Ice Level 4");
+        SceneManager.LoadScene("Snow Level 4");
     }
 
-    // TODO
     public void loadIceLevelStore()
     {
-        // TODO when Ice level is committed
-        // SceneManager.LoadScene("Ice Level 4");
+        SceneManager.LoadScene("Snow Store");
     }
 
-    // TODO
     public void loadPCGJungle()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+        
+        SceneManager.LoadScene("PCG Jungle Level");
     }
 
-    // TODO
     public void loadPCGUnderwater()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("PCG Underwater Level");
     }
 
-    // TODO
     public void loadPCGHaunted()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("PCG Haunted Level");
     }
 
-    // TODO
-    public void loadPCGIce()
+    public void loadPCGSnow()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("PCG Snow Level");
     }
+
+    public void loadPCGJungle_GAMEOVER()
+    {
+
+        SceneManager.LoadScene("Jungle PCG End Level Menu");
+    }
+
+    public void loadPCGUnderwater_GAMEOVER()
+    {
+        SceneManager.LoadScene("UW PCG Game Over Menu");
+    }
+
+    public void loadPCGHaunted_GAMEOVER()
+    {
+        SceneManager.LoadScene("Haunted PCG Game Over Menu");
+    }
+
+    public void loadPCGSnow_GAMEOVER()
+    {
+        SceneManager.LoadScene("Snow PCG Game Over Menu");
+    }
+
+
 }

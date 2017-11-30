@@ -27,7 +27,7 @@ public class Spike : MonoBehaviour {
 		}
 	}
 	IEnumerator wait(){
-		yield return new WaitForSeconds (3);			//wait 3 min
+		yield return new WaitForSeconds (3);			//wait 3 sec
 		this.GetComponent<EdgeCollider2D> ().enabled = true;	//turn collide box back on
 
 	}
