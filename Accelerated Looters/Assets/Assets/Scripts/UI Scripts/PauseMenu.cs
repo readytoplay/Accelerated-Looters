@@ -59,7 +59,7 @@ public class PauseMenu : MonoBehaviour {
     }
 
     // toggle game pause
-    bool togglePause()
+    public bool togglePause()
     {
         if (Time.timeScale == 0f)
         {
