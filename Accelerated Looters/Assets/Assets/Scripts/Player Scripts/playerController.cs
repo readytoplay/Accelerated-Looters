@@ -62,6 +62,9 @@ public class playerController : MonoBehaviour {
 	//high score (enemies killed number)
 	public int highScore;
 	public KillEnemy k;
+
+    //state vars
+    public bool isSpeedBoost;
     
     // Use this for initialization
     void Start() {
@@ -74,6 +77,7 @@ public class playerController : MonoBehaviour {
         coins = 0;
         CoinBoost = false;
         GameOver.SetActive(false); // hide game over
+        isSpeedBoost = false;
 
 
         // Get Components/Get Types
@@ -200,6 +204,7 @@ public class playerController : MonoBehaviour {
         {
             SpeedBoostTimer = 10.0f; //reset SpeedBoost timer
             moveSpeed = originalSpeed; //reset SpeedBoost to normal
+            isSpeedBoost = false;
         }
 
         DoubleCoinTimer -= Time.deltaTime; //decreases DoubleCoin timer
@@ -316,7 +321,9 @@ public class playerController : MonoBehaviour {
 	}
 
 	public void setSpeedBoost(){ //increases height of jump
-		moveSpeed = 20f;
+        isSpeedBoost = true;
+        originalSpeed = moveSpeed;
+        moveSpeed *= 2;
 		SpeedBoostTimer = 10.0f;
 	}
 
@@ -334,7 +341,7 @@ public class playerController : MonoBehaviour {
     {
         if(hasPowerUp3)
         {
-            moveSpeed = 15.0f;
+            moveSpeed *= 1.5f;
         }
     }
 }
