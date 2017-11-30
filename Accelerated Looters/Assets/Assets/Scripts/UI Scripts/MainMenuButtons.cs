@@ -120,31 +120,45 @@ public class MainMenuButtons : MonoBehaviour {
         // SceneManager.LoadScene("Ice Level 4");
     }
 
-    // TODO
     public void loadPCGJungle()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+
+        SceneManager.LoadScene("PCG Jungle Level");
     }
 
-    // TODO
     public void loadPCGUnderwater()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("PCG Underwater Level");
     }
 
-    // TODO
     public void loadPCGHaunted()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("PCG Haunted Level");
     }
 
-    // TODO
-    public void loadPCGIce()
+    public void loadPCGSnow()
     {
-        // TODO when PCG is finished
-        // SceneManager.LoadScene("");
+        SceneManager.LoadScene("PCG Snow Level");
+    }
+
+    public void loadPCGJungle_GAMEOVER()
+    {
+
+        SceneManager.LoadScene("Jungle PCG End Level Menu");
+    }
+
+    public void loadPCGUnderwater_GAMEOVER()
+    {
+        SceneManager.LoadScene("UW PCG Game Over Menu");
+    }
+
+    public void loadPCGHaunted_GAMEOVER()
+    {
+        SceneManager.LoadScene("Haunted PCG Game Over Menu");
+    }
+
+    public void loadPCGSnow_GAMEOVER()
+    {
+        SceneManager.LoadScene("Snow PCG Game Over Menu");
     }
 }
