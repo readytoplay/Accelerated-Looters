@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
@@ -63,6 +64,9 @@ public class playerController : MonoBehaviour {
 	//high score (enemies killed number)
 	public int highScore;
 	public KillEnemy k;
+
+    //state vars
+    public bool isSpeedBoost;
     
     // Use this for initialization
     void Start() {
@@ -75,6 +79,7 @@ public class playerController : MonoBehaviour {
         coins = 0;
         CoinBoost = false;
         GameOver.SetActive(false); // hide game over
+        isSpeedBoost = false;
 
 
         // Get Components/Get Types
@@ -203,6 +208,7 @@ public class playerController : MonoBehaviour {
         {
             SpeedBoostTimer = 10.0f; //reset SpeedBoost timer
             moveSpeed = originalSpeed; //reset SpeedBoost to normal
+            isSpeedBoost = false;
         }
 
         DoubleCoinTimer -= Time.deltaTime; //decreases DoubleCoin timer
@@ -246,8 +252,28 @@ public class playerController : MonoBehaviour {
 	        {
 		        PlayerPrefs.SetInt("highscore", k.enemyKilled);
 	        }
-            GameOver.SetActive(true);       //set gameover true
-            Time.timeScale = 0;
+
+            if (SceneManager.GetActiveScene().name == "Jungle Level 1")
+            {
+                SceneManager.LoadScene("Jungle Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Underwater Level 2")
+            {
+                SceneManager.LoadScene("UW Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Haunted Level 3")
+            {
+                SceneManager.LoadScene("Haunted Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Snow Level 4")
+            {
+                SceneManager.LoadScene("Snow Game Over Menu");
+            }
+            
+           
         }
     }
 
@@ -319,7 +345,9 @@ public class playerController : MonoBehaviour {
 	}
 
 	public void setSpeedBoost(){ //increases height of jump
-		moveSpeed = 20f;
+        isSpeedBoost = true;
+        originalSpeed = moveSpeed;
+        moveSpeed *= 2;
 		SpeedBoostTimer = 10.0f;
 	}
 
@@ -337,7 +365,7 @@ public class playerController : MonoBehaviour {
     {
         if(hasPowerUp3)
         {
-            moveSpeed = 15.0f;
+            moveSpeed *= 1.5f;
         }
     }
 

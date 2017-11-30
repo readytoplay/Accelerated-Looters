@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 114631128069674816}
   - component: {fileID: 114494602475680964}
   - component: {fileID: 58341384008814766}
+  - component: {fileID: 114578169730088576}
   - component: {fileID: 95692239904266332}
   m_Layer: 0
   m_Name: Player
@@ -569,6 +570,18 @@ MonoBehaviour:
   resumeButton: {fileID: 114763540429986924}
   restartButton: {fileID: 114329075065081512}
   exitButton: {fileID: 114949717220499396}
+--- !u!114 &114578169730088576
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264686011681494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3196799f4286a040872ab680cc23726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
 --- !u!114 &114631128069674816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -593,10 +606,16 @@ MonoBehaviour:
   SpeedBoostTimer: 10
   DoubleCoinTimer: 10
   InvincibleTimer: 10
+  jumpBuffer: 0
   isGrounded: 0
   CoinBoost: 0
   Invincible: 0
   beingCollected: 0
+  doubleJump: 0
+  hasPowerUp1: 0
+  hasPowerUp2: 0
+  hasPowerUp3: 0
+  hasPowerUp4: 0
   spike: {fileID: 0}
   GameOver: {fileID: 0}
   killBox: {fileID: 1117454689185604}
@@ -609,6 +628,10 @@ MonoBehaviour:
   MyLevelManager: {fileID: 0}
   checkPointChecker: {fileID: 0}
   myAnim: {fileID: 0}
+  totalCoins: 0
+  highScore: 0
+  k: {fileID: 0}
+  isSpeedBoost: 0
 --- !u!114 &114632436494695488
 MonoBehaviour:
   m_ObjectHideFlags: 1

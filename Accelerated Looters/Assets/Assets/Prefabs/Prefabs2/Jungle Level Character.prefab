@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114085381820752780}
   - component: {fileID: 114705146179037284}
   - component: {fileID: 58157924176585298}
+  - component: {fileID: 114005293608210306}
   - component: {fileID: 95558104548512646}
   m_Layer: 0
   m_Name: Jungle Level Character
@@ -366,6 +367,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114005293608210306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1028418259931002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3196799f4286a040872ab680cc23726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0
 --- !u!114 &114072993212645226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -442,6 +455,7 @@ MonoBehaviour:
   totalCoins: 0
   highScore: 0
   k: {fileID: 0}
+  isSpeedBoost: 0
 --- !u!114 &114205538580408936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -867,7 +881,6 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -883,7 +896,6 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
