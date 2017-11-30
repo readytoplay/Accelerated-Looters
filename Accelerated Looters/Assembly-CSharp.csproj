@@ -93,7 +93,10 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
+    <Compile Include="Assets\coinUI.cs" />
     <Compile Include="Assets\Procedural_Spikes.cs" />
+    <Compile Include="Assets\TextCheck.cs" />
+    <Compile Include="Assets\Unpause.cs" />
     <Compile Include="Assets\WiggleEnemy2.cs" />
     <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Assets\Other\Settings\LibraryFormatVersion.txt" />
