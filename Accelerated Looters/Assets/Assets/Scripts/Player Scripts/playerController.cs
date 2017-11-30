@@ -55,7 +55,13 @@ public class playerController : MonoBehaviour {
 
 
     Vector3 respawn_pos;    //the position that the player gonna respawn
-
+	
+	//total coins
+	public int totalCoins;
+	
+	//high score (enemies killed number)
+	public int highScore;
+	public KillEnemy k;
     
     // Use this for initialization
     void Start() {
@@ -77,6 +83,20 @@ public class playerController : MonoBehaviour {
         checkPointChecker = FindObjectOfType<CheckPointController>();
         myAnim = FindObjectOfType<Animator>();
 
+	    
+	    //Get history coins number
+	    totalCoins = PlayerPrefs.GetInt("totalcoins");
+
+        if(hasPowerUp4)
+        {
+            life_count = 5;
+        }
+	    
+	    //Get high score
+	    k = FindObjectOfType<KillEnemy>();
+	    highScore = PlayerPrefs.GetInt("highscore");
+
+
     }
 
     // Update is called once per frame
@@ -85,6 +105,8 @@ public class playerController : MonoBehaviour {
     {
         beingCollected = false;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+
+        powerUp3();
 
         handleMovement(); // handles player's movement
 
@@ -214,6 +236,13 @@ public class playerController : MonoBehaviour {
     {
         if (life_count <= 0)
         {
+	        //update coins
+	        PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
+	        //update high score
+	        if (k.enemyKilled > highScore)
+	        {
+		        PlayerPrefs.SetInt("highscore", k.enemyKilled);
+	        }
             GameOver.SetActive(true);       //set gameover true
             Time.timeScale = 0;
         }
@@ -244,7 +273,13 @@ public class playerController : MonoBehaviour {
 			//In case the coins are being collected again before it disappears
 			if (!beingCollected) 
 			{
-				if (CoinBoost) {
+                if(CoinBoost && hasPowerUp2) {
+                    coins = coins + 6;
+                }
+                else if (hasPowerUp2){
+                    coins = coins + 3;
+                }
+				else if (CoinBoost) {
 					coins = coins + 2;
 					beingCollected = true;
 				} else {
@@ -295,4 +330,11 @@ public class playerController : MonoBehaviour {
 		InvincibleTimer = 10.0f;
 	}
 
+    public void powerUp3()
+    {
+        if(hasPowerUp3)
+        {
+            moveSpeed = 15.0f;
+        }
+    }
 }
