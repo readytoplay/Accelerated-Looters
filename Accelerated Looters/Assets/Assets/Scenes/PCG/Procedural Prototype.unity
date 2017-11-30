@@ -77,17 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -109,8 +107,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &144974126
 Prefab:
@@ -204,11 +200,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &366706737 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1264686011681494, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
-    type: 2}
-  m_PrefabInternal: {fileID: 144974126}
 --- !u!95 &366706738 stripped
 Animator:
   m_PrefabParentObject: {fileID: 95692239904266332, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
@@ -217,6 +208,11 @@ Animator:
 --- !u!50 &366706742 stripped
 Rigidbody2D:
   m_PrefabParentObject: {fileID: 50534212841291778, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+    type: 2}
+  m_PrefabInternal: {fileID: 144974126}
+--- !u!4 &366706745 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
     type: 2}
   m_PrefabInternal: {fileID: 144974126}
 --- !u!1001 &382609157
@@ -288,7 +284,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 538362140}
   m_Enabled: 1
-  m_ExtensionPropertyValues: []
 --- !u!124 &538362142
 Behaviour:
   m_ObjectHideFlags: 0
@@ -360,10 +355,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 538362140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c0b9d5fda383a04d8e5fa944c593be2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3535b9087e150da4680ffc36fa7821e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 366706737}
+  targetTransform: {fileID: 366706745}
 --- !u!114 &688144074 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114201888904870252, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
@@ -481,6 +476,31 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224535959175081480, guid: 85c16d20271c9c34cb0d247044b464b5,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -49.210007
+      objectReference: {fileID: 0}
+    - target: {fileID: 114230522730000424, guid: 85c16d20271c9c34cb0d247044b464b5,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224535959175081480, guid: 85c16d20271c9c34cb0d247044b464b5,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224535959175081480, guid: 85c16d20271c9c34cb0d247044b464b5,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224535959175081480, guid: 85c16d20271c9c34cb0d247044b464b5,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 58.700012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85c16d20271c9c34cb0d247044b464b5, type: 2}

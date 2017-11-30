@@ -68,3 +68,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Scenes/Levels/Snow Level 4.unity
     guid: cb587aa8c49015d44bcfde5ba1563c35
+  - enabled: 1
+    path: Assets/Assets/Scenes/UI Scenes/PCG UI/Haunted PCG Game Over Menu.unity
+    guid: f1fe0bb5a04b0374da474803edb6fa2d
+  - enabled: 1
+    path: Assets/Assets/Scenes/UI Scenes/PCG UI/Jungle PCG Game Over Menu.unity
+    guid: 1a204678eedc6194db9fcd58a0ff6b8d
+  - enabled: 1
+    path: Assets/Assets/Scenes/UI Scenes/PCG UI/Snow PCG Game Over Menu.unity
+    guid: 82009a1e4c76cd442b5f8dd32f336e1b
+  - enabled: 1
+    path: Assets/Assets/Scenes/UI Scenes/PCG UI/UW PCG Game Over Menu.unity
+    guid: e6abe2e5c4ddf2e4f923bd7fcfceea6d
