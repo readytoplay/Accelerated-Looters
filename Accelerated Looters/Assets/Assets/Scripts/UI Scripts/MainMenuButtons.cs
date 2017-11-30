@@ -94,6 +94,16 @@ public class MainMenuButtons : MonoBehaviour {
 
     }
 
+    public void reset()
+    { 
+        PlayerPrefs.SetInt("totalcoins", 0);
+        
+        PlayerPrefs.SetInt("highscore", 0);
+        
+       
+    }
+
+
     // ***** TODO Stuff *****
 
     // TODO
