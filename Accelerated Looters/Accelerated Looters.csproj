@@ -250,6 +250,7 @@
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\CameraFollowProcedural.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Coins.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\DeadZoneSlider.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\DistanceSlide.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\EndLevel.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\LevelEndMenu.cs" />

@@ -1,17 +1,9 @@
 ﻿
-<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Accelerated Looters.csproj", "{91C74C02-917E-C4CB-9293-6DFFCA4ADCE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters.Editor", "Accelerated Looters.Editor.csproj", "{264FDE7E-E20B-AEE5-F5FD-A4025BD155D3}"
-=======
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Assembly-CSharp.csproj", "{6B24B61E-3EC9-454D-9B15-170A505F3CC8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Accelerated Looters", "Assembly-CSharp-Editor.csproj", "{E4360F41-01A2-92AE-B8EC-38117E99737F}"
->>>>>>> 2f2302e1a28bc30436192035f446dbe3b8f0dc9a
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

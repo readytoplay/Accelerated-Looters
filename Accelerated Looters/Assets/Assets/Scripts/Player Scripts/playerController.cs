@@ -86,18 +86,17 @@ public class playerController : MonoBehaviour {
 	    
 	    //Get history coins number
 	    totalCoins = PlayerPrefs.GetInt("totalcoins");
-<<<<<<< HEAD
+
         if(hasPowerUp4)
         {
             life_count = 5;
         }
-=======
 	    
 	    //Get high score
 	    k = FindObjectOfType<KillEnemy>();
 	    highScore = PlayerPrefs.GetInt("highscore");
 
->>>>>>> 31ba298c9749d00e313e040e9a75ffbaa89b8dfc
+
     }
 
     // Update is called once per frame
@@ -107,6 +106,8 @@ public class playerController : MonoBehaviour {
         beingCollected = false;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 
+        powerUp3();
+
         handleMovement(); // handles player's movement
 
         handleFallingOffMap(); // if player falls off map
@@ -114,11 +115,6 @@ public class playerController : MonoBehaviour {
         healthManager(); // check life count
 
         powerUpTimers(); // handles the power up timers
-
-        if(hasPowerUp3)
-        {
-            moveSpeed = 15.0f;
-        }
 
     }
 
@@ -334,4 +330,11 @@ public class playerController : MonoBehaviour {
 		InvincibleTimer = 10.0f;
 	}
 
+    public void powerUp3()
+    {
+        if(hasPowerUp3)
+        {
+            moveSpeed = 15.0f;
+        }
+    }
 }
