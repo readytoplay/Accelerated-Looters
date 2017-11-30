@@ -18,9 +18,12 @@ public class Procedural_Spikes : MonoBehaviour {
 
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D c)
     {
-                player.spikeDamage();
-                player.myRigidbody.velocity = new Vector3(player.myRigidbody.velocity.x, player.jumpSpeed + 5, 0);
+        if (c.gameObject.tag == "Player")
+        {
+            player.spikeDamage();
+            player.myRigidbody.velocity = new Vector3(player.myRigidbody.velocity.x, player.jumpSpeed + 5, 0);
+        }
     }
 }

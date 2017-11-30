@@ -123,7 +123,7 @@ public class MainMenuButtons : MonoBehaviour {
     public void loadPCGJungle()
     {
 
-        SceneManager.LoadScene("PCG Jungle Level");
+        SceneManager.LoadScene("Procedural Prototype");
     }
 
     public void loadPCGUnderwater()
