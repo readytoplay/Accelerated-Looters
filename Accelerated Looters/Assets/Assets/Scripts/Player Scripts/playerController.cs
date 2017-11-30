@@ -58,7 +58,10 @@ public class playerController : MonoBehaviour {
 	
 	//total coins
 	public int totalCoins;
-
+	
+	//high score (enemies killed number)
+	public int highScore;
+	public KillEnemy k;
     
     // Use this for initialization
     void Start() {
@@ -82,6 +85,10 @@ public class playerController : MonoBehaviour {
 	    
 	    //Get history coins number
 	    totalCoins = PlayerPrefs.GetInt("totalcoins");
+	    
+	    //Get high score
+	    k = FindObjectOfType<KillEnemy>();
+	    highScore = PlayerPrefs.GetInt("highscore");
 
     }
 
@@ -220,7 +227,13 @@ public class playerController : MonoBehaviour {
     {
         if (life_count <= 0)
         {
+	        //update coins
 	        PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
+	        //update high score
+	        if (k.enemyKilled > highScore)
+	        {
+		        PlayerPrefs.SetInt("highscore", k.enemyKilled);
+	        }
             GameOver.SetActive(true);       //set gameover true
             Time.timeScale = 0;
         }

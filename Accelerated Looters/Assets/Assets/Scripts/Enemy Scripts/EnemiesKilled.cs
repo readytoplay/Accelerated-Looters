@@ -8,6 +8,7 @@ public class EnemiesKilled : MonoBehaviour {
 
 
 	public int enemies = 0;
+	public int highScore;
 	public Text enemiesKilled;
 
 	public KillEnemy k;
@@ -24,7 +25,9 @@ public class EnemiesKilled : MonoBehaviour {
 	{
 		
 		enemies = k.enemyKilled;
-		enemiesKilled.text = ("Enemies Killed = "+ enemies);
+		highScore = PlayerPrefs.GetInt("highscore");
+		enemiesKilled.text = ("Enemies Killed: "+ enemies+ "\n" + "High Score: " + highScore);
+		
 
 	}
 }

@@ -669,54 +669,50 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_LocalPosition.x
       value: 364.1
       objectReference: {fileID: 0}
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_LocalPosition.y
       value: 14.1
       objectReference: {fileID: 0}
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4805863471552476, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+    - target: {fileID: 4447227082776796, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1264686011681494, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
-      propertyPath: m_Name
-      value: Jungle Level Character
-      objectReference: {fileID: 0}
-    - target: {fileID: 114631128069674816, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+    - target: {fileID: 114085381820752780, guid: 74dbb75cdb141284d99f135abac406ac,
         type: 2}
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 868109985}
-    - target: {fileID: 114631128069674816, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+    - target: {fileID: 114085381820752780, guid: 74dbb75cdb141284d99f135abac406ac,
         type: 2}
       propertyPath: MyLevelManager
       value: 
       objectReference: {fileID: 15690583}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7922245ac2dfe5f41bfaf8a430ae134f, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 74dbb75cdb141284d99f135abac406ac, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &125695638
 GameObject:
@@ -6588,12 +6584,12 @@ SpriteRenderer:
   m_MaskInteraction: 0
 --- !u!1 &1529368212 stripped
 GameObject:
-  m_PrefabParentObject: {fileID: 1264686011681494, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+  m_PrefabParentObject: {fileID: 1028418259931002, guid: 74dbb75cdb141284d99f135abac406ac,
     type: 2}
   m_PrefabInternal: {fileID: 121212146}
 --- !u!114 &1529368214 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114631128069674816, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+  m_PrefabParentObject: {fileID: 114085381820752780, guid: 74dbb75cdb141284d99f135abac406ac,
     type: 2}
   m_PrefabInternal: {fileID: 121212146}
   m_Script: {fileID: 11500000, guid: b6a0bbbe4ef22aa4ea424f7e35455e19, type: 3}
