@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
@@ -243,8 +244,28 @@ public class playerController : MonoBehaviour {
 	        {
 		        PlayerPrefs.SetInt("highscore", k.enemyKilled);
 	        }
-            GameOver.SetActive(true);       //set gameover true
-            Time.timeScale = 0;
+
+            if (SceneManager.GetActiveScene().name == "Jungle Level 1")
+            {
+                SceneManager.LoadScene("Jungle Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Underwater Level 2")
+            {
+                SceneManager.LoadScene("UW Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Haunted Level 3")
+            {
+                SceneManager.LoadScene("Haunted Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Snow Level 4")
+            {
+                SceneManager.LoadScene("Snow Game Over Menu");
+            }
+            
+           
         }
     }
 
