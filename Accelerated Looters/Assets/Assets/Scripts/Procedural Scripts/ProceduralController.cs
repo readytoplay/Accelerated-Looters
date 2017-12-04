@@ -81,7 +81,7 @@ public class ProceduralController : MonoBehaviour
 
     //game variables
     private Transform _playerTransform;
-    private List<GameObject> _currentFloorChunkObjects;
+    private MinHeap _currentFloorChunkObjects;
     private List<float> _currentPlatformLocations;
     private List<float> _curEnemyLocations;
 
@@ -101,7 +101,7 @@ public class ProceduralController : MonoBehaviour
     //initialize list before
     private void Awake()
     {
-        _currentFloorChunkObjects = new List<GameObject>();
+        _currentFloorChunkObjects = new MinHeap();
         _currentPlatformLocations = new List<float>();
         _curEnemyLocations = new List<float>();
         _random = new System.Random();
@@ -111,10 +111,10 @@ public class ProceduralController : MonoBehaviour
     void Start()
     {
         _playerTransform = GameObject.FindWithTag("Player").transform;
-        InvokeRepeating("_checkMemory", 5, 5);
         _curChunk = new Chunk(CHUNK_W);
         _fillChunk(_curChunk);
         _curPlatformEnd = 0;
+        StartCoroutine(_removeMostDistantPlatform());
     }
 
     /// <summary>
@@ -289,19 +289,6 @@ public class ProceduralController : MonoBehaviour
     }
 
     /// <summary>
-    /// destroys a list of gameobjects
-    /// </summary>
-    /// <param name="l">the list</param>
-    private void _destroyObjects(List<GameObject> l)
-    {
-        foreach (var go in l)
-        {
-            Destroy(go);
-        }
-        l.Clear();
-    }
-
-    /// <summary>
     /// generates the floor of current chunk
     /// </summary>
     /// <param name="c">the chunk we're working on</param>
@@ -368,17 +355,25 @@ public class ProceduralController : MonoBehaviour
     }
 
     /// <summary>
-    /// removes distant tiles
+    /// removes the most left-distant platform (aka lowest x value)
     /// </summary>
-    private void _checkMemory()
+    private IEnumerator _removeMostDistantPlatform()
     {
-        for (var i = 0; i < _currentFloorChunkObjects.Count; ++i)
+        float timeout = 0.3f;
+        while (true)
         {
-            if (_currentFloorChunkObjects[i].transform.position.x + 25f < _playerTransform.position.x)
+            if (_currentFloorChunkObjects.Size() == 0)
+                continue;
+
+            var curObj = _currentFloorChunkObjects.Get();
+            yield return new WaitForSeconds(timeout);
+
+            _currentFloorChunkObjects.Remove();
+            Destroy(curObj);
+
+            if (timeout > 0.02f)
             {
-                Destroy(_currentFloorChunkObjects[i]);
-                _currentFloorChunkObjects.RemoveAt(i);
-                i--;
+                timeout -= 0.001f;
             }
         }
     }

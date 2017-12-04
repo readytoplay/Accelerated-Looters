@@ -38,6 +38,7 @@ public class playerController : MonoBehaviour {
     public bool beingCollected;
     public bool doubleJump;
     public bool hasPowerUp1, hasPowerUp2, hasPowerUp3, hasPowerUp4;
+    public bool invincibleToSpikeDamage;
 
 
     // Objects ***
@@ -80,6 +81,7 @@ public class playerController : MonoBehaviour {
         CoinBoost = false;
         GameOver.SetActive(false); // hide game over
         isSpeedBoost = false;
+        invincibleToSpikeDamage = false;
 
 
         // Get Components/Get Types
@@ -105,6 +107,17 @@ public class playerController : MonoBehaviour {
 
     }
 
+    private void findGround()
+    {
+        invincibleToSpikeDamage = false;
+        var objs = Physics2D.OverlapCircleAll(transform.position, 1f);
+        foreach(var obj in objs)
+        {
+            if (obj.tag == "Ground")
+                invincibleToSpikeDamage = true;
+        }
+    }
+
     // Update is called once per frame
     // Everyone, please use functions and function calls instead of putting everything in the Update() function, thanks.
     void Update()
@@ -124,6 +137,7 @@ public class playerController : MonoBehaviour {
 
         increaseSpikeTime(); //
 
+        findGround();
     }
 
     /*

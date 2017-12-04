@@ -607,6 +607,7 @@ MonoBehaviour:
   DoubleCoinTimer: 10
   InvincibleTimer: 10
   jumpBuffer: 0
+  spikeCooldown: 3
   isGrounded: 0
   CoinBoost: 0
   Invincible: 0

@@ -13,10 +13,8 @@ public class Spike : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	}
 	void OnTriggerEnter2D(Collider2D other){
+        if (player.isGrounded) return;
 		if (other.CompareTag ("Player")) {
 			
 			player.myRigidbody.velocity = new Vector3 (player.myRigidbody.velocity.x, player.jumpSpeed + 5, 0);
