@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 
-public class playerController : MonoBehaviour {
+public class playerController : MonoBehaviour
+{
 
     // Integers ***
     public int coins;
@@ -58,19 +59,20 @@ public class playerController : MonoBehaviour {
 
 
     Vector3 respawn_pos;    //the position that the player gonna respawn
-	
-	//total coins
-	public int totalCoins;
-	
-	//high score (enemies killed number)
-	public int highScore;
-	public KillEnemy k;
+
+    //total coins
+    public int totalCoins;
+
+    //high score (enemies killed number)
+    public int highScore;
+    public KillEnemy k;
 
     //state vars
     public bool isSpeedBoost;
-    
+
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
 
         // Variable Setting
         life_count = 3; // player life
@@ -91,27 +93,35 @@ public class playerController : MonoBehaviour {
         checkPointChecker = FindObjectOfType<CheckPointController>();
         myAnim = FindObjectOfType<Animator>();
 
-	    
-	    //Get history coins number
-	    totalCoins = PlayerPrefs.GetInt("totalcoins");
 
-        if(hasPowerUp4)
+        //Get history coins number
+        totalCoins = PlayerPrefs.GetInt("totalcoins");
+
+        if (hasPowerUp4)
         {
             life_count = 5;
         }
-	    
-	    //Get high score
-	    k = FindObjectOfType<KillEnemy>();
-	    highScore = PlayerPrefs.GetInt("highscore");
+
+        //Get high score
+        k = FindObjectOfType<KillEnemy>();
+        highScore = PlayerPrefs.GetInt("highscore");
 
 
+    }
+
+    /// <summary>
+    /// called once per fixed interval
+    /// </summary>
+    private void FixedUpdate()
+    {
+        findGround();
     }
 
     private void findGround()
     {
         invincibleToSpikeDamage = false;
         var objs = Physics2D.OverlapCircleAll(transform.position, 1f);
-        foreach(var obj in objs)
+        foreach (var obj in objs)
         {
             if (obj.tag == "Ground")
                 invincibleToSpikeDamage = true;
@@ -136,8 +146,6 @@ public class playerController : MonoBehaviour {
         powerUpTimers(); // handles the power up timers
 
         increaseSpikeTime(); //
-
-        findGround();
     }
 
     /*
@@ -146,30 +154,30 @@ public class playerController : MonoBehaviour {
     void handleMovement()
     {
 
-	    myAnim.SetBool("isJumping", !isGrounded);
+        myAnim.SetBool("isJumping", !isGrounded);
         if (Input.GetAxisRaw("Horizontal") > 0f) //move to right (value >0 is to the right)
         {
             myRigidbody.velocity = new Vector3(moveSpeed, myRigidbody.velocity.y, 0);
             //myAnim.SetBool("isJumping", false);
             myAnim.SetFloat("Speed", moveSpeed);
-	        transform.eulerAngles = new Vector2(0,0); //flip the character
+            transform.eulerAngles = new Vector2(0, 0); //flip the character
 
 
         }
         else if (Input.GetAxisRaw("Horizontal") < 0f) //move to right (value >0 is to the right)
         {
             myRigidbody.velocity = new Vector3(-moveSpeed, myRigidbody.velocity.y, 0);
-           // myAnim.SetBool("isJumping", false);
+            // myAnim.SetBool("isJumping", false);
             myAnim.SetFloat("Speed", moveSpeed);
-	        transform.eulerAngles = new Vector2(0,180); //flip the character
+            transform.eulerAngles = new Vector2(0, 180); //flip the character
 
 
         }
         else if (Input.GetAxisRaw("Horizontal") == 0)
         {
             myRigidbody.velocity = new Vector2(0f, myRigidbody.velocity.y);
-           // myAnim.SetBool("isJumping", false);
-           myAnim.SetFloat("Speed", 0f);
+            // myAnim.SetBool("isJumping", false);
+            myAnim.SetFloat("Speed", 0f);
         }
 
         if (Input.GetButtonDown("Jump") && isGrounded) //jump (value>0 is up)
@@ -201,7 +209,7 @@ public class playerController : MonoBehaviour {
         {
             killBox.SetActive(false);
         }
-	    myAnim.SetFloat("Speed", Mathf.Abs( myRigidbody.velocity.x));
+        myAnim.SetFloat("Speed", Mathf.Abs(myRigidbody.velocity.x));
 
     }
 
@@ -259,13 +267,13 @@ public class playerController : MonoBehaviour {
     {
         if (life_count <= 0)
         {
-	        //update coins
-	        PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
-	        //update high score
-	        if (k.enemyKilled > highScore)
-	        {
-		        PlayerPrefs.SetInt("highscore", k.enemyKilled);
-	        }
+            //update coins
+            PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
+            //update high score
+            if (k.enemyKilled > highScore)
+            {
+                PlayerPrefs.SetInt("highscore", k.enemyKilled);
+            }
 
             if (SceneManager.GetActiveScene().name == "Jungle Level 1")
             {
@@ -286,98 +294,115 @@ public class playerController : MonoBehaviour {
             {
                 SceneManager.LoadScene("Snow Game Over Menu");
             }
-            
-           
+
+
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other){
-		if (other.CompareTag ("CheckPoint")) {
-				
-				respawn_pos = other.transform.position;			//record the transition point
-			}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("CheckPoint"))
+        {
 
-		if (other.CompareTag("Enemy"))
-		{
-			if (!Invincible) { //check if player is invincible before doing damage
-				if (charaterKilling.killingEnemy == false) {	//if we are not killing anyone and we collide with enemy, we lose health
-					MyLevelManager.HurtPlayer (1);
-					this.setInvincible ();
-					InvincibleTimer = 2.0f;
+            respawn_pos = other.transform.position;         //record the transition point
+        }
+
+        if (other.CompareTag("Enemy"))
+        {
+            if (!Invincible)
+            { //check if player is invincible before doing damage
+                if (charaterKilling.killingEnemy == false)
+                {   //if we are not killing anyone and we collide with enemy, we lose health
+                    MyLevelManager.HurtPlayer(1);
+                    this.setInvincible();
+                    InvincibleTimer = 2.0f;
 
 
-				}
-			}
-		}
+                }
+            }
+        }
 
 
-		if (other.CompareTag("Coin"))
-		{
-			//In case the coins are being collected again before it disappears
-			if (!beingCollected) 
-			{
-                if(CoinBoost && hasPowerUp2) {
+        if (other.CompareTag("Coin"))
+        {
+            //In case the coins are being collected again before it disappears
+            if (!beingCollected)
+            {
+                if (CoinBoost && hasPowerUp2)
+                {
                     coins = coins + 6;
                 }
-                else if (hasPowerUp2){
+                else if (hasPowerUp2)
+                {
                     coins = coins + 3;
                 }
-				else if (CoinBoost) {
-					coins = coins + 2;
-					beingCollected = true;
-				} else {
-					coins++;
-				}
-			}
-			Destroy(other.gameObject);
-			
-		}
+                else if (CoinBoost)
+                {
+                    coins = coins + 2;
+                    beingCollected = true;
+                }
+                else
+                {
+                    coins++;
+                }
+            }
+            Destroy(other.gameObject);
 
-		
-		
-	}//when player collide
+        }
 
-	void OnCollisionEnter2D(Collision2D player){
-		//if player collide with platform
-		if (player.gameObject.CompareTag ("movingPlatform")) {
-			transform.SetParent (player.transform);  //set the player parent to the movingPlatform and move together
 
-		}
-	}
-	//when player exit collide
-	void OnCollisionExit2D(Collision2D player){
 
-		if (player.gameObject.CompareTag ("movingPlatform")) {
-			transform.SetParent (null);				//set the player parent off the movingPlatform
-		}
+    }//when player collide
 
-	}
+    void OnCollisionEnter2D(Collision2D player)
+    {
+        //if player collide with platform
+        if (player.gameObject.CompareTag("movingPlatform"))
+        {
+            transform.SetParent(player.transform);  //set the player parent to the movingPlatform and move together
 
-	public void setHighJump(){ //increases height of jump
-		jumpSpeed = 25f;
-		HighJumpTimer = 10.0f;
-	}
+        }
+    }
+    //when player exit collide
+    void OnCollisionExit2D(Collision2D player)
+    {
 
-	public void setSpeedBoost(){ //increases height of jump
+        if (player.gameObject.CompareTag("movingPlatform"))
+        {
+            transform.SetParent(null);              //set the player parent off the movingPlatform
+        }
+
+    }
+
+    public void setHighJump()
+    { //increases height of jump
+        jumpSpeed = 25f;
+        HighJumpTimer = 10.0f;
+    }
+
+    public void setSpeedBoost()
+    { //increases height of jump
         isSpeedBoost = true;
         originalSpeed = moveSpeed;
-        moveSpeed *= 2;
-		SpeedBoostTimer = 10.0f;
-	}
+        moveSpeed += 5;
+        SpeedBoostTimer = 10.0f;
+    }
 
-	public void setDoubleCoin(){ //doubles amount of coins collected
-		CoinBoost = true;
-		DoubleCoinTimer = 10.0f;
-	}
+    public void setDoubleCoin()
+    { //doubles amount of coins collected
+        CoinBoost = true;
+        DoubleCoinTimer = 10.0f;
+    }
 
-	public void setInvincible(){ //doubles amount of coins collected
-		Invincible = true;
-		InvincibleTimer = 10.0f;
-	}
+    public void setInvincible()
+    { //doubles amount of coins collected
+        Invincible = true;
+        InvincibleTimer = 10.0f;
+    }
 
     public void powerUp3()
     {
-        if(hasPowerUp3)
+        if (hasPowerUp3)
         {
             moveSpeed *= 1.5f;
         }

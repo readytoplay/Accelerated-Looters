@@ -10,18 +10,18 @@ public class Spike : MonoBehaviour {
 	void Start ()
 	{
 		player = FindObjectOfType<playerController>(); //gets script to access
-
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-        if (player.isGrounded) return;
-		if (other.CompareTag ("Player")) {
-			
-			player.myRigidbody.velocity = new Vector3 (player.myRigidbody.velocity.x, player.jumpSpeed + 5, 0);
+        if (other.CompareTag ("Player")) {
+            if (player.invincibleToSpikeDamage)
+                Debug.Log("collision invincible");
+            else Debug.Log("collision not invincible");
+            if (player.invincibleToSpikeDamage)
+                return;
+            player.myRigidbody.velocity = new Vector3 (player.myRigidbody.velocity.x, player.jumpSpeed + 5, 0);
 			this.GetComponent<EdgeCollider2D> ().enabled = false;		//set false so character will fall
 			StartCoroutine (wait());
-
-		
 		}
 	}
 	IEnumerator wait(){
