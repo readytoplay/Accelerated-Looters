@@ -60,6 +60,12 @@ public class playerController : MonoBehaviour
 
     Vector3 respawn_pos;    //the position that the player gonna respawn
 
+    //database stuff
+
+    public databaseController db;
+
+    public string userName;
+    
     //total coins
     public int totalCoins;
 
@@ -74,6 +80,8 @@ public class playerController : MonoBehaviour
     void Start()
     {
 
+        db = FindObjectOfType<databaseController>();
+        userName = "Default";
         // Variable Setting
         life_count = 3; // player life
         originalJumpSpeed = jumpSpeed;
@@ -273,6 +281,8 @@ public class playerController : MonoBehaviour
             if (k.enemyKilled > highScore)
             {
                 PlayerPrefs.SetInt("highscore", k.enemyKilled);
+                StartCoroutine(db.PostScores(userName, PlayerPrefs.GetInt("highscore")));
+
             }
 
             if (SceneManager.GetActiveScene().name == "Jungle Level 1")
