@@ -1,15 +1,16 @@
-﻿<Properties StartupConfiguration="{91C74C02-917E-C4CB-9293-6DFFCA4ADCE3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/TextCheck.cs">
+﻿<Properties StartupConfiguration="{91C74C02-917E-C4CB-9293-6DFFCA4ADCE3}|" StartupItem="Accelerated Looters.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs">
     <Files>
-      <File FileName="Assets/Assets/Scripts/Player Scripts/playerController.cs" Line="175" Column="10" />
-      <File FileName="Assets/TextCheck.cs" Line="26" Column="1" />
+      <File FileName="Assets\Assets\Scripts\Player Scripts\playerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\TextCheck.cs" Line="26" Column="1" />
+      <File FileName="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Accelerated_220Looters PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Accelerated_220Looters PreferredExecutionTarget="Unity.Editor" />
 </Properties>
