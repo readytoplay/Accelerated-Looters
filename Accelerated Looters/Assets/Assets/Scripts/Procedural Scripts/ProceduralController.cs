@@ -141,39 +141,7 @@ public class ProceduralController : MonoBehaviour
         List<GameObject> curItems;
         _generateFloor(chunk, out curItems);
         _ensureLevelIsCompletable(curItems);
-        _fillVertical(_currentPlatformObjects.GetList());
         _fillChunkWithPrefabs(curItems);
-    }
-
-    private void _fillVertical(List<GameObject> currentPlatformObjects)
-    {
-   
-        var platformList = new List<List<GameObject>>();
-        var curList = new List<GameObject>();
-        GameObject prev = null;
-        for (var i = 0; i < currentPlatformObjects.Count; ++i)
-        {
-            if (i == 0)
-            {
-                curList.Add(currentPlatformObjects[i]);
-                prev = currentPlatformObjects[i];
-            }
-            else if (currentPlatformObjects[i].transform.position.x - prev.transform.position.x <= BOX_WIDTH + 0.1f)
-            {
-                curList.Add(currentPlatformObjects[i]);
-                prev = currentPlatformObjects[i];
-            }
-            else
-            {
-                platformList.Add(new List<GameObject>(curList));
-                curList.Clear();
-                prev = currentPlatformObjects[i];
-            }
-        }
-        foreach (var spikeChunk in platformList)
-        {
-            if(_rollWithProbability(0.5f)) _generateJumpable(spikeChunk);
-        }
     }
 
     /// <summary>
