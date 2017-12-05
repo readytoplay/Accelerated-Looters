@@ -37,14 +37,14 @@ public class PauseMenu : MonoBehaviour {
     }
 
     // resume playing from pause
-    void resumeButtonOnClick()
+    public void resumeButtonOnClick()
     {
         paused = togglePause();
         pauseMenuTemplate.SetActive(false);
     }
 
     // restart level
-    void restartButtonOnClick()
+    public void restartButtonOnClick()
     {
         paused = togglePause();
         SceneManager.LoadScene("Jungle Level 1");
@@ -52,7 +52,7 @@ public class PauseMenu : MonoBehaviour {
     }
 
     // exit game
-    void exitButtonOnClick()
+    public void exitButtonOnClick()
     {
         Application.Quit(); // quit app
 
