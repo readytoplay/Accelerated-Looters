@@ -18,6 +18,7 @@ TagManager:
   - goal
   - CoinText
   - Ground
+  - Tutorial1
   layers:
   - Default
   - TransparentFX
