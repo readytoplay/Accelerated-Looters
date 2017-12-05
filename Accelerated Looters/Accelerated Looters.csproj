@@ -119,9 +119,9 @@
     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\SpeedBoostPowerUp.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\AcceleratingPlayer.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\CameraFollowProcedural.cs" />
-    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\MinHeap.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\Procedural_Spikes.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\Queue.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Coins.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\DeadZoneSlider.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\DistanceSlide.cs" />

@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-internal class MinHeap : IEnumerable<GameObject>
+public class Queue : IEnumerable<GameObject>
 {
 
     private List<GameObject> _internalList;
 
-    public MinHeap()
+    public List<GameObject> GetList(){return _internalList;}
+
+    public Queue()
     {
         _internalList = new List<GameObject>();
-    }
-
-    public void _sort()
-    {
-        _internalList.Sort((GameObject obj1, GameObject obj2) => obj1.transform.position.x.CompareTo(obj2.transform.position.x));
     }
 
     /// <summary>
@@ -24,13 +21,11 @@ internal class MinHeap : IEnumerable<GameObject>
     public void Add(GameObject gameObject)
     {
         _internalList.Add(gameObject);
-        _sort();
     }
 
     public void AddRange(List<GameObject> list)
     {
         _internalList.AddRange(list);
-        _sort();
     }
 
     public int Size() { return _internalList.Count;  }

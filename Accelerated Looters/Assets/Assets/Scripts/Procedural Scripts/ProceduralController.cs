@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 /// <summary>
 /// chunk is the space we're inializing for our current procedue
@@ -72,6 +72,7 @@ public class ProceduralController : MonoBehaviour
     public GameObject prefab_pu2;
     public GameObject prefab_pu3;
     public GameObject prefab_pu4;
+    public Text text;
 
     //state variables
     private Chunk _curChunk;
@@ -81,13 +82,16 @@ public class ProceduralController : MonoBehaviour
 
     //game variables
     private Transform _playerTransform;
-    private MinHeap _currentFloorChunkObjects;
+    public Transform GetPlayerTransform() { return _playerTransform;  }
+    private Queue _currentFloorChunkObjects;
+    public Queue GetCurFloorObjs() { return _currentFloorChunkObjects;  }
+    private Queue _currentPlatformObjects;
     private List<float> _currentPlatformLocations;
     private List<float> _curEnemyLocations;
 
     //useful info
     private const float BOX_WIDTH = 0.8f, FLOOR_Y = -3f;
-    private float CHUNK_W = 50f;
+    private float CHUNK_W = 100f;
 
     //probabilities
     private const float ENEMY1_PROB = 0.05f;
@@ -101,9 +105,10 @@ public class ProceduralController : MonoBehaviour
     //initialize list before
     private void Awake()
     {
-        _currentFloorChunkObjects = new MinHeap();
+        _currentFloorChunkObjects = new Queue();
         _currentPlatformLocations = new List<float>();
         _curEnemyLocations = new List<float>();
+        _currentPlatformObjects = new Queue();
         _random = new System.Random();
     }
 
@@ -152,6 +157,12 @@ public class ProceduralController : MonoBehaviour
             {
                 _randomSpawn(gameObject.transform.position.x, gameObject.transform.position.y+1f);
             }
+        }
+
+        //find platform locations
+        foreach (var gameObject in _currentPlatformObjects)
+        {
+            _randomSpawn(gameObject.transform.position.x, gameObject.transform.position.y + 1f);
         }
     }
 
@@ -284,9 +295,42 @@ public class ProceduralController : MonoBehaviour
             pt:         PLATFORM_TYPE.AIR_T,
             curObjects: out temp 
         );
-        _currentFloorChunkObjects.AddRange(temp);
+        _currentPlatformObjects.AddRange(temp);
         _currentPlatformLocations.Add(spikeChunk[0].transform.position.x);
     }
+
+    /*/// <summary>
+    /// generate a platform aboves spikeChunk so that you can jump on it
+    /// </summary>
+    /// <param name="spikeChunk"></param>
+    private void _generateJumpable(GameObject platform)
+    {
+
+        if (_currentPlatformLocations.Contains(platform.transform.position.x))
+            return;
+
+        if (platform.transform.position.x <= _curPlatformEnd)
+            return;
+
+        //parameter calcuations
+        var _x   = (float)(platform.transform.position.x + (3 * _random.NextDouble()));
+        var _y   = (float)(platform.transform.position.y + (3 * _random.NextDouble()));
+        var _len = (float)(10f *_random.NextDouble());
+
+
+        List<GameObject> temp;
+        _generatePiece(
+            x: _x,
+            y: _y,
+            len: _len,
+            pt: PLATFORM_TYPE.AIR_T,
+            curObjects: out temp
+        );
+        _currentPlatformObjects.AddRange(temp);
+        _currentPlatformLocations.Add(temp[0].transform.position.x);
+
+        Debug.Log("spawned a platform for you papi");
+    }*/
 
     /// <summary>
     /// generates the floor of current chunk
@@ -371,7 +415,7 @@ public class ProceduralController : MonoBehaviour
             _currentFloorChunkObjects.Remove();
             Destroy(curObj);
 
-            if (timeout > 0.02f)
+            if (timeout > 0.035f)
             {
                 timeout -= 0.001f;
             }
@@ -382,6 +426,8 @@ public class ProceduralController : MonoBehaviour
     void Update()
     {
         _playerTransform = GameObject.FindWithTag("Player").transform;
+        text.text = "d=" + 
+            (_playerTransform.position.x - _currentFloorChunkObjects.Get().transform.position.x);
         // check if we need to fill a new chunk
         if (checkForChunkRefresh())
         {
@@ -389,6 +435,7 @@ public class ProceduralController : MonoBehaviour
             _fillChunk(c);
             _curChunk = c;
         }
+        
     }
 
     /// <summary>
