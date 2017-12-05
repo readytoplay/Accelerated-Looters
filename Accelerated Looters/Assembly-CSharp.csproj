@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Assets\Prefabs\playerController2.cs" />
+    <Compile Include="Assets\Assets\Prefabs\Prefabs2\databaseController.cs" />
     <Compile Include="Assets\Assets\Prefabs\spawnEnemyBehaviour.cs" />
     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BasicEnemyController.cs" />
     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BulletTest.cs" />
@@ -79,6 +80,8 @@
     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\SpeedBoostPowerUp.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\AcceleratingPlayer.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\CameraFollowProcedural.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\MinHeap.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\Procedural_Spikes.cs" />
     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Coins.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\DeadZoneSlider.cs" />
@@ -94,7 +97,6 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
     <Compile Include="Assets\coinUI.cs" />
-    <Compile Include="Assets\Procedural_Spikes.cs" />
     <Compile Include="Assets\TextCheck.cs" />
     <Compile Include="Assets\Unpause.cs" />
     <Compile Include="Assets\WiggleEnemy2.cs" />
