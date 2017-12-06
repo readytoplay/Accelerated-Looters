@@ -195,7 +195,7 @@ Prefab:
     - target: {fileID: 224035417012571618, guid: ac2b48d366717dd4193543b4ce837a4b,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 100.49994
+      value: 154.60004
       objectReference: {fileID: 0}
     - target: {fileID: 224035417012571618, guid: ac2b48d366717dd4193543b4ce837a4b,
         type: 2}
@@ -235,7 +235,7 @@ Prefab:
     - target: {fileID: 224035417012571618, guid: ac2b48d366717dd4193543b4ce837a4b,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 100.49994
+      value: 154.6
       objectReference: {fileID: 0}
     - target: {fileID: 224035417012571618, guid: ac2b48d366717dd4193543b4ce837a4b,
         type: 2}
@@ -245,7 +245,7 @@ Prefab:
     - target: {fileID: 224035417012571618, guid: ac2b48d366717dd4193543b4ce837a4b,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 510.4
+      value: 1606.1
       objectReference: {fileID: 0}
     - target: {fileID: 224035417012571618, guid: ac2b48d366717dd4193543b4ce837a4b,
         type: 2}
@@ -281,6 +281,26 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.4659795
+      objectReference: {fileID: 0}
+    - target: {fileID: 114966645874820638, guid: ac2b48d366717dd4193543b4ce837a4b,
+        type: 2}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114966645874820638, guid: ac2b48d366717dd4193543b4ce837a4b,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114966645874820638, guid: ac2b48d366717dd4193543b4ce837a4b,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114966645874820638, guid: ac2b48d366717dd4193543b4ce837a4b,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ac2b48d366717dd4193543b4ce837a4b, type: 2}
@@ -757,7 +777,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1444368124}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28, y: 108, z: 0}
+  m_LocalPosition: {x: 72.8, y: 108, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1099788833}
@@ -765,8 +785,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28, y: 108}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 72.8, y: 108}
+  m_SizeDelta: {x: 258.3, y: 30}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1444368126
 MonoBehaviour:
@@ -789,10 +809,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -800,7 +820,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "UserName\t\tScore"
+  m_Text: "UserName\t\t\t\t\t\t      Score"
 --- !u!222 &1444368127
 CanvasRenderer:
   m_ObjectHideFlags: 0

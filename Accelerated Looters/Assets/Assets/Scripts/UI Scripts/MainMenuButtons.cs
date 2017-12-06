@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ using UnityEngine;
 public class MainMenuButtons : MonoBehaviour {
 
     public static string PreviousScene = "";
+
 
     public void loadPreviousScene()
     {
@@ -102,6 +104,8 @@ public class MainMenuButtons : MonoBehaviour {
         
        
     }
+
+ 
 
 
     // ***** TODO Stuff *****

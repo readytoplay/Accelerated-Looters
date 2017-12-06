@@ -278,12 +278,9 @@ public class playerController : MonoBehaviour
             //update coins
             PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
             //update high score
-            if (k.enemyKilled > highScore)
-            {
-                PlayerPrefs.SetInt("highscore", k.enemyKilled);
-                StartCoroutine(db.PostScores(userName, PlayerPrefs.GetInt("highscore")));
-
-            }
+           
+            PlayerPrefs.SetInt("highscore", k.enemyKilled);
+            StartCoroutine(db.PostScores(PlayerPrefs.GetString("PlayerName"), PlayerPrefs.GetInt("highscore")));
 
             if (SceneManager.GetActiveScene().name == "Jungle Level 1")
             {
