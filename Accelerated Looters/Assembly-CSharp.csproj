@@ -93,6 +93,8 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\life_number_Script.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\MainMenuButtons.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenuWater.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\pauseMeunforWater.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\PCG_UI.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
