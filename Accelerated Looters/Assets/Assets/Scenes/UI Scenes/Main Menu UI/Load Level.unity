@@ -1902,7 +1902,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 904497364}
-        m_MethodName: loadPCGIce
+        m_MethodName: loadPCGSnow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

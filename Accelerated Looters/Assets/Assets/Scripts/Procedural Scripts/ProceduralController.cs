@@ -106,6 +106,7 @@ public class ProceduralController : MonoBehaviour
     private const float BOX_WIDTH = 0.8f, FLOOR_Y = -3f;
     private float CHUNK_W = 100f;
     private const float PLAYER_SEE_DISTANCE = 25f;
+    private const float PROCEDURAL_JUMP = 10f; 
 
     //probabilities
     private const float ENEMY1_PROB = 0.05f;
@@ -132,6 +133,8 @@ public class ProceduralController : MonoBehaviour
     void Start()
     {
         _playerTransform = GameObject.FindWithTag("Player").transform;
+        var pc = GetComponent<playerController>();
+        pc.jumpSpeed = PROCEDURAL_JUMP;
         _curChunk = new Chunk(CHUNK_W);
         _fillChunk(_curChunk);
         _curPlatformEnd = 0;
