@@ -80,3 +80,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Assets/Scenes/UI Scenes/PCG UI/UW PCG Game Over Menu.unity
     guid: e6abe2e5c4ddf2e4f923bd7fcfceea6d
+  - enabled: 1
+    path: Assets/Assets/Scenes/PCG/Haunted PCG.unity
+    guid: 7bea5c259045c774f81ed3b684045a39
+  - enabled: 1
+    path: Assets/Assets/Scenes/PCG/Jungle PCG.unity
+    guid: bc36387c357a60040aeb4893f1f1d1d7
+  - enabled: 1
+    path: Assets/Assets/Scenes/PCG/Snow PCG.unity
+    guid: 8c3054ced4e187a42b92e98e61284eb7
+  - enabled: 1
+    path: Assets/Assets/Scenes/PCG/Underwater PCG.unity
+    guid: 2fb6f23d421d6c449a64313376ab742b

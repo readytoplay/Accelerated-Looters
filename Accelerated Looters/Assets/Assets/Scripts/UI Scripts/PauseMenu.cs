@@ -47,13 +47,14 @@ public class PauseMenu : MonoBehaviour {
     public void restartButtonOnClick()
     {
         paused = togglePause();
-        SceneManager.LoadScene("Jungle Level 1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         
     }
 
     // exit game
     public void exitButtonOnClick()
     {
+        paused = togglePause();
         SceneManager.LoadScene("Main Menu"); // quit app
 
     }
