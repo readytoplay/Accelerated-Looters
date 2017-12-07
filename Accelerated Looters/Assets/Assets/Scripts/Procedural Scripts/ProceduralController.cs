@@ -74,6 +74,7 @@ public static class Extensions
 public class ProceduralController : MonoBehaviour
 {
 
+#region SerializedVariables
     [SerializeField]
     public GameObject prefab_lowerPlatform;
     public GameObject prefab_spikes;
@@ -85,6 +86,8 @@ public class ProceduralController : MonoBehaviour
     public GameObject prefab_pu3;
     public GameObject prefab_pu4;
     public Text text;
+    public playerController controller;
+#endregion
 
     //state variables
     private Chunk _curChunk;
@@ -106,7 +109,7 @@ public class ProceduralController : MonoBehaviour
     private const float BOX_WIDTH = 0.8f, FLOOR_Y = -3f;
     private float CHUNK_W = 100f;
     private const float PLAYER_SEE_DISTANCE = 25f;
-    private const float PROCEDURAL_JUMP = 10f; 
+    private const float PROCEDURAL_JUMP = 15f; 
 
     //probabilities
     private const float ENEMY1_PROB = 0.05f;
@@ -122,6 +125,7 @@ public class ProceduralController : MonoBehaviour
     //initialize list before
     private void Awake()
     {
+        controller.jumpSpeed = PROCEDURAL_JUMP;
         _currentFloorChunkObjects = new Queue();
         _currentPlatformLocations = new List<float>();
         _curEnemyLocations = new List<float>();
@@ -133,8 +137,6 @@ public class ProceduralController : MonoBehaviour
     void Start()
     {
         _playerTransform = GameObject.FindWithTag("Player").transform;
-        /*var pc = GetComponent<playerController>();
-        pc.jumpSpeed = PROCEDURAL_JUMP;*/
         _curChunk = new Chunk(CHUNK_W);
         _fillChunk(_curChunk);
         _curPlatformEnd = 0;

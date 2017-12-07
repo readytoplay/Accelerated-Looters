@@ -856,6 +856,7 @@ MonoBehaviour:
   prefab_pu3: {fileID: 1808412702977524, guid: b417d729d8bfc6b42b46c4ea994ea5a5, type: 2}
   prefab_pu4: {fileID: 1534923143060946, guid: 599001103eb8ef04bb471ba0b1610ad3, type: 2}
   text: {fileID: 1079857256}
+  controller: {fileID: 1972586252}
 --- !u!4 &1382357973
 Transform:
   m_ObjectHideFlags: 0
@@ -1053,6 +1054,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1972586252 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114631128069674816, guid: 7922245ac2dfe5f41bfaf8a430ae134f,
+    type: 2}
+  m_PrefabInternal: {fileID: 144974126}
+  m_Script: {fileID: 11500000, guid: b6a0bbbe4ef22aa4ea424f7e35455e19, type: 3}
 --- !u!1 &2002914673 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1480990022063362, guid: 80f22da012ce54f46b3f48dd1ef2f5b8,
