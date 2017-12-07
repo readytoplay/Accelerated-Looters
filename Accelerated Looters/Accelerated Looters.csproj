@@ -254,7 +254,9 @@
     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\KillEnemy.cs" />
     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\Shooting.cs" />
     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\SpawnEnemyMovementScript.cs" />
+    <Compile Include="Assets\Assets\Scripts\level2\DeadZoneForHunter.cs" />
     <Compile Include="Assets\Assets\Scripts\level2\level2Animation.cs" />
+    <Compile Include="Assets\Assets\Scripts\level2\underWaterPhysics.cs" />
     <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraController.cs" />
     <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraFollowPlayer.cs" />
     <Compile Include="Assets\Assets\Scripts\Player Scripts\CheckPointController.cs" />

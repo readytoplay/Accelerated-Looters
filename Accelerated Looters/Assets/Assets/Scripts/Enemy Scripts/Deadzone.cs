@@ -14,7 +14,7 @@ public class Deadzone : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Player = FindObjectOfType<playerController>();
-        levelManager = GameObject.Find ("Level Manager").GetComponent<LevelManager> ();
+        levelManager = GameObject.Find ("LevelManager").GetComponent<LevelManager> ();
 		StartCoroutine (startDeadZone());
 	}
 	
