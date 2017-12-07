@@ -45,9 +45,10 @@
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
     <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript" />
     <Reference Include="UnityScript.Lang" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
@@ -67,7 +68,7 @@
       <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Editor\Data/Managed/nunit.framework.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>Library\UnityAssemblies\UnityEngine.Timeline.dll</HintPath>
@@ -135,6 +136,7 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\PCG_UI.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
     <Compile Include="Assets\coinUI.cs" />
