@@ -101,6 +101,7 @@
     <Compile Include="Assets\TextCheck.cs" />
     <Compile Include="Assets\Unpause.cs" />
     <Compile Include="Assets\WiggleEnemy2.cs" />
+    <None Include="Assets\Jiggly Bubble Free\readme_Jiggly_Bubble_Free.txt" />
     <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Assets\Other\Settings\LibraryFormatVersion.txt" />
     <None Include="Assets\Assets\Other\Settings\LastSceneManagerSetup.txt" />
