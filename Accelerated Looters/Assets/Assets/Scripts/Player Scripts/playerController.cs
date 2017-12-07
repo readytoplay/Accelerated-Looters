@@ -6,8 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public enum Level {  JUNGLE, SNOW, UNDERWATER, HAUNTED, J_PCG, S_PCG, U_PCG, H_PCG }
-
 public class playerController : MonoBehaviour
 {
 
