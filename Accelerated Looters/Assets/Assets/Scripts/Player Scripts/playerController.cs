@@ -247,7 +247,7 @@ public class playerController : MonoBehaviour
             totalWait += JUMP_QUEUE_WAIT;
             yield return new WaitForSeconds(JUMP_QUEUE_WAIT);
         }
-        if(totalWait <= 1f)
+        if(totalWait <= 0.3f)
         {
             jumpBuffer = 0;
             myAnim.SetBool("isJumping", true);

@@ -113,36 +113,35 @@ public class MainMenuButtons : MonoBehaviour {
     // TODO
     public void loadIceLevel()
     {
-        // TODO when Ice level is committed
-        // SceneManager.LoadScene("Ice Level 4");
+        SceneManager.LoadScene("Snow Level 4");
     }
 
     // TODO
     public void loadIceLevelStore()
     {
         // TODO when Ice level is committed
-        // SceneManager.LoadScene("Ice Level 4");
+        SceneManager.LoadScene("Snow Store");
     }
 
     public void loadPCGJungle()
     {
 
-        SceneManager.LoadScene("Procedural Prototype");
+        SceneManager.LoadScene("Jungle PCG");
     }
 
     public void loadPCGUnderwater()
     {
-        SceneManager.LoadScene("PCG Underwater Level");
+        SceneManager.LoadScene("Underwater PCG");
     }
 
     public void loadPCGHaunted()
     {
-        SceneManager.LoadScene("PCG Haunted Level");
+        SceneManager.LoadScene("Haunted PCG");
     }
 
     public void loadPCGSnow()
     {
-        SceneManager.LoadScene("PCG Snow Level");
+        SceneManager.LoadScene("Snow PCG");
     }
 
     public void loadPCGJungle_GAMEOVER()

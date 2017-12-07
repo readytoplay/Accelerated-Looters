@@ -157,22 +157,22 @@ public class LevelEndMenu : MonoBehaviour {
     public void loadPCGJungle()
     {
         
-        SceneManager.LoadScene("PCG Jungle Level");
+        SceneManager.LoadScene("Jungle PCG");
     }
 
     public void loadPCGUnderwater()
     {
-        SceneManager.LoadScene("PCG Underwater Level");
+        SceneManager.LoadScene("Underwater PCG");
     }
 
     public void loadPCGHaunted()
     {
-        SceneManager.LoadScene("PCG Haunted Level");
+        SceneManager.LoadScene("Haunted PCG");
     }
 
     public void loadPCGSnow()
     {
-        SceneManager.LoadScene("PCG Snow Level");
+        SceneManager.LoadScene("Snow PCG");
     }
 
     public void loadPCGJungle_GAMEOVER()

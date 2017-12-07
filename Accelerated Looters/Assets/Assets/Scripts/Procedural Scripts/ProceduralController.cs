@@ -141,10 +141,15 @@ public class ProceduralController : MonoBehaviour
 
     private void _deleteUselessPlatforms()
     {
-        foreach(var platform in _currentPlatformObjects)
+        var platforms = _currentPlatformObjects.GetList();
+        for(var i=0; i<platforms.Count; ++i)
         {
-            if (platform.transform.position.x <= _curDeleteX)
-                Destroy(platform);
+            if(platforms[i].transform.position.x <= _curDeleteX)
+            {
+                Debug.Log("deleting " + i);
+                Destroy(platforms[i]);
+                platforms.RemoveAt(i);
+            }
         }
     }
 
@@ -455,7 +460,7 @@ public class ProceduralController : MonoBehaviour
         while (true)
         {
             if (_currentFloorChunkObjects.Size() == 0)
-                continue;
+                yield return new WaitForSeconds(10);
 
             var curObj = _currentFloorChunkObjects.Get();
             _curDeleteX = curObj.transform.position.x;
