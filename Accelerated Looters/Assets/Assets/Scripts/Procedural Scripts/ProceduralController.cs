@@ -133,8 +133,8 @@ public class ProceduralController : MonoBehaviour
     void Start()
     {
         _playerTransform = GameObject.FindWithTag("Player").transform;
-        var pc = GetComponent<playerController>();
-        pc.jumpSpeed = PROCEDURAL_JUMP;
+        /*var pc = GetComponent<playerController>();
+        pc.jumpSpeed = PROCEDURAL_JUMP;*/
         _curChunk = new Chunk(CHUNK_W);
         _fillChunk(_curChunk);
         _curPlatformEnd = 0;
