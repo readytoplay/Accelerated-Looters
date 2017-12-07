@@ -20,6 +20,8 @@ public class Procedural_Spikes : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D c)
     {
+        if (c == null)
+            return;
         if (player.invincibleToSpikeDamage)
             return;
         if (c.gameObject.tag == "Player")

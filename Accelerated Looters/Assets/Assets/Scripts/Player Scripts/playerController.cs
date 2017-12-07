@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-
 public class playerController : MonoBehaviour
 {
 
@@ -75,6 +74,7 @@ public class playerController : MonoBehaviour
 
     //state vars
     public bool isSpeedBoost;
+    private bool _jumpBuffer;
 
     
    /*** double jump - powerup1
@@ -135,7 +135,7 @@ public class playerController : MonoBehaviour
     private void findGround()
     {
         invincibleToSpikeDamage = false;
-        var objs = Physics2D.OverlapCircleAll(transform.position, 1f);
+        var objs = Physics2D.OverlapCircleAll(transform.position, 0.5f);
         foreach (var obj in objs)
         {
             if (obj.tag == "Ground")
@@ -211,6 +211,11 @@ public class playerController : MonoBehaviour
             myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0);
         }
 
+        if(Input.GetButtonDown("Jump") && !isGrounded)
+        {
+            StartCoroutine(_awaitLanding());
+        }
+
         if (isGrounded)
         {
             doubleJump = true;
@@ -226,6 +231,24 @@ public class playerController : MonoBehaviour
         }
         myAnim.SetFloat("Speed", Mathf.Abs(myRigidbody.velocity.x));
 
+    }
+
+    private const float JUMP_QUEUE_WAIT = 0.05f;
+    private IEnumerator _awaitLanding()
+    {
+        var totalWait = 0f;
+        while (!isGrounded) {
+            if (totalWait > 1f)
+                break;
+            totalWait += JUMP_QUEUE_WAIT;
+            yield return new WaitForSeconds(JUMP_QUEUE_WAIT);
+        }
+        if(totalWait <= 1f)
+        {
+            jumpBuffer = 0;
+            myAnim.SetBool("isJumping", true);
+            myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, jumpSpeed, 0);
+        }
     }
 
     /*

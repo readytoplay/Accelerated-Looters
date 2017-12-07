@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public class Queue : IEnumerable<GameObject>
@@ -63,5 +65,26 @@ public class Queue : IEnumerable<GameObject>
     public IEnumerator<GameObject> GetEnumerator()
     {
         return ((IEnumerable<GameObject>)_internalList).GetEnumerator();
+    }
+
+    internal static class Cloner {
+        public static object DeepClone(object obj)
+        {
+            object objResult = null;
+            using (MemoryStream ms = new MemoryStream())
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(ms, obj);
+
+                ms.Position = 0;
+                objResult = bf.Deserialize(ms);
+            }
+            return objResult;
+        }
+    }
+
+    public List<GameObject> Clone()
+    {
+        return (List<GameObject>)Cloner.DeepClone(_internalList);
     }
 }

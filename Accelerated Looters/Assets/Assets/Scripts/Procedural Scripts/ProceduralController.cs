@@ -59,6 +59,18 @@ internal class Chunk
 /// </summary>
 public enum PLATFORM_TYPE { FLOOR_T, AIR_T, SPIKE_T };
 
+public static class Extensions
+{
+    public static bool IsWithin<T>(this T value, T minimum, T maximum) where T : IComparable<T>
+    {
+        if (value.CompareTo(minimum) < 0)
+            return false;
+        if (value.CompareTo(maximum) > 0)
+            return false;
+        return true;
+    }
+}
+
 public class ProceduralController : MonoBehaviour
 {
 
@@ -79,6 +91,7 @@ public class ProceduralController : MonoBehaviour
     private float _curFloorEnd;
     private float _curPlatformEnd;
     private System.Random _random;
+    private float _curDeleteX;
 
     //game variables
     private Transform _playerTransform;
@@ -92,6 +105,7 @@ public class ProceduralController : MonoBehaviour
     //useful info
     private const float BOX_WIDTH = 0.8f, FLOOR_Y = -3f;
     private float CHUNK_W = 100f;
+    private const float PLAYER_SEE_DISTANCE = 25f;
 
     //probabilities
     private const float ENEMY1_PROB = 0.05f;
@@ -101,6 +115,8 @@ public class ProceduralController : MonoBehaviour
     private const float PU2_PROB = 0.01f;
     private const float PU3_PROB = 0.01f;
     private const float PU4_PROB = 0.01f;
+    private const float PLATFORM_JUMPABLE_PROB = 0.1f;
+
 
     //initialize list before
     private void Awake()
@@ -120,6 +136,16 @@ public class ProceduralController : MonoBehaviour
         _fillChunk(_curChunk);
         _curPlatformEnd = 0;
         StartCoroutine(_removeMostDistantPlatform());
+        InvokeRepeating("_deleteUselessPlatforms", 10, 10);
+    }
+
+    private void _deleteUselessPlatforms()
+    {
+        foreach(var platform in _currentPlatformObjects)
+        {
+            if (platform.transform.position.x <= _curDeleteX)
+                Destroy(platform);
+        }
     }
 
     /// <summary>
@@ -142,6 +168,19 @@ public class ProceduralController : MonoBehaviour
         _generateFloor(chunk, out curItems);
         _ensureLevelIsCompletable(curItems);
         _fillChunkWithPrefabs(curItems);
+        _fillVertical(new List<GameObject>(_currentPlatformObjects.GetList()));
+    }
+
+    private void _fillVertical(List<GameObject> currentPlatformObjects)
+    {
+        foreach(var obj in currentPlatformObjects)
+        {
+            if (_rollWithProbability(PLATFORM_JUMPABLE_PROB))
+            {
+                _generateJumpable(obj);
+                Debug.Log("vertical platform");
+            }
+        }
     }
 
     /// <summary>
@@ -299,22 +338,29 @@ public class ProceduralController : MonoBehaviour
         _currentPlatformLocations.Add(spikeChunk[0].transform.position.x);
     }
 
-    /*/// <summary>
+    /// <summary>
     /// generate a platform aboves spikeChunk so that you can jump on it
     /// </summary>
     /// <param name="spikeChunk"></param>
     private void _generateJumpable(GameObject platform)
     {
+        var val = _playerTransform.transform.position.x;
+        
+        foreach(var value in _currentPlatformLocations)
+        {
+            if (value.IsWithin(val - 5f, val + 5f))
+                return;
+        }
 
-        if (_currentPlatformLocations.Contains(platform.transform.position.x))
+        if (platform.transform.position.x < _playerTransform.position.x + PLAYER_SEE_DISTANCE)
+        {
             return;
+        }
 
-        if (platform.transform.position.x <= _curPlatformEnd)
-            return;
 
         //parameter calcuations
         var _x   = (float)(platform.transform.position.x + (3 * _random.NextDouble()));
-        var _y   = (float)(platform.transform.position.y + (3 * _random.NextDouble()));
+        var _y   = (float)(platform.transform.position.y + (7 * _random.NextDouble() + 2f));
         var _len = (float)(10f *_random.NextDouble());
 
 
@@ -326,11 +372,13 @@ public class ProceduralController : MonoBehaviour
             pt: PLATFORM_TYPE.AIR_T,
             curObjects: out temp
         );
+        _fillChunkWithPrefabs(temp);
         _currentPlatformObjects.AddRange(temp);
-        _currentPlatformLocations.Add(temp[0].transform.position.x);
-
-        Debug.Log("spawned a platform for you papi");
-    }*/
+        foreach(var obj in temp)
+        {
+            _currentPlatformLocations.Add(obj.transform.position.x);
+        }
+    }
 
     /// <summary>
     /// generates the floor of current chunk
@@ -410,6 +458,7 @@ public class ProceduralController : MonoBehaviour
                 continue;
 
             var curObj = _currentFloorChunkObjects.Get();
+            _curDeleteX = curObj.transform.position.x;
             yield return new WaitForSeconds(timeout);
 
             _currentFloorChunkObjects.Remove();
@@ -426,8 +475,8 @@ public class ProceduralController : MonoBehaviour
     void Update()
     {
         _playerTransform = GameObject.FindWithTag("Player").transform;
-        text.text = "d=" + 
-            (_playerTransform.position.x - _currentFloorChunkObjects.Get().transform.position.x);
+        text.text = "Distance: " + 
+            (int)(_playerTransform.position.x - _currentFloorChunkObjects.Get().transform.position.x);
         // check if we need to fill a new chunk
         if (checkForChunkRefresh())
         {
