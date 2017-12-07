@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114939063882524220}
   - component: {fileID: 50634143369096312}
   - component: {fileID: 61919992103556296}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SpawnTypeEnemy
   m_TagString: SpawnEnemy
   m_Icon: {fileID: 0}
