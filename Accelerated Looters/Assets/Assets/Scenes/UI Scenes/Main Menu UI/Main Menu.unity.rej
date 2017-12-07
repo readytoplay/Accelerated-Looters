@@ -1,0 +1,10 @@
+diff a/Accelerated Looters/Assets/Assets/Scenes/UI Scenes/Main Menu UI/Main Menu.unity b/Accelerated Looters/Assets/Assets/Scenes/UI Scenes/Main Menu UI/Main Menu.unity	(rejected hunks)
+@@ -1108,7 +1108,7 @@
+ <<<<<<< HEAD
+   m_LocalPosition: {x: 515.5, y: 203, z: 0}
+ =======
+-  m_LocalPosition: {x: 366, y: 162.5, z: 0}
++
+ >>>>>>> 6061b64c4bb25c42f6646039d3d9bc47b40c4991
+   m_LocalScale: {x: 1, y: 1, z: 1}
+   m_Children:
