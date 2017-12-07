@@ -346,6 +346,25 @@ public class playerController : MonoBehaviour
                 SceneManager.LoadScene("Snow Game Over Menu");
             }
 
+            if (SceneManager.GetActiveScene().name == "Jungle PCG")
+            {
+                SceneManager.LoadScene("Jungle PCG Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Underwater PCG")
+            {
+                SceneManager.LoadScene("UW PCG Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Haunted PCG")
+            {
+                SceneManager.LoadScene("Haunted PCG Game Over Menu");
+            }
+
+            if (SceneManager.GetActiveScene().name == "Snow PCG")
+            {
+                SceneManager.LoadScene("Snow PCG Game Over Menu");
+            }
 
         }
     }
