@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4480844866311762}
   - component: {fileID: 212767278987206636}
   - component: {fileID: 114939063882524220}
-  - component: {fileID: 61448583712127394}
   - component: {fileID: 50634143369096312}
+  - component: {fileID: 61919992103556296}
   m_Layer: 0
   m_Name: SpawnTypeEnemy
   m_TagString: SpawnEnemy
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1302889438986476}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0.24, y: 0.21, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,7 +63,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &61448583712127394
+--- !u!61 &61919992103556296
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -86,7 +86,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.755, y: 0.93}
+  m_Size: {x: 6, y: 6}
   m_EdgeRadius: 0
 --- !u!114 &114939063882524220
 MonoBehaviour:
