@@ -65,12 +65,15 @@ public class playerController : MonoBehaviour
 
     public string userName;
     
+    
+    
     //total coins
     public int totalCoins;
 
     //high score (enemies killed number)
     public int highScore;
     public KillEnemy k;
+    public bool scoresAdded;
 
     //state vars
     public bool isSpeedBoost;
@@ -86,6 +89,7 @@ public class playerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        scoresAdded = false;
 
         db = FindObjectOfType<databaseController>();
         userName = "Default";
@@ -308,9 +312,19 @@ public class playerController : MonoBehaviour
             //update coins
             PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
             //update high score
+
+            if (k.enemyKilled > highScore)
+            {
+                highScore = k.enemyKilled; //local high score always shows the highest one
+            }
            
             PlayerPrefs.SetInt("highscore", k.enemyKilled);
-            StartCoroutine(db.PostScores(PlayerPrefs.GetString("PlayerName"), PlayerPrefs.GetInt("highscore")));
+            if (!scoresAdded)
+            {
+                //all score records store in the database
+                StartCoroutine(db.PostScores(PlayerPrefs.GetString("PlayerName"), PlayerPrefs.GetInt("highscore")));
+                scoresAdded = true;
+            }
 
             if (SceneManager.GetActiveScene().name == "Jungle Level 1")
             {
