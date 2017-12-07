@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{6B24B61E-3EC9-454D-9B15-170A505F3CC8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,235 +40,103 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.XML" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Assets\Prefabs\playerController2.cs" />
-     <Compile Include="Assets\Assets\Prefabs\Prefabs2\databaseController.cs" />
-     <Compile Include="Assets\Assets\Prefabs\spawnEnemyBehaviour.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BasicEnemyController.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BulletTest.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\Deadzone.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemiesKilled.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemyAttack.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemyMovement.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\enemySpawnScript.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\enemyTop.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\KillEnemy.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\Shooting.cs" />
-     <Compile Include="Assets\Assets\Scripts\Enemy Scripts\SpawnEnemyMovementScript.cs" />
-     <Compile Include="Assets\Assets\Scripts\level2\level2Animation.cs" />
-     <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraController.cs" />
-     <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraFollowPlayer.cs" />
-     <Compile Include="Assets\Assets\Scripts\Player Scripts\CheckPointController.cs" />
-     <Compile Include="Assets\Assets\Scripts\Player Scripts\LevelManager.cs" />
-     <Compile Include="Assets\Assets\Scripts\Player Scripts\PlatformMoving.cs" />
-     <Compile Include="Assets\Assets\Scripts\Player Scripts\playerController.cs" />
-     <Compile Include="Assets\Assets\Scripts\Player Scripts\Spike.cs" />
-     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\DoubleCoinPowerUp.cs" />
-     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\HighJumpPowerUP.cs" />
-     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\InvincibilityPowerUp.cs" />
-     <Compile Include="Assets\Assets\Scripts\Power Up Scripts\SpeedBoostPowerUp.cs" />
-     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\AcceleratingPlayer.cs" />
-     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\CameraFollowProcedural.cs" />
-     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\Procedural_Spikes.cs" />
-     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
-     <Compile Include="Assets\Assets\Scripts\Procedural Scripts\Queue.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\Coins.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\DeadZoneSlider.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\DistanceSlide.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\EndLevel.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\LevelEndMenu.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\life_number_Script.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\MainMenuButtons.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\PCG_UI.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
-     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
-     <Compile Include="Assets\coinUI.cs" />
-     <Compile Include="Assets\getUserName.cs" />
-     <Compile Include="Assets\TextCheck.cs" />
-     <Compile Include="Assets\Unpause.cs" />
-     <Compile Include="Assets\WiggleEnemy2.cs" />
-     <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
-     <None Include="Assets\Assets\Other\Settings\LibraryFormatVersion.txt" />
-     <None Include="Assets\Assets\Other\Settings\LastSceneManagerSetup.txt" />
- <Reference Include="UnityEngine.CoreModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AccessibilityModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ParticleSystemModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PhysicsModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VehiclesModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ClothModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AIModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AnimationModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TextRenderingModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TerrainPhysicsModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.IMGUIModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestAudioModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestTextureModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestWWWModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ClusterInputModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ClusterRendererModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UNETModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.DirectorModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityAnalyticsModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.CrashReportingModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PerformanceReportingModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityConnectModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.WebModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ARModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VRModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIElementsModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.StyleSheetsModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AudioModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GameCenterModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GridModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ImageConversionModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.InputModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.JSONSerializeModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ParticlesLegacyModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Physics2DModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ScreenCaptureModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpriteMaskModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TerrainModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TilemapModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VideoModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.WindModule">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Timeline">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIAutomation">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GoogleAudioSpatializer">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Program Files/Unity 2017.2.0b10/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Users/shado/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@0.0.16/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/shado/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@0.0.17/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/shado/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.18/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Assets\Prefabs\playerController2.cs" />
+    <Compile Include="Assets\Assets\Prefabs\Prefabs2\databaseController.cs" />
+    <Compile Include="Assets\Assets\Prefabs\spawnEnemyBehaviour.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BasicEnemyController.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\BulletTest.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\Deadzone.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemiesKilled.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\enemySpawnScript.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\enemyTop.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\KillEnemy.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\Shooting.cs" />
+    <Compile Include="Assets\Assets\Scripts\Enemy Scripts\SpawnEnemyMovementScript.cs" />
+    <Compile Include="Assets\Assets\Scripts\level2\level2Animation.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraController.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\CameraFollowPlayer.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\CheckPointController.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\PlatformMoving.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\playerController.cs" />
+    <Compile Include="Assets\Assets\Scripts\Player Scripts\Spike.cs" />
+    <Compile Include="Assets\Assets\Scripts\Power Up Scripts\DoubleCoinPowerUp.cs" />
+    <Compile Include="Assets\Assets\Scripts\Power Up Scripts\HighJumpPowerUP.cs" />
+    <Compile Include="Assets\Assets\Scripts\Power Up Scripts\InvincibilityPowerUp.cs" />
+    <Compile Include="Assets\Assets\Scripts\Power Up Scripts\SpeedBoostPowerUp.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\AcceleratingPlayer.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\CameraFollowProcedural.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\Procedural_Spikes.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\ProceduralController.cs" />
+    <Compile Include="Assets\Assets\Scripts\Procedural Scripts\Queue.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\Coins.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\DeadZoneSlider.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\DistanceSlide.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\EndLevel.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\LevelEndMenu.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\life_number_Script.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\MainMenuButtons.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\PCG_UI.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
+    <Compile Include="Assets\coinUI.cs" />
+    <Compile Include="Assets\getUserName.cs" />
+    <Compile Include="Assets\TextCheck.cs" />
+    <Compile Include="Assets\Unpause.cs" />
+    <Compile Include="Assets\WiggleEnemy2.cs" />
+    <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
+    <None Include="Assets\Assets\Other\Settings\LibraryFormatVersion.txt" />
+    <None Include="Assets\Assets\Other\Settings\LastSceneManagerSetup.txt" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:/Program Files/Unity/Editor\Data/Managed/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/Monika/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/Monika/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -277,5 +146,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

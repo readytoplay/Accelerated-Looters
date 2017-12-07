@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
@@ -31,48 +32,94 @@ public class Store : MonoBehaviour {
         // TODO: check if player has power up in power up script and set bool variables
     }
 
-    public void buyPowerUp1()
+public void buyPowerUp1()
     {
 
+       // TODO
+        if (!hasPowerUp1 && PlayerPrefs.GetInt("totalcoins") >= 5)
+        {
+            if (PlayerPrefs.GetInt("hasPowerUp1") == 0)
+            {
+                hasPowerUp1 = true;
+                PlayerPrefs.SetInt("hasPowerUp1",1);
+                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
+            } else
+            {
+                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+            }
+            // todo - enable player script new power up
+        }
+      
+        else
+        {
+            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
+        }
+    }
+
+   public void buyPowerUp2()
+    {
         // TODO
-        if(!hasPowerUp1&&PlayerPrefs.GetInt("totalcoins")>=5)
+        if (!hasPowerUp2 && PlayerPrefs.GetInt("totalcoins") >= 10)
         {
-            hasPowerUp1 = true;
-            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-5);
+            if (PlayerPrefs.GetInt("hasPowerUp2") == 0)
+            {
+                hasPowerUp2 = true;
+                PlayerPrefs.SetInt("hasPowerUp2",1);
+                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
+            } else
+            {
+                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+            }
             // todo - enable player script new power up
+        }
+      
+        else
+        {
+            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
         }
     }
 
-    public void buyPowerUp2()
+   public void buyPowerUp3()
     {
-        // TODO 
-        if (!hasPowerUp2&&PlayerPrefs.GetInt("totalcoins")>=10)
+        if (!hasPowerUp3 && PlayerPrefs.GetInt("totalcoins") >= 15)
         {
-            hasPowerUp2 = true;
-            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-10);
+            if (PlayerPrefs.GetInt("hasPowerUp3") == 0)
+            {
+                hasPowerUp3 = true;
+                PlayerPrefs.SetInt("hasPowerUp3",1);
+                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
+            } else
+            {
+                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+            }
             // todo - enable player script new power up
+        }
+      
+        else
+        {
+            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
         }
     }
 
-    public void buyPowerUp3()
+   public void buyPowerUp4()
     {
-        // TODO 
-        if (!hasPowerUp3&&PlayerPrefs.GetInt("totalcoins")>=15)
+        if (!hasPowerUp4 && PlayerPrefs.GetInt("totalcoins") >= 20)
         {
-            hasPowerUp3 = true;
-            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-15);
+            if (PlayerPrefs.GetInt("hasPowerUp4") == 0)
+            {
+                hasPowerUp4 = true;
+                PlayerPrefs.SetInt("hasPowerUp4",1);
+                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
+            } else
+            {
+                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+            }
             // todo - enable player script new power up
         }
-    }
-
-    public void buyPowerUp4()
-    {
-        // TODO 
-        if (!hasPowerUp4&& PlayerPrefs.GetInt("totalcoins")>=20)
+      
+        else
         {
-            hasPowerUp4 = true;
-            PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins")-20);
-            // todo - enable player script new power up
+            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
         }
     }
 

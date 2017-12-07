@@ -76,6 +76,13 @@ public class playerController : MonoBehaviour
     //state vars
     public bool isSpeedBoost;
 
+    
+   /*** double jump - powerup1
+        triple coin - powerup2
+        faster movement - powerup3
+        extra life - powerup4
+   ***/
+   
     // Use this for initialization
     void Start()
     {
@@ -105,7 +112,7 @@ public class playerController : MonoBehaviour
         //Get history coins number
         totalCoins = PlayerPrefs.GetInt("totalcoins");
 
-        if (hasPowerUp4)
+        if (PlayerPrefs.GetInt("hasPowerUp4") == 1)
         {
             life_count = 5;
         }
@@ -196,7 +203,7 @@ public class playerController : MonoBehaviour
         }
 
         jumpBuffer = jumpBuffer + Time.deltaTime;
-        if (Input.GetButtonDown("Jump") && doubleJump && jumpBuffer < 1.0f && !isGrounded)//&& hasPowerUp1)
+        if (Input.GetButtonDown("Jump") && doubleJump && jumpBuffer < 1.0f && !isGrounded)
         {
             Debug.Log("plz");
             doubleJump = false;
@@ -339,7 +346,7 @@ public class playerController : MonoBehaviour
                 {
                     coins = coins + 6;
                 }
-                else if (hasPowerUp2)
+                else if (PlayerPrefs.GetInt("hasPowerUp2") == 1)
                 {
                     coins = coins + 3;
                 }
@@ -409,9 +416,18 @@ public class playerController : MonoBehaviour
 
     public void powerUp3()
     {
-        if (hasPowerUp3)
+        if (PlayerPrefs.GetInt("hasPowerUp3") == 1)
         {
             moveSpeed *= 1.5f;
+        }
+    }
+    
+    public void powerUp1()
+    {
+        if (PlayerPrefs.GetInt("hasPowerUp1") == 1)
+        {
+            jumpSpeed = 22f;
+         
         }
     }
 
