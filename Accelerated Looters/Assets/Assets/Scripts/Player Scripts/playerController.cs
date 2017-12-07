@@ -418,7 +418,7 @@ public class playerController : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("hasPowerUp3") == 1)
         {
-            moveSpeed *= 1.5f;
+            moveSpeed = 10f;
         }
     }
     
