@@ -1,5 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Monika\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Accelerated Looters.1264392805.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Monika\Documents\Accelerated-Looters-dev-new\Accelerated Looters" t="IncludeRecursive">
+      <e p="Accelerated Looters.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Assets" t="Include">
+          <e p="Other" t="Include">
+            <e p="Plugins" t="Include">
+              <e p="Editor" t="Include">
+                <e p="JetBrains" t="Include">
+                  <e p="Unity3DRider.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Settings" t="Include">
+              <e p="LastSceneManagerSetup.txt" t="Include" />
+              <e p="LibraryFormatVersion.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="playerController2.cs" t="Include" />
+            <e p="Prefabs2" t="Include">
+              <e p="databaseController.cs" t="Include" />
+            </e>
+            <e p="spawnEnemyBehaviour.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Enemy Scripts" t="Include">
+              <e p="BasicEnemyController.cs" t="Include" />
+              <e p="BulletTest.cs" t="Include" />
+              <e p="Deadzone.cs" t="Include" />
+              <e p="EnemiesKilled.cs" t="Include" />
+              <e p="EnemyAttack.cs" t="Include" />
+              <e p="EnemyMovement.cs" t="Include" />
+              <e p="enemySpawnScript.cs" t="Include" />
+              <e p="enemyTop.cs" t="Include" />
+              <e p="KillEnemy.cs" t="Include" />
+              <e p="Shooting.cs" t="Include" />
+              <e p="SpawnEnemyMovementScript.cs" t="Include" />
+            </e>
+            <e p="level2" t="Include">
+              <e p="DeadZoneForHunter.cs" t="Include" />
+              <e p="level2Animation.cs" t="Include" />
+              <e p="underWaterPhysics.cs" t="Include" />
+            </e>
+            <e p="Player Scripts" t="Include">
+              <e p="CameraController.cs" t="Include" />
+              <e p="CameraFollowPlayer.cs" t="Include" />
+              <e p="CheckPointController.cs" t="Include" />
+              <e p="LevelManager.cs" t="Include" />
+              <e p="PlatformMoving.cs" t="Include" />
+              <e p="playerController.cs" t="Include" />
+              <e p="Spike.cs" t="Include" />
+            </e>
+            <e p="Power Up Scripts" t="Include">
+              <e p="DoubleCoinPowerUp.cs" t="Include" />
+              <e p="HighJumpPowerUP.cs" t="Include" />
+              <e p="InvincibilityPowerUp.cs" t="Include" />
+              <e p="SpeedBoostPowerUp.cs" t="Include" />
+            </e>
+            <e p="Procedural Scripts" t="Include">
+              <e p="AcceleratingPlayer.cs" t="Include" />
+              <e p="CameraFollowProcedural.cs" t="Include" />
+              <e p="Procedural_Spikes.cs" t="Include" />
+              <e p="ProceduralController.cs" t="Include" />
+              <e p="Queue.cs" t="Include" />
+            </e>
+            <e p="UI Scripts" t="Include">
+              <e p="Coins.cs" t="Include" />
+              <e p="DeadZoneSlider.cs" t="Include" />
+              <e p="DistanceSlide.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="Store.cs" t="Include" />
+              </e>
+              <e p="EndLevel.cs" t="Include" />
+              <e p="LevelEndMenu.cs" t="Include" />
+              <e p="life_number_Script.cs" t="Include" />
+              <e p="MainMenuButtons.cs" t="Include" />
+              <e p="PauseMenu.cs" t="Include" />
+              <e p="PauseMenuWater.cs" t="Include" />
+              <e p="pauseMeunforWater.cs" t="Include" />
+              <e p="PCG_UI.cs" t="Include" />
+              <e p="StartScreen.cs" t="Include" />
+              <e p="Timer.cs" t="Include" />
+              <e p="WiggledEnemyMovement.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="coinUI.cs" t="Include" />
+        <e p="getUserName.cs" t="Include" />
+        <e p="Jiggly Bubble Free" t="Include">
+          <e p="readme_Jiggly_Bubble_Free.txt" t="Include" />
+        </e>
+        <e p="ProjectSettings" t="Include">
+          <e p="ProjectVersion.txt" t="Include" />
+        </e>
+        <e p="TextCheck.cs" t="Include" />
+        <e p="Unpause.cs" t="Include" />
+        <e p="WiggleEnemy2.cs" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
   <component name="RiderRiderContentModelStore">
     <excludedPaths>
       <Path>Temp</Path>
