@@ -3351,7 +3351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 0
   life_count: 0
-  moveSpeed: 3
+  moveSpeed: 4
   inAirMoveSpeed: 6
   originalSpeed: 0
   jumpSpeed: 5
