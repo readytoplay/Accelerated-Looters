@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
-
-#if UNITY_EDTIOR
-using UnityEditor;
+using UnityEngine.UI;
 
 
 public class Store : MonoBehaviour {
@@ -14,6 +12,8 @@ public class Store : MonoBehaviour {
     public playerController playerScript;
 
     public bool hasPowerUp1, hasPowerUp2, hasPowerUp3, hasPowerUp4;
+
+    public GUIText notification;
 
     // Use this for initialization
     void Start () {
@@ -48,14 +48,14 @@ public void buyPowerUp1()
                 PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
             } else
             {
-                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+                StartCoroutine(ShowMessage("You already got this power up.", 1));
             }
             // todo - enable player script new power up
         }
       
         else
         {
-            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
+            StartCoroutine(ShowMessage("You don't have enough coins man!", 1));
         }
     }
 
@@ -68,17 +68,18 @@ public void buyPowerUp1()
             {
                 hasPowerUp2 = true;
                 PlayerPrefs.SetInt("hasPowerUp2",1);
-                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
+                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 10);
             } else
             {
-                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+                StartCoroutine(ShowMessage("You already got this power up.", 1));
+        
             }
             // todo - enable player script new power up
         }
       
         else
         {
-            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
+            StartCoroutine(ShowMessage("You don't have enough coins man!", 1));
         }
     }
 
@@ -90,17 +91,17 @@ public void buyPowerUp1()
             {
                 hasPowerUp3 = true;
                 PlayerPrefs.SetInt("hasPowerUp3",1);
-                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
+                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 15);
             } else
             {
-                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+                StartCoroutine(ShowMessage("You already got this power up.", 1));
             }
             // todo - enable player script new power up
         }
       
         else
         {
-            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
+            StartCoroutine(ShowMessage("You don't have enough coins man!", 1));
         }
     }
 
@@ -112,17 +113,18 @@ public void buyPowerUp1()
             {
                 hasPowerUp4 = true;
                 PlayerPrefs.SetInt("hasPowerUp4",1);
-                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 5);
+                PlayerPrefs.SetInt("totalcoins", PlayerPrefs.GetInt("totalcoins") - 20);
             } else
             {
-                bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You already got this power up.", "Ok");
+                StartCoroutine(ShowMessage("You already got this power up.", 1));
             }
             // todo - enable player script new power up
         }
       
         else
         {
-            bool rang = EditorUtility.DisplayDialog("Failed buy power up ", "You don't have enough coins man!", "Ok");
+            StartCoroutine(ShowMessage("You don't have enough coins man!", 1));
+           
         }
     }
 
@@ -183,6 +185,13 @@ public void buyPowerUp1()
             buyIcon4.SetActive(false);
         }
     }
+    
+    IEnumerator ShowMessage (string message, float delay) {
+       
+        GetComponent<GUIText>().text = message;
+        GetComponent<GUIText>().enabled = true;
+        yield return new WaitForSeconds(delay);
+        GetComponent<GUIText>().enabled = false;
+    }
 
 }
-#endif

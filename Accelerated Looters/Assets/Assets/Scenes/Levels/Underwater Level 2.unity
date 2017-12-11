@@ -3354,7 +3354,7 @@ MonoBehaviour:
   moveSpeed: 4
   inAirMoveSpeed: 6
   originalSpeed: 0
-  jumpSpeed: 5
+  jumpSpeed: 6
   originalJumpSpeed: 0
   groundRadius: 0
   time1: 0

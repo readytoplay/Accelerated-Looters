@@ -73,9 +73,6 @@
               <e p="Coins.cs" t="Include" />
               <e p="DeadZoneSlider.cs" t="Include" />
               <e p="DistanceSlide.cs" t="Include" />
-              <e p="Editor" t="Include">
-                <e p="Store.cs" t="Include" />
-              </e>
               <e p="EndLevel.cs" t="Include" />
               <e p="LevelEndMenu.cs" t="Include" />
               <e p="life_number_Script.cs" t="Include" />
@@ -85,6 +82,7 @@
               <e p="pauseMeunforWater.cs" t="Include" />
               <e p="PCG_UI.cs" t="Include" />
               <e p="StartScreen.cs" t="Include" />
+              <e p="Store.cs" t="Include" />
               <e p="Timer.cs" t="Include" />
               <e p="WiggledEnemyMovement.cs" t="Include" />
             </e>
