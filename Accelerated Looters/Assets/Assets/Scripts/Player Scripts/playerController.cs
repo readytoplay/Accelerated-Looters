@@ -313,9 +313,9 @@ public class playerController : MonoBehaviour
             PlayerPrefs.SetInt("totalcoins", totalCoins + coins);
             //update high score
 
-            if (k.enemyKilled > highScore)
+            if (k.enemyKilled >  PlayerPrefs.GetInt("localhighscore"))
             {
-                highScore = k.enemyKilled; //local high score always shows the highest one
+                PlayerPrefs.SetInt("localhighscore", k.enemyKilled); //local high score always shows the highest one
             }
            
             PlayerPrefs.SetInt("highscore", k.enemyKilled);
