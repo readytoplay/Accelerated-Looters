@@ -3,9 +3,9 @@
   <component name="ContentModelStore">
     <e p="C:\Users\Monika\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_Accelerated Looters.1264392805.00" t="ExcludeRecursive" />
     <e p="C:\Users\Monika\Documents\Accelerated-Looters-dev-new\Accelerated Looters" t="IncludeRecursive">
+      <e p="Accelerated Looters.csproj" t="IncludeRecursive" />
+      <e p="Accelerated Looters.Editor.csproj" t="IncludeRecursive" />
       <e p="Accelerated Looters.sln" t="IncludeFlat" />
-      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
-      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Assets" t="Include">
           <e p="Other" t="Include">
@@ -101,10 +101,10 @@
         <e p="WiggleEnemy2.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
-      <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">
-        <e p="bin" t="ExcludeRecursive" />
+        <e p="UnityVS_bin\Debug" t="ExcludeRecursive" />
+        <e p="UnityVS_obj\Debug" t="ExcludeRecursive" />
       </e>
     </e>
   </component>
