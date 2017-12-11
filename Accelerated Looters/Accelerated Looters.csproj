@@ -118,6 +118,7 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\PauseMenuWater.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\life_number_Script.cs" />
