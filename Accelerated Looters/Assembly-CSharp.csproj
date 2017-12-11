@@ -97,6 +97,7 @@
     <Compile Include="Assets\Assets\Scripts\UI Scripts\pauseMeunforWater.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\PCG_UI.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\StartScreen.cs" />
+    <Compile Include="Assets\Assets\Scripts\UI Scripts\Store.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\Timer.cs" />
     <Compile Include="Assets\Assets\Scripts\UI Scripts\WiggledEnemyMovement.cs" />
     <Compile Include="Assets\coinUI.cs" />

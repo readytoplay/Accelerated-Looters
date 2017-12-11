@@ -102,7 +102,13 @@ public class MainMenuButtons : MonoBehaviour {
         
         PlayerPrefs.SetInt("highscore", 0);
         
+        PlayerPrefs.SetInt("hasPowerUp1",0);
+        
+        PlayerPrefs.SetInt("hasPowerUp2",0);
        
+        PlayerPrefs.SetInt("hasPowerUp3",0);
+        
+        PlayerPrefs.SetInt("hasPowerUp4",0);
     }
 
  
