@@ -36,19 +36,19 @@
       <file leaf-file-name="CameraController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Scripts/CameraController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="53" column="93" lean-forward="false" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
+            <state relative-caret-position="520">
+              <caret line="48" column="107" lean-forward="false" selection-start-line="48" selection-start-column="107" selection-end-line="48" selection-end-column="107" />
               <folding>
-                <marker date="1512966448890" expanded="false" signature="6:108" ph="..." />
-                <marker date="1512966448890" expanded="true" signature="155:1883" ph="{...}" />
-                <marker date="1512966448890" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
-                <marker date="1512966448890" expanded="true" signature="511:520" ph="{...}" />
-                <marker date="1512966448890" expanded="true" signature="574:1881" ph="{...}" />
-                <marker date="1512966448890" expanded="true" signature="580:742" ph="/* camera follow the player when it moves left and right. ... */" />
-                <marker date="1512966448890" expanded="true" signature="989:1125" ph="{...}" />
-                <marker date="1512966448890" expanded="true" signature="1217:1336" ph="{...}" />
-                <marker date="1512966448890" expanded="true" signature="1427:1546" ph="{...}" />
-                <marker date="1512966448890" expanded="true" signature="1638:1773" ph="{...}" />
+                <marker date="1512966993000" expanded="false" signature="6:108" ph="..." />
+                <marker date="1512966993000" expanded="true" signature="155:1914" ph="{...}" />
+                <marker date="1512966993000" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
+                <marker date="1512966993000" expanded="true" signature="511:520" ph="{...}" />
+                <marker date="1512966993000" expanded="true" signature="574:1912" ph="{...}" />
+                <marker date="1512966993000" expanded="true" signature="580:742" ph="/* camera follow the player when it moves left and right. ... */" />
+                <marker date="1512966993000" expanded="true" signature="989:1125" ph="{...}" />
+                <marker date="1512966993000" expanded="true" signature="1217:1352" ph="{...}" />
+                <marker date="1512966993000" expanded="true" signature="1443:1577" ph="{...}" />
+                <marker date="1512966993000" expanded="true" signature="1669:1804" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -291,7 +291,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-6" />
     <option name="y" value="2" />
     <option name="width" value="1924" />
@@ -427,12 +427,12 @@
       <workItem from="1512501466804" duration="7125000" />
       <workItem from="1512537184546" duration="7898000" />
       <workItem from="1512613603381" duration="1551000" />
-      <workItem from="1512966426447" duration="86000" />
+      <workItem from="1512966426447" duration="567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31768000" />
+    <option name="totallyTimeSpent" value="32249000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -444,7 +444,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="2" width="1924" height="1048" extended-state="1" />
+    <frame x="-6" y="2" width="1924" height="1048" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1225,19 +1225,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Assets/Scripts/Player Scripts/CameraController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="53" column="93" lean-forward="false" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
+        <state relative-caret-position="520">
+          <caret line="48" column="107" lean-forward="false" selection-start-line="48" selection-start-column="107" selection-end-line="48" selection-end-column="107" />
           <folding>
-            <marker date="1512966448890" expanded="false" signature="6:108" ph="..." />
-            <marker date="1512966448890" expanded="true" signature="155:1883" ph="{...}" />
-            <marker date="1512966448890" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
-            <marker date="1512966448890" expanded="true" signature="511:520" ph="{...}" />
-            <marker date="1512966448890" expanded="true" signature="574:1881" ph="{...}" />
-            <marker date="1512966448890" expanded="true" signature="580:742" ph="/* camera follow the player when it moves left and right. ... */" />
-            <marker date="1512966448890" expanded="true" signature="989:1125" ph="{...}" />
-            <marker date="1512966448890" expanded="true" signature="1217:1336" ph="{...}" />
-            <marker date="1512966448890" expanded="true" signature="1427:1546" ph="{...}" />
-            <marker date="1512966448890" expanded="true" signature="1638:1773" ph="{...}" />
+            <marker date="1512966993000" expanded="false" signature="6:108" ph="..." />
+            <marker date="1512966993000" expanded="true" signature="155:1914" ph="{...}" />
+            <marker date="1512966993000" expanded="true" signature="270:397" ph="/* the actual position that the camera will follow ... */" />
+            <marker date="1512966993000" expanded="true" signature="511:520" ph="{...}" />
+            <marker date="1512966993000" expanded="true" signature="574:1912" ph="{...}" />
+            <marker date="1512966993000" expanded="true" signature="580:742" ph="/* camera follow the player when it moves left and right. ... */" />
+            <marker date="1512966993000" expanded="true" signature="989:1125" ph="{...}" />
+            <marker date="1512966993000" expanded="true" signature="1217:1352" ph="{...}" />
+            <marker date="1512966993000" expanded="true" signature="1443:1577" ph="{...}" />
+            <marker date="1512966993000" expanded="true" signature="1669:1804" ph="{...}" />
           </folding>
         </state>
       </provider>
