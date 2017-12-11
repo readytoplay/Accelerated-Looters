@@ -77,15 +77,17 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -107,7 +109,15 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    debug:
+      m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &39800591 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114819307857269954, guid: 2893a0d8ca5007d4a9d6b84583fd9821,
+    type: 2}
+  m_PrefabInternal: {fileID: 495536346}
+  m_Script: {fileID: 11500000, guid: f1aa3b146d8ba5c48826018e9a93d25c, type: 3}
 --- !u!1 &86301030
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,6 +202,7 @@ GameObject:
   - component: {fileID: 129829472}
   - component: {fileID: 129829474}
   - component: {fileID: 129829473}
+  - component: {fileID: 129829475}
   m_Layer: 5
   m_Name: Coin Count
   m_TagString: Untagged
@@ -256,6 +267,19 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 129829471}
+--- !u!114 &129829475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129829471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 259e547f8a781a44f8ebd2d0ade69d63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalCoins: 0
+  coins: {fileID: 129829473}
 --- !u!1 &180220289
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,68 +425,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 183903020}
---- !u!1 &299191160
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 299191163}
-  - component: {fileID: 299191162}
-  - component: {fileID: 299191161}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &299191161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 299191160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &299191162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 299191160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!4 &299191163
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 299191160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &380304838
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,11 +496,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!4 &380304843
 Transform:
   m_ObjectHideFlags: 0
@@ -577,6 +539,7 @@ SpriteRenderer:
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -592,6 +555,7 @@ SpriteRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -621,7 +585,7 @@ Transform:
   m_LocalScale: {x: 1.6378579, y: 1.6378579, z: 1.6378579}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435685101
 GameObject:
@@ -698,7 +662,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 435685104}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39800591}
+        m_MethodName: buyPowerUp4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &435685104
@@ -952,6 +927,68 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 465348578}
+--- !u!1001 &495536346
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595696420385654, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819307857269954, guid: 2893a0d8ca5007d4a9d6b84583fd9821,
+        type: 2}
+      propertyPath: buyIcon1
+      value: 
+      objectReference: {fileID: 952844944}
+    - target: {fileID: 114819307857269954, guid: 2893a0d8ca5007d4a9d6b84583fd9821,
+        type: 2}
+      propertyPath: buyIcon2
+      value: 
+      objectReference: {fileID: 1191088608}
+    - target: {fileID: 114819307857269954, guid: 2893a0d8ca5007d4a9d6b84583fd9821,
+        type: 2}
+      propertyPath: buyIcon3
+      value: 
+      objectReference: {fileID: 1007619868}
+    - target: {fileID: 114819307857269954, guid: 2893a0d8ca5007d4a9d6b84583fd9821,
+        type: 2}
+      propertyPath: buyIcon4
+      value: 
+      objectReference: {fileID: 435685101}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2893a0d8ca5007d4a9d6b84583fd9821, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &524139997
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1239,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 677052410}
-  - component: {fileID: 677052409}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1210,26 +1246,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &677052409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 677052408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1aa3b146d8ba5c48826018e9a93d25c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buyIcon1: {fileID: 952844944}
-  buyIcon2: {fileID: 1191088608}
-  buyIcon3: {fileID: 1007619868}
-  buyIcon4: {fileID: 435685101}
-  playerScript: {fileID: 0}
-  hasPowerUp1: 0
-  hasPowerUp2: 0
-  hasPowerUp3: 0
-  hasPowerUp4: 0
 --- !u!4 &677052410
 Transform:
   m_ObjectHideFlags: 0
@@ -1241,7 +1257,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767494917
 GameObject:
@@ -1537,7 +1553,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 952844947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39800591}
+        m_MethodName: buyPowerUp1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &952844947
@@ -1648,7 +1675,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1007619871}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39800591}
+        m_MethodName: buyPowerUp3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1007619871
@@ -1833,7 +1871,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1191088611}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39800591}
+        m_MethodName: buyPowerUp2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1191088611
@@ -2296,7 +2345,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 677052409}
+      - m_Target: {fileID: 39800591}
         m_MethodName: goBackSnowEndLevelMenu
         m_Mode: 1
         m_Arguments:
