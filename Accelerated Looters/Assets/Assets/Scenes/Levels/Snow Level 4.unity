@@ -17767,9 +17767,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1875843426}
-  AheadOfPlayer: 2.5
+  AheadOfPlayer: 3
   TargetPosition: {x: 0, y: 0, z: 0}
-  DelayTime: 0.8
+  DelayTime: 1.2
 --- !u!1 &1422884095
 GameObject:
   m_ObjectHideFlags: 0

@@ -51,7 +51,7 @@ public class CameraController : MonoBehaviour
 		}
 		else if (Player.transform.localPosition.x < -3f && Player.transform.localPosition.y > 3f)
 		{
-			TargetPosition = new Vector3(TargetPosition.x - AheadOfPlayer, TargetPosition.y + AheadOfPlayer, transform.position.z);
+			TargetPosition = new Vector3(TargetPosition.x - AheadOfPlayer, TargetPosition.y - AheadOfPlayer, transform.position.z);
 			
 		}
 
